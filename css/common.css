@@ -1,0 +1,155 @@
+main{
+    overflow: hidden;
+  }
+  /*COMMON*/
+    a {
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      background: transparent;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-underline-offset: 2px; 
+      /* menu list__name underline position설정 */
+    } 
+    strong {
+      font-size: 100%;
+      line-height: 1.4;
+      background: transparent;
+    }
+    img {
+      /* img(인라인 요소) 하단에 Baseline 공백을 제거 */
+      display: block;
+      max-width: 100%;
+    }
+    /*INNER*/
+    .inner {
+      width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /*BUTTON*/
+    /*promotion*/
+    .btn.btn--promotion {
+      width: 130px;
+      padding: 10px;
+      border: 2px solid #333;
+      border-radius: 4px;
+      color: #333;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      box-sizing: border-box;
+      display: block;
+      transition: .4s;
+    }
+    .btn.btn--promotion:hover {
+      background-color: #333;
+      color: #FFF;
+    }
+    .btn.btn--visual {
+      display: block;
+      width: 28%;
+      height: 100%;
+      margin:0 auto; 
+      border:2px solid #004734; 
+      color: #004734; 
+      font-size: 14px; 
+      line-height: 35px;  
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 5px;
+      word-spacing: -1px;
+      letter-spacing: -1px;
+      transition: background-color .7s, color .7s, border-color .7s; 
+      -webkit-transition: background-color .7s, 
+      color .7s, 
+      border-color .7s;
+    }
+    .btn.btn--visual:hover {
+      background-color:#004734; 
+      color: #fff; 
+    }
+    .btn.btn--white {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      text-align: center;
+      box-sizing: border-box;
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 14px;
+      line-height: 36px;
+      transition: background-color .7s, color .7s, border-color .7s;
+      -webkit-transition: background-color .7s, color .7s, border-color .7s;
+      letter-spacing: -1px;
+    }
+    .btn.btn--white:hover{
+      background-color: #fff;
+      color: #000;
+    }
+    .btn.btn--black {
+      display: block;
+      margin: 0 auto;
+      width: 125px;
+      height: 100%;
+      color: #000;
+      font-size: 15px;
+      line-height: 34px;
+      text-align: center;
+      font-weight: 500;
+      border: 2px solid #000;
+      border-radius: 5px;
+      box-sizing: border-box;
+      transition: background-color .7s, color .7s, border-color .7s;
+      -webkit-transition: background-color .7s, color .7s, border-color .7s;
+      letter-spacing: -1px;
+    }
+    .btn.btn--black:hover{
+      color: #fff;
+      background-color: #000;
+    }
+    .btn.btn--white {
+      color: #FFF;
+      border-color: #FFF;
+    }
+    .btn.btn--white:hover {
+      color: #333;
+      background-color: #FFF;
+    }
+    
+    /*BACK TO POSITION*/
+    .back-to-position {
+      opacity: 0;
+      transition: 3s;
+    }
+    .back-to-position.to-right {
+      transform: translateX(-550px);
+    }
+    .back-to-position.to-left {
+      transform: translateX(550px);
+    }
+    .show .back-to-position {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .show .back-to-position.delay-0 {
+      transition-delay: 0s;
+    }
+    .show .back-to-position.delay-1 {
+      transition-delay: .3s;
+    }
+    .show .back-to-position.delay-2 {
+      transition-delay: .6s;
+    }
+    .show .back-to-position.delay-3 {
+      transition-delay: .9s;
+    }
+    
+  
