@@ -70,8 +70,8 @@ window.addEventListener('scroll', _.throttle(function () {
             opacity: 1,
             display: 'block'
         });
-    }
-}, 300));
+    }  
+}, 300));  
 
 /** gsap 
  * library **/
