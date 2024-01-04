@@ -111,7 +111,7 @@ main{
     }
     .btn.btn--gold:hover{
       background-color: #b68341;
-      color: #000;
+      color: #222;
     }
 
     .btn.btn--black {
@@ -134,6 +134,30 @@ main{
     .btn.btn--black:hover{
       color: #fff;
       background-color: #000;
+    }
+
+    .btn.btn--newYear {
+      display: block;
+      width: 42%;
+      height: 100%;
+      margin:0 auto; 
+      border:2px solid #1a3c34; 
+      color: #1a3c34; 
+      font-size: 15px; 
+      line-height: 34px;  
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 5px;
+      word-spacing: -1px;
+      letter-spacing: -1px;
+      transition: background-color .7s, color .7s, border-color .7s; 
+      -webkit-transition: background-color .7s, 
+      color .7s, 
+      border-color .7s;
+    }
+    .btn.btn--newYear:hover {
+      background-color:#1a3c34; 
+      color: #fff; 
     }
  
 

@@ -12,6 +12,7 @@
   border: 0;
 }
 
+
 /*HEADER*/
 header {
   width: 100%;
@@ -38,6 +39,76 @@ header .sub-menu {
   right: 0;
   display: flex;
 }
+/*반응형 헤더 수정 2023 10.09 */
+@media screen and (max-width:480px) {
+  header > .inner { background:#f6f5ef; border-bottom:1px solid #e5e5e5; height:69px; left:0; position:fixed; top:0; width:100%; z-index:20; }
+  header > .inner .sub-menu { display: none; top: 0; right: 0;}
+  header > .inner .main-menu { display: none;}
+  header > .inner h1 { height:45px; left:10px; position:absolute; top:13px; width:45px;} 
+  header .logo {
+    background-size:45px auto; display:block; height:100%; overflow:hidden; text-indent:-20000px; width:100%;
+  }
+  #main_content {
+    background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_m_disney2_top_bg.jpg");
+    width: auto;
+    height: 291vw;
+    padding-top: 9px;
+    background-position: center top;
+    box-sizing: border-box;
+    margin-top: 70px;
+  }
+  #main_content .set_01 {
+    z-index: 8;
+    top: 17.4%;
+    left: 12.5%;
+    width: 90%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  #main_content .set_02 {
+    z-index: 9;
+    top: 49%;
+    left: 12%;
+    width: 77%;
+    max-width: 100%;
+  }
+  #main_content .set_03 {
+    z-index: 10;
+    top: 64%;
+    left: 17%;
+    width: 84.1%;
+    max-width: 100%;
+  }
+  #main_content .visual_slogan {
+    width: 46%;
+    top: 4.9%;
+    left: 15.5%;
+  }
+  #main_content .btn_slogan {
+    z-index: 10;
+    top: 89%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+    height: auto;
+    bottom: auto;
+  }
+  #main_content .btn_slogan a {
+    width: 36%;
+    color: #fff;
+    border-color: #fff;
+    line-height: 10vw;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 16px;
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+}
+/*********************************/
 header .sub-menu ul.menu {
   font-family: Arial, sans-serif;
   display: flex;
@@ -186,7 +257,7 @@ aside .badges img {
   margin-top: 120px;
   height: 32vw;
   max-width: 100%;
-  background-image: url('../images/2023_autumn_visual_bg.jpg');
+  background-image: url('/images/2024_newYear_top_bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -199,7 +270,8 @@ aside .badges img {
   height: 100%;
 }
 .visual .visual_slogan {
-  top: 33%;
+  top: 30%;
+
 }
 .visual .visual_slogan img {
   max-width: 100%;
@@ -216,28 +288,28 @@ aside .badges img {
 .set_01 {
   position: absolute;
   z-index: 9;
-  top: 11.8%;
-  left: 38.5%;
+  top: 52.1%;
+  left: 50.3%;
   width: 16.4%;
 }
 .set_02 {
   position: absolute;
   z-index: 8;
-  top: 12%;
-  left: 51.4%;
-  width: 17.6%;
+  top: 20.7%;
+  left: 34.5%;
+  width: 20.8%;
 }
 .set_03 {
   position: absolute;
   z-index: 10;
-  top: 17%;
-  right: 18%;
-  width: 18.8%;
+  top: 13%;
+  right: 22.3%;
+  width: 16.6%;
 }
 
 .visual .btn_slogan {
-  z-index: 11;
-  top: 58%;
+  z-index: 10;
+  top: 65%;
   text-align: center;
   height: 38px;
 }
@@ -251,8 +323,8 @@ aside .badges img {
 .visual .visual_slogan,
 .visual .btn_slogan {
   position: absolute;
-  width: 22%;
-  left: 12%;
+  width: 15%;
+  left: 15.4%;
 }
 
 /* notice */
@@ -600,7 +672,7 @@ aside .badges img {
 
 /* 메인 원두 리워드  섹션  */
 #main-bean-wrap {
-  background-image: url('../images/2023_autumn_promotion_bg.jpg');    
+  background-image: url('/images/2024_newYear_promotion_bg.jpg');    
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -622,10 +694,11 @@ aside .badges img {
 }
 .main-bean-txt {
   position: absolute;
-  width: 25%;
-  right: 7.2%;
-  top: 30.9%;
+  width: 37.63%;
+  right: 8.6%;
+  top: 31.8%;
   z-index: 9;
+  max-width: 400px;
 }
 .main-bean-txt .btn_detail {
   width: 125px;
@@ -636,7 +709,7 @@ aside .badges img {
 /* 리저브 섹션 */
 
 #first_reserve_wrap {
-  background-image: url('../images/2023reserve_bg.jpg');
+  background-image: url('../images/2024reserve_bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -692,7 +765,7 @@ aside .badges img {
 /* favorite Section */
 #fav_wrap {
   position: relative;
-  background: url('../images/2023_autumn_fav_bg.jpg') center center fixed no-repeat transparent;
+  background: url('../images/2024_new-year_fav_bg.jpg') center center fixed no-repeat transparent;
   background-size: auto 87%;
   background-position: bottom;
   height: 800px;
@@ -739,7 +812,7 @@ aside .badges img {
   right: -163px;
   width: 912px;
   height: 575px;
-  background-image: url('../images/2023_autumn_fav_img.png');
+  background-image: url('../images/2024_new-year_fav_image.png');
 }
 .fav_btn {
   position: absolute;
