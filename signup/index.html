@@ -22,6 +22,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/signin.css">
   <link rel="stylesheet" href="../css/style.css">
   
   <!-- fonts -->
@@ -361,8 +362,28 @@
           </ul>
       </div>
     </header>
-    <section class="signup">
-        123
+    <section id="signin">
+        <h2>로그인</h2>
+        <div class="signin__card">
+            <div class="signin__card__title">
+                <span>Welcome!</span>            
+                    스타벅스 코리아에 오신 것을 환영합니다.
+            </div>
+            <form action="javascript:void(0)">
+                <input type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
+                <input type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
+                <input type="submit" value="로그인" class="form__login">
+                <p>
+                    * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다. <br>
+                    * 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
+                </p>
+            </form>
+            <div class="siginin__card__utils">
+                <a href="javascript:void(0)">회원가입</a>
+                <a href="javascript:void(0)">아이디 찾기</a>
+                <a href="javascript:void(0)">비밀번호 찾기</a>
+            </div>
+        </div>
     </section>
     <!-- 푸터 -->
     <footer id="footer">
