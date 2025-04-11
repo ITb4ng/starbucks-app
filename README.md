@@ -6,4 +6,4 @@ dev - 2025 Spring 리뉴얼 (이미지, 프로모션) <br>
 ![image](https://github.com/user-attachments/assets/704b93d1-c7a6-4a65-9dff-9b568ea6196a)
 
 release - 마크업, 뱃지, JQuery적용 <br>
-master - 2025StarbucksNew
+master - starbucks2025
