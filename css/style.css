@@ -39,76 +39,7 @@ header .sub-menu {
   right: 0;
   display: flex;
 }
-/*반응형 헤더 수정 2023 10.09 */
-@media screen and (max-width:480px) {
-  header > .inner { background:#f6f5ef; border-bottom:1px solid #e5e5e5; height:69px; left:0; position:fixed; top:0; width:100%; z-index:20; }
-  header > .inner .sub-menu { display: none; top: 0; right: 0;}
-  header > .inner .main-menu { display: none;}
-  header > .inner h1 { height:45px; left:10px; position:absolute; top:13px; width:45px;} 
-  header .logo {
-    background-size:45px auto; display:block; height:100%; overflow:hidden; text-indent:-20000px; width:100%;
-  }
-  #main_content {
-    background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_m_disney2_top_bg.jpg");
-    width: auto;
-    height: 291vw;
-    padding-top: 9px;
-    background-position: center top;
-    box-sizing: border-box;
-    margin-top: 70px;
-  }
-  #main_content .set_01 {
-    z-index: 8;
-    top: 17.4%;
-    left: 12.5%;
-    width: 90%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  #main_content .set_02 {
-    z-index: 9;
-    top: 49%;
-    left: 12%;
-    width: 77%;
-    max-width: 100%;
-  }
-  #main_content .set_03 {
-    z-index: 10;
-    top: 64%;
-    left: 17%;
-    width: 84.1%;
-    max-width: 100%;
-  }
-  #main_content .visual_slogan {
-    width: 46%;
-    top: 4.9%;
-    left: 15.5%;
-  }
-  #main_content .btn_slogan {
-    z-index: 10;
-    top: 89%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 0;
-    height: auto;
-    bottom: auto;
-  }
-  #main_content .btn_slogan a {
-    width: 36%;
-    color: #fff;
-    border-color: #fff;
-    line-height: 10vw;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 3px;
-    font-size: 16px;
-    word-spacing: 0;
-    letter-spacing: 0;
-  }
-}
-/*********************************/
+
 header .sub-menu ul.menu {
   font-family: Arial, sans-serif;
   display: flex;
@@ -252,12 +183,13 @@ aside .badges img {
   width: 100%;
 }
 
-/* Section Main Visual_set */
+/* Section Main 
+   "Desktop" Visual_set */
 .visual {
   margin-top: 120px;
-  height: 32vw;
+  height: 32.3vw;
   max-width: 100%;
-  background-image: url('/images/2024_newYear_top_bg.jpg');
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_top_bg_250409.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -270,8 +202,7 @@ aside .badges img {
   height: 100%;
 }
 .visual .visual_slogan {
-  top: 30%;
-
+  top: 30.031%;
 }
 .visual .visual_slogan img {
   max-width: 100%;
@@ -288,31 +219,57 @@ aside .badges img {
 .set_01 {
   position: absolute;
   z-index: 9;
-  top: 52.1%;
-  left: 50.3%;
-  width: 16.4%;
+  top: 20.123%;
+  left: 54.7%;
+  width: 14.05%;
 }
 .set_02 {
   position: absolute;
   z-index: 8;
-  top: 20.7%;
-  left: 34.5%;
-  width: 20.8%;
+  top: 18.111%;
+  left: 43.15%;
+  width: 14.05%;
 }
 .set_03 {
   position: absolute;
-  z-index: 10;
-  top: 13%;
-  right: 22.3%;
-  width: 16.6%;
+  z-index: 8;
+  top: 19.969%;
+  left: 66.15%;
+  width: 14.05%;
 }
 
 .visual .btn_slogan {
   z-index: 10;
-  top: 65%;
+  top: 64.241%;
+  left: 10.7%;
   text-align: center;
   height: 38px;
 }
+
+/* 2025__Visual Main btn */
+.visual .btn_slogan a {
+  width: 29%;
+  min-width: 125px;
+  margin: 0 auto;
+  color: #0092c8;
+  border: 2px solid #0092c8;
+  transition: background-color .7s, color .7s, border-color .7s;
+  -webkit-transition: background-color .7s, color .7s, border-color .7s;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  font-size: 15px;
+  line-height: 34px;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.visual .btn_slogan a:hover {
+  background-color: #0092c8;
+  color: #fff;
+  text-decoration: underline;
+}
+
 
 /* Visual Overlap */
   /* 가시효과   */
@@ -323,8 +280,8 @@ aside .badges img {
 .visual .visual_slogan,
 .visual .btn_slogan {
   position: absolute;
-  width: 15%;
-  left: 15.4%;
+  width: 25.25%;
+  left: 10.7%;
 }
 
 /* notice */
@@ -334,7 +291,7 @@ aside .badges img {
 .notice .notice-line .bg-left {
   width: 50%;
   height: 100%;
-  background-color: #333;
+  background-color: #000;
   position: absolute;
   top: 0;
   left: 0;
@@ -355,10 +312,13 @@ aside .badges img {
 .notice .notice-line .inner__left {
   width: 60%;
   height: 100%;
-  background-color: #333;
+  background-color: #000;
   display: flex;
   align-items: center;
+  padding-left: 20px;
 }
+
+
 .notice .notice-line .inner__left .speaker {
   color: #fff;
   background: url('../images/notice-line_speker.png') center center no-repeat;
@@ -369,19 +329,34 @@ aside .badges img {
 .notice .notice-line .inner__left .swiper-container {
   height: 62px;
   flex-grow: 1;
+  padding-left: 20px;
 }
 .notice .notice-line .inner__left .swiper-slide {
   height: 62px;
   display: flex;
   align-items: center;
 }
-.notice .notice-line .inner__left .swiper-slide-active:hover a{
+/* .notice .notice-line .inner__left .swiper-slide-active:hover a{
   text-decoration: underline;
   text-underline-position: under;
-}
+} 
+   공지사항 밑줄 제거  
+*/
+
+/* 공지사항 
+   텍스트 길이 제한
+   04/25 추가(말 줄임표)
+*/
 .notice .notice-line .inner__left .swiper-slide a {
   color: #fff;
+  display: inline-block;
+  width: 500px;
+  padding: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .notice .notice-line .inner__left .notice-line__more {
   width: 62px;
   height: 62px;
@@ -404,6 +379,9 @@ aside .badges img {
   justify-content: flex-end;
   align-items: center;
 }
+
+
+
 .notice .notice-line .inner__right h3 {
   font-size: 17px;
   font-weight: 700;
@@ -548,7 +526,6 @@ aside .badges img {
 
 /* Rewards Code Section */
  
-
 #new-rewards_wrap {
   padding-top: 30px; 
   padding-bottom: 40px; 
@@ -574,22 +551,25 @@ aside .badges img {
   margin-right: 40px; 
   text-align: center;
 }
+
 .new-rewards_logo img {
   width: 176px;
 }
 
 .new-rewards_conts {
   box-sizing: border-box;
-  float: left;width: calc(83.7% - 80px);
+  float: left;
+  width: calc(83.7% - 80px);
   padding-right: 30px;
   color: #fff;
   letter-spacing: 0.5px;
 }	
+
+
 .new-rewards_conts .info-cont {
   position: relative; 
   margin-bottom: 22px; 
-  border-bottom: 1px 
-  solid #4b615b;
+  border-bottom: 1px solid #4b615b;
 }
 .new-rewards_conts .info-cont_txt {
   margin-bottom: 12px;
@@ -622,6 +602,8 @@ aside .badges img {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
 /* Common */
 .new-rewards_conts .btn-signin_group a:hover,
 .new-rewards_conts .btn_egift a:hover {
@@ -634,7 +616,7 @@ aside .badges img {
   position: absolute; 
   top: 0; 
   right: 0; 
-  width: 183px; 
+  width: 193px; 
   height: 38px; 
   line-height: 36px; 
   text-align: center; 
@@ -669,14 +651,46 @@ aside .badges img {
   /* letter-spacing: -1px; */
 }
 
+@media screen and (max-width: 1020px) {
+  .new-rewards_logo {
+      width: 35%;
+      margin-top: 30px;
+      margin-right: 30px;
+  }
+  .new-rewards_logo img {
+    width: auto;
+    max-width: 100%;
+  }
+  .new-rewards_inner .pc-br {
+    display: block;
+  }
+  .new-rewards_conts .btn-signin_group {
+    position: static;
+    display: inline-block;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    margin-bottom: 20px;
+  }
+  .new-rewards_conts {
+    width: calc(65% - 80px);
+  }
+  .new-rewards_conts .btn_egift {
+    position: static;
+    display: inline-block;
+    margin:20px 0; 
+  }
+}
+
+
 
 /* 메인 원두 리워드  섹션  */
 #main-bean-wrap {
-  background-image: url('/images/2024_newYear_promotion_bg.jpg');    
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_promotion_bg.jpg');    
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 572px;
+  height: 578px;
 }
 .main-bean-inner {
   max-width: 1124px;
@@ -684,32 +698,34 @@ aside .badges img {
   height: 100%;
   margin: 0 auto;
 }
+
 .main-bean-imgBox {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15.917%;
+  /* transform: translateY(-50%); */
   z-index: 9;
-  width: 45%;
-  left: 13.6%;
+  width: 21.072%;
+  left: 28.5694%;
+  margin-left: -5%;
 }
 .main-bean-txt {
   position: absolute;
-  width: 37.63%;
-  right: 8.6%;
-  top: 31.8%;
   z-index: 9;
-  max-width: 400px;
+  top: calc(50% + 3px);
+  right: 13.8494%;
+  transform: translateY(-50%);
+  width: 36.072%;
 }
 .main-bean-txt .btn_detail {
   width: 125px;
   height: 38px;
-  margin-top: 39px;
+  margin-top: 40px;
 }
 
 /* 리저브 섹션 */
 
 #first_reserve_wrap {
-  background-image: url('../images/2024reserve_bg.jpg');
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/250305_pc_reserve_bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -726,23 +742,32 @@ aside .badges img {
 .first_reserve_title {
   position: relative;
   z-index: 10;
-  padding-top: 68px;
+  padding-top: 64px;
   max-width: 1080px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
-.first_reserve_title img {
+.first_reserve_title img,
+.first_reserve_visual img {
   width: auto;
-  transform: translateX(161px);
+}
+.first_reserve_visual .reserve_visual-m {
+  display: none;
+}
+
+.first_reserve_title img {
+  transform: translateX(70px);
 }
 .first_reserve_visual {
-  right: -16%;
+  right: -2%;
   display: block;
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
+
 .first_reserve_visual img {
   width: auto;
   max-width: none;
@@ -751,10 +776,8 @@ aside .badges img {
   position: relative;
   z-index: 10;
   max-width: 1080px;
-  margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 254px;
+  margin: 30px auto;
+  padding-left: 306px;
   box-sizing: border-box;
 }
 .first_reserve_detail-btn {
@@ -765,7 +788,7 @@ aside .badges img {
 /* favorite Section */
 #fav_wrap {
   position: relative;
-  background: url('../images/2024_new-year_fav_bg.jpg') center center fixed no-repeat transparent;
+  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_bg_250409.jpg') center center fixed no-repeat transparent;
   background-size: auto 87%;
   background-position: bottom;
   height: 800px;
@@ -812,7 +835,7 @@ aside .badges img {
   right: -163px;
   width: 912px;
   height: 575px;
-  background-image: url('../images/2024_new-year_fav_image.png');
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_img_250409.png');
 }
 .fav_btn {
   position: absolute;

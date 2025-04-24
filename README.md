@@ -1,11 +1,3 @@
-## 기능 개발
-branch <br>
-master - starbucks2025 &lt;main&gt; <br>
-release - 25.0.0 &lt;아코디언 적용X&gt;<br>
-release - 25.0.1 &lt;아코디언 적용O&gt;<br>
-feature/signin <br>
-feature/responsive <br>
-dev &lt;jQuery 작업&gt;
 # 0419 
 <del>feature/signin  로그인,회원가입 페이지</del>
 <br>
