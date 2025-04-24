@@ -1,9 +1,26 @@
-## 기능 개발 시작
-feature/signin  로그인,회원가입 페이지 <br>
-feature/responsive 반응형 개발 (<u>Desktop</u>, Laptop, Mobile) <br>
-dev - 2025 Spring 리뉴얼 (이미지, 프로모션) <br>
+## 기능 개발
+branch <br>
+master - starbucks2025 &lt;main&gt; <br>
+release - 25.0.0 &lt;아코디언 적용X&gt;<br>
+release - 25.0.1 &lt;아코디언 적용O&gt;<br>
+feature/signin <br>
+feature/responsive <br>
+dev &lt;jQuery 작업&gt;
+# 0419 
+<del>feature/signin  로그인,회원가입 페이지</del>
+<br>
+# 0425 
+feature/responsive 반응형 <br>
+<ul>
+  <li><del>(Desktop)</del> <br></li>
+  <li>Laptop<br></li>
+  <li>Mobile <br></li>
+</ul>
+
 ![image](https://github.com/user-attachments/assets/1bc64985-e9d7-42d7-95cc-00f30243f46a)
 ![image](https://github.com/user-attachments/assets/704b93d1-c7a6-4a65-9dff-9b568ea6196a)
 
-release - 마크업, 뱃지, JQuery적용 <br>
+dev - (헤더, 푸터, 아코디언) <br>
+release - 크로스 브라우징 이슈 해결 <br>
 master - starbucks2025
+
