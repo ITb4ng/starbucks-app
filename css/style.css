@@ -18,12 +18,80 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 9999;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
 }
 header > .inner {
+  width: 100%;
+  max-width: 1100px;
   height: 120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+header .header-toggle,
+header .header-close,
+header .main-menu .item > .item__name {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+}
+header .header-toggle,
+header .header-close,
+header .header-overlay {
+  display: none;
+}
+header .header-toggle {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+header .header-toggle span[aria-hidden="true"] {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #1e1e1e;
+}
+header .header-close {
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+header .header-close .material-icons {
+  font-size: 28px;
+  color: #222;
+}
+header .header-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+header .header-nav {
+  position: relative;
+  height: 100%;
+}
+header .header-nav__top {
+  position: relative;
 }
 header .logo {
   height: 75px;
@@ -38,6 +106,8 @@ header .sub-menu {
   top: 10px;
   right: 0;
   display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 header .sub-menu ul.menu {
@@ -112,28 +182,35 @@ header .main-menu {
   z-index: 1;
   display: flex;
 }
-header .main-menu .item .item__name {
+header .main-menu .item > .item__name {
+  width: 100%;
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   color: #333;
+  cursor: pointer;
 }
-header .main-menu .item .item__name:hover {
+header .main-menu .item > .item__name:hover {
   color: #669900;
   text-decoration: underline;
-  cursor: pointer;
   text-underline-position: under;
 }
-header .main-menu .item:hover .item__name {
+header .main-menu .item:hover > .item__name {
   background-color: #2C2A29;
   color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+header .main-menu .item > .item__name:focus-visible {
+  outline: 2px solid #669900;
+  outline-offset: -2px;
   border-radius: 6px 6px 0 0;
 }
 header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
+  top: 120px;
   display: none;
 } 
 header .main-menu .item:hover .item__contents {
@@ -143,8 +220,12 @@ header .main-menu .item .item__contents .contents__menu {
   background-color: #2C2A29;
 }
 header .main-menu .item .item__contents .contents__menu > ul {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 20px 0 20px 0;
   display: flex;
+  box-sizing: border-box;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li {
   width: 220px;
@@ -162,7 +243,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   font-size: 12px;
   color: #999;
   cursor: pointer;
-  line-height: .6;
+  line-height: 1.4;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   text-decoration: underline;

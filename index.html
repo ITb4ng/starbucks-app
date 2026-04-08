@@ -23,9 +23,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/app.css">
-  <link rel="stylesheet" href="./css/common.css">
   
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -58,7 +58,19 @@
               <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
             </a>
           </h1>
-          <div class="sub-menu">
+          <button type="button" class="header-toggle" aria-controls="header-nav" aria-expanded="false">
+            <span class="blind">전체 메뉴 열기</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="header-nav" id="header-nav" aria-label="전체 메뉴">
+          <div class="header-nav__top">
+            <button type="button" class="header-close">
+              <span class="material-icons" aria-hidden="true">close</span>
+              <span class="blind">전체 메뉴 닫기</span>
+            </button>
+            <div class="sub-menu">
             <ul class="menu">
               <li>
                 <a href="./signup/">Sign In</a>  
@@ -78,9 +90,10 @@
               <span class="material-icons">search</span>
             </div>
           </div>
+          </div>
           <ul class="main-menu">
             <li class="item">
-              <div class="item__name">COFFEE</div> <!--오버시 가려짐 ->  보여짐-->
+              <button class="item__name" type="button" aria-expanded="false">COFFEE</button> <!--오버시 가려짐 ->  보여짐-->
               <div class="item__contents">  <!--가려짐-->
                 <div class="contents__menu">
                   <ul class="inner">
@@ -135,7 +148,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">MENU</div>
+              <button class="item__name" type="button" aria-expanded="false">MENU</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -200,7 +213,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">STORE</div>
+              <button class="item__name" type="button" aria-expanded="false">STORE</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -226,7 +239,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">RESPONSIBILITY</div>
+              <button class="item__name" type="button" aria-expanded="false">RESPONSIBILITY</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -273,7 +286,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">STARBUCKS REWARDS</div>
+              <button class="item__name" type="button" aria-expanded="false">STARBUCKS REWARDS</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -308,7 +321,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">CORPORATE SALES</div>
+              <button class="item__name" type="button" aria-expanded="false">CORPORATE SALES</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -334,7 +347,7 @@
               </div>
             </li>
             <li class="item">
-              <div class="item__name">WHAT'S NEW</div>
+              <button class="item__name" type="button" aria-expanded="false">WHAT'S NEW</button>
               <div class="item__contents">
                 <div class="contents__menu">
                   <ul class="inner">
@@ -375,7 +388,9 @@
               </div>
             </li>
           </ul>
+          </div>
       </div>
+      <div class="header-overlay"></div>
       
     </header>
 
