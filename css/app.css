@@ -31,12 +31,377 @@
   }
 }
 
-/* 태블릿 | 768px ~ 959px */
-@media screen and (max-width: 959px) {
+/* =========================================================
+   데스크탑 보정 구간 | 951px 이상
+   - Hero는 style.css에서 absolute 포스터형으로 처리
+   - 여기서는 데스크탑에서 모바일 CTA가 노출되지 않도록 보강
+========================================================= */
+
+/* =========================================================
+   태블릿 ~ 모바일 시작 | 950px 이하
+   - Hero는 대표 음료 1개만
+   - 모바일 CTA 활성화
+========================================================= */
+@media screen and (max-width: 1020px) {
+  .new-rewards_logo {
+    width: 35%;
+    margin-top: 30px;
+    margin-right: 30px;
+  }
+
+  .new-rewards_logo img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .new-rewards_inner .pc-br {
+    display: block;
+  }
+
+  .new-rewards_conts .btn-signin_group {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .new-rewards_conts {
+    width: calc(65% - 80px);
+  }
+
+  .new-rewards_conts .btn_egift {
+    position: static;
+    display: inline-block;
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  /* Mobile polish: soften the header/hero seam */
+  header {
+    border-bottom-color: rgba(200, 196, 199, 0.58);
+  }
+
   body.header-nav-open {
     overflow: hidden;
   }
 
+  /* Mobile polish: bottom sheet density */
+  .order-choice {
+    align-items: flex-end;
+    padding: 20px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .order-choice__panel {
+    width: min(100%, 420px);
+    max-height: min(680px, calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)));
+    padding: 20px 18px calc(18px + env(safe-area-inset-bottom, 0px));
+    border-radius: 24px;
+    transform: translateY(calc(100% + 24px));
+  }
+
+  .order-choice.is-open .order-choice__panel {
+    transform: translateY(0);
+  }
+
+  .order-choice__eyebrow {
+    margin-bottom: 7px;
+    font-size: 11px;
+  }
+
+  .order-choice__panel h2 {
+    font-size: 23px;
+    line-height: 1.24;
+  }
+
+  .order-choice__panel > p {
+    margin-top: 10px;
+    font-size: 13.5px;
+    line-height: 1.56;
+  }
+
+  .order-choice__actions {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .order-choice__button {
+    min-height: 48px;
+    font-size: 14px;
+  }
+
+  /* Mobile polish: hero density */
+  .visual {
+    margin-top: 84px;
+    min-height: 0;
+    padding: 16px 0 28px;
+    background-color: #edf4cc;
+    background-image:
+      linear-gradient(
+        180deg,
+        #f6f5f0 0%,
+        rgba(246, 245, 240, 0.94) 10%,
+        rgba(246, 245, 240, 0.56) 20%,
+        rgba(246, 245, 240, 0.14) 34%,
+        rgba(246, 245, 240, 0) 46%
+      ),
+      url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_top_bg_mo_260220.jpg");
+    background-position: center top, center top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+  }
+
+  .visual .visual-inner {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-width: none;
+    max-height: none;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "slogan"
+      "stage"
+      "landing";
+    justify-items: center;
+    row-gap: 0;
+    background-image: none;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  .visual .visual_slogan,
+  .visual .btn_slogan {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .visual .visual_slogan {
+    grid-area: slogan;
+    align-self: auto;
+    width: min(344px, 60vw);
+    margin: 0 auto 8px;
+  }
+
+  .visual .btn_slogan {
+    display: none !important;
+  }
+
+  .visual .visual_set {
+    position: relative;
+    grid-area: stage;
+    width: min(100%, 420px);
+    max-width: 420px;
+    margin: 0;
+    height: auto;
+    align-self: auto;
+    overflow: visible;
+  }
+
+  .visual .visual_stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 356px;
+    padding: 0;
+    gap: 0;
+  }
+
+  .visual .visual_stage__item {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    flex: 0 0 auto;
+    transform: none;
+  }
+
+  /* 950px 이하에서는 대표 음료 1개만 */
+  .visual .visual_stage__item--drink-01,
+  .visual .visual_stage__item--drink-02,
+  .visual .visual_stage__item--drink-04,
+  .visual .visual_stage__item--drink-05 {
+    display: none !important;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    display: block !important;
+    order: 1;
+    width: clamp(232px, 36vw, 296px);
+    margin: 0 auto;
+    z-index: 2;
+    transform: translateX(5.5%);
+  }
+
+  .visual .visual_stage__item--drink-03 img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transform-origin: center bottom;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  /* Mobile polish: CTA hierarchy */
+  .visual .hero-mobile-landing {
+    grid-area: landing;
+    display: block !important;
+    width: min(364px, 100%);
+    margin-top: 18px;
+    padding: 10px 12px 10px;
+    border-radius: 20px;
+    background: linear-gradient(
+      180deg,
+      rgba(246, 245, 239, 0.56) 0%,
+      rgba(246, 245, 239, 0.88) 24%,
+      rgba(246, 245, 239, 0.96) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    box-shadow: 0 10px 22px rgba(30, 57, 50, 0.07);
+  }
+
+  .visual .hero-mobile-landing::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 2px;
+    margin: 0 auto 8px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 98, 65, 0) 0%,
+      rgba(0, 98, 65, 0.16) 24%,
+      rgba(0, 98, 65, 0.26) 50%,
+      rgba(0, 98, 65, 0.16) 76%,
+      rgba(0, 98, 65, 0) 100%
+    );
+  }
+
+  .visual .hero-copy-mobile {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 9px;
+  }
+
+  .visual .hero-copy-mobile__text {
+    max-width: 22ch;
+    margin: 0 auto;
+    color: #1e3932;
+    font-size: 12.5px;
+    line-height: 1.54;
+    text-align: center;
+    letter-spacing: -0.01em;
+  }
+
+  .visual .hero-actions {
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 7px;
+  }
+
+  .visual .btn--hero-primary,
+  .visual .btn--hero-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .visual .btn--hero-primary {
+    min-height: 45px;
+    color: #fff;
+    background-color: #006241;
+    border: 1px solid #006241;
+    font-weight: 700;
+    box-shadow: 0 8px 14px rgba(0, 98, 65, 0.14);
+  }
+
+  .visual .btn--hero-primary:hover {
+    background-color: #004f33;
+    border-color: #004f33;
+  }
+
+  .visual .btn--hero-secondary {
+    min-height: 43px;
+    color: #31584d;
+    background-color: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(30, 57, 50, 0.16);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    font-weight: 600;
+  }
+
+  .visual .btn--hero-secondary:hover {
+    color: #24473d;
+    border-color: rgba(0, 98, 65, 0.28);
+    background-color: #fff;
+  }
+
+  .visual .hero-link {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #5f746d;
+    font-size: 10.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    opacity: .9;
+  }
+
+  .visual .hero-link__label {
+    border-bottom: 1px solid rgba(80, 103, 96, 0.35);
+    line-height: 1.2;
+  }
+
+  .visual .hero-link__icon {
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  /* Mobile polish: season card rhythm */
+  .season-drinks__copy h3 {
+    min-height: 2.45em;
+    font-size: 18px;
+  }
+
+  .season-drinks__card--featured .season-drinks__copy h3 {
+    font-size: 20px;
+  }
+
+  .season-drinks__copy p {
+    display: -webkit-box;
+    overflow: hidden;
+    min-height: calc(1.58em * 3);
+    font-size: 12.5px;
+    line-height: 1.58;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .season-drinks__copy a {
+    min-width: 118px;
+    height: 38px;
+  }
+
+  /* 모바일 헤더 */
   header > .inner {
     height: 84px;
     padding: 0 18px;
@@ -83,19 +448,16 @@
     height: 100vh;
     padding: 24px 20px 32px;
     background-color: #f6f5ef;
-    box-sizing: border-box;
     overflow-y: auto;
     transform: translateX(calc(100% + 32px));
     visibility: hidden;
     pointer-events: none;
-    box-shadow: -16px 0 40px rgba(0, 0, 0, .14);
+    box-shadow: -16px 0 40px rgba(0, 0, 0, 0.14);
     z-index: 10001;
   }
 
   header.is-nav-ready .header-nav {
-    transition:
-      transform .4s ease,
-      visibility 0s linear .4s;
+    transition: transform 0.4s ease, visibility 0s linear 0.4s;
   }
 
   header.is-nav-open .header-nav {
@@ -105,9 +467,7 @@
   }
 
   header.is-nav-ready.is-nav-open .header-nav {
-    transition:
-      transform .4s ease,
-      visibility 0s linear 0s;
+    transition: transform 0.4s ease, visibility 0s linear 0s;
   }
 
   header .header-nav__top {
@@ -201,7 +561,7 @@
     border-right: 2px solid #1e3932;
     border-bottom: 2px solid #1e3932;
     transform: translateY(-70%) rotate(45deg);
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
   }
 
   header .main-menu .item.is-open > .item__name {
@@ -275,10 +635,201 @@
     visibility: visible;
     pointer-events: auto;
   }
+
+  /* 시즌 카드 섹션: 겹침 방지 */
+  .season-drinks {
+    padding: 72px 20px 80px;
+  }
+
+  .season-drinks__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    row-gap: 15px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .season-drinks__card {
+    min-width: 0;
+    height: 100%;
+    padding: 20px 16px 18px;
+    border-radius: 24px;
+  }
+
+  .season-drinks__card--featured {
+    grid-column: span 1;
+  }
+
+  .season-drinks__visual,
+  .season-drinks__card--featured .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .season-drinks__visual::after {
+    display: none;
+  }
+
+  .season-drinks__visual picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .season-drinks__visual img,
+  .season-drinks__card--featured .season-drinks__visual img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .season-drinks__copy {
+    min-width: 0;
+    gap: 10px;
+    padding-top: 16px;
+  }
+
+  .season-drinks__copy h3 {
+    min-height: 2.7em;
+    font-size: 18px;
+  }
+
+  .season-drinks__card--featured .season-drinks__copy h3 {
+    font-size: 20px;
+  }
+
+  .season-drinks__copy p {
+    min-height: 5.2em;
+    font-size: 13px;
+  }
 }
 
-/* 모바일 | 767px 이하 */
+/* 899px 이하 */
+@media screen and (max-width: 899px) {
+  .visual {
+    padding: 16px 0 24px;
+    background-position: center top, 54% 0;
+  }
+
+  .visual .visual_slogan {
+    width: min(320px, 58vw);
+    margin-bottom: 6px;
+  }
+
+  .visual .visual_set {
+    width: min(100%, 392px);
+    max-width: 392px;
+  }
+
+  .visual .visual_stage {
+    min-height: 336px;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    width: clamp(222px, 40vw, 282px);
+    transform: translateX(5%);
+  }
+
+  .visual .hero-mobile-landing {
+    width: min(388px, 100%);
+    margin-top: 16px;
+    padding: 10px 10px 9px;
+  }
+}
+
+/* 767px 이하 */
 @media screen and (max-width: 767px) {
+  .visual {
+    margin-top: 68px;
+    padding: 14px 0 22px;
+    background-position: center top, center top;
+  }
+
+  .visual .visual-inner {
+    padding: 0 16px;
+  }
+
+  .visual .visual_slogan {
+    width: min(258px, 68vw);
+    margin-bottom: 8px;
+  }
+
+  .visual .visual_set {
+    width: min(100%, 360px);
+    max-width: 360px;
+  }
+
+  .visual .visual_stage {
+    min-height: 304px;
+    padding-top: 0;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    width: clamp(214px, 54vw, 254px);
+    margin-bottom: 0;
+    transform: translateX(4.5%);
+  }
+
+  .visual .visual_stage__item--drink-03 img {
+    transform: scale(0.99);
+  }
+
+  .visual .hero-mobile-landing {
+    width: min(324px, 100%);
+    margin-top: 14px;
+    padding: 11px 12px 10px;
+    border-radius: 18px;
+    box-shadow: 0 8px 18px rgba(30, 57, 50, 0.06);
+  }
+
+  .visual .hero-mobile-landing::before {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+
+  .visual .hero-copy-mobile {
+    margin-bottom: 9px;
+  }
+
+  .visual .hero-copy-mobile__text {
+    max-width: 22ch;
+    font-size: 12px;
+    line-height: 1.56;
+  }
+
+  .visual .hero-actions {
+    gap: 6px;
+  }
+
+  .visual .btn--hero-primary,
+  .visual .btn--hero-secondary {
+    font-size: 13.5px;
+    border-radius: 13px;
+  }
+
+  .visual .btn--hero-primary {
+    min-height: 46px;
+  }
+
+  .visual .btn--hero-secondary {
+    min-height: 42px;
+  }
+
+  .visual .hero-link {
+    font-size: 11.5px;
+    padding-top: 1px;
+  }
+
   header > .inner {
     height: 68px;
     padding: 0 14px;
@@ -334,5 +885,420 @@
   header .main-menu .item .item__contents .contents__menu > ul > li ul li {
     font-size: 12px;
   }
+
+  .season-drinks {
+    padding: 64px 18px 72px;
+  }
+
+  .season-drinks__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    row-gap: 18px;
+  }
+
+  .season-drinks__card {
+    padding: 18px 15px 18px;
+    border-radius: 22px;
+  }
+
+  .season-drinks__card--featured {
+    grid-column: span 1;
+  }
+
+  .season-drinks__visual,
+  .season-drinks__card--featured .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border-radius: 18px;
+  }
+
+  .season-drinks__visual img,
+  .season-drinks__card--featured .season-drinks__visual img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .season-drinks__copy h3 {
+    min-height: 2.7em;
+    font-size: 17px;
+  }
+
+  .season-drinks__copy p {
+    min-height: calc(1.56em * 3);
+    font-size: 12px;
+    line-height: 1.56;
+  }
 }
-  
+
+/* 540px 이하 */
+@media screen and (max-width: 540px) {
+  .visual {
+    padding: 10px 0 20px;
+  }
+
+  .visual .visual-inner {
+    padding: 0 14px;
+  }
+
+  .visual .visual_slogan {
+    width: min(212px, 70vw);
+    margin-bottom: 4px;
+  }
+
+  .visual .visual_stage {
+    min-height: 262px;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    width: clamp(200px, 70vw, 236px);
+    transform: translateX(4%);
+  }
+
+  .visual .visual_stage__item--drink-03 img {
+    transform: scale(0.98);
+  }
+
+  .visual .hero-mobile-landing {
+    width: min(284px, 100%);
+    margin-top: 12px;
+    padding: 10px 10px 9px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(30, 57, 50, 0.05);
+  }
+
+  .visual .hero-mobile-landing::before {
+    width: 26px;
+    margin-bottom: 6px;
+  }
+
+  .visual .hero-copy-mobile {
+    margin-bottom: 8px;
+  }
+
+  .visual .hero-copy-mobile__text {
+    max-width: 19ch;
+    font-size: 10.5px;
+    line-height: 1.46;
+  }
+
+  .visual .hero-actions {
+    gap: 5px;
+  }
+
+  .visual .btn--hero-primary,
+  .visual .btn--hero-secondary {
+    padding: 0 14px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  .visual .btn--hero-primary {
+    min-height: 42px;
+  }
+
+  .visual .btn--hero-secondary {
+    min-height: 40px;
+  }
+
+  .visual .hero-link {
+    font-size: 10px;
+  }
+
+  .season-drinks {
+    padding: 36px 14px 64px;
+  }
+
+  .season-drinks__heading {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .season-drinks__heading p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+
+  .season-drinks__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    row-gap: 18px;
+  }
+
+  .season-drinks__card,
+  .season-drinks__card--featured {
+    grid-column: span 1;
+  }
+
+  .season-drinks__card {
+    border-radius: 22px;
+    padding: 14px 14px 18px;
+  }
+
+  .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .season-drinks__card--featured .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Mobile card visual: keep the higher-res asset sharp by preserving its ratio and only trimming outer whitespace a little. */
+  .season-drinks__visual picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .season-drinks__visual img,
+  .season-drinks__card--featured .season-drinks__visual img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+  }
+
+  .season-drinks__copy {
+    gap: 8px;
+    padding-top: 12px;
+  }
+
+  .season-drinks__copy h3 {
+    min-height: 2.45em;
+    font-size: 17px;
+  }
+
+  .season-drinks__copy p {
+    min-height: calc(1.54em * 3);
+    font-size: 12px;
+    line-height: 1.54;
+  }
+}
+
+/* 390px 이하 */
+@media screen and (max-width: 390px) {
+  .visual {
+    padding: 18px 0 18px;
+    background-position: center top, 52% 0;
+  }
+
+  .visual .visual-inner {
+    padding: 0 12px;
+  }
+
+  .visual .visual_slogan {
+    width: min(192px, 68vw);
+  }
+
+  .visual .visual_stage {
+    min-height: 236px;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    width: clamp(188px, 74vw, 216px);
+    transform: translateX(3.5%);
+  }
+
+  .visual .visual_stage__item--drink-03 img {
+    transform: scale(0.97);
+  }
+
+  .visual .hero-mobile-landing {
+    width: min(262px, 100%);
+    margin-top: 20px;
+    padding: 9px 8px 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(30, 57, 50, 0.04);
+  }
+
+  .visual .hero-mobile-landing::before {
+    width: 24px;
+    margin-bottom: 6px;
+  }
+
+  .visual .hero-copy-mobile__text {
+    max-width: 24ch;
+    font-size: 11px;
+    line-height: 1.42;
+  }
+
+  .visual .btn--hero-primary,
+  .visual .btn--hero-secondary {
+    padding: 0 12px;
+    font-size: 11.5px;
+    border-radius: 9px;
+  }
+
+  .visual .btn--hero-primary {
+    min-height: 42px;
+  }
+
+  .visual .btn--hero-secondary {
+    min-height: 38px;
+  }
+
+  .visual .hero-actions {
+    gap: 4px;
+  }
+
+  .visual .hero-link {
+    font-size: 9.5px;
+  }
+
+  .season-drinks__heading h2 {
+    font-size: 28px;
+  }
+
+  .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .season-drinks__card--featured .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .season-drinks__visual img,
+  .season-drinks__card--featured .season-drinks__visual img {
+    max-width: none;
+    max-height: none;
+  }
+
+  .season-drinks__copy p {
+    min-height: calc(1.5em * 2);
+    font-size: 11.5px;
+    line-height: 1.5;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* 350px 이하 */
+@media screen and (max-width: 350px) {
+  .visual {
+    padding: 8px 0 16px;
+    background-position: center top, 50% 0;
+  }
+
+  .visual .visual-inner {
+    padding: 0 10px;
+  }
+
+  .visual .visual_slogan {
+    width: min(178px, 66vw);
+  }
+
+  .visual .visual_stage {
+    min-height: 220px;
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    width: clamp(178px, 76vw, 204px);
+    transform: translateX(3%);
+  }
+
+  .visual .visual_stage__item--drink-03 img {
+    transform: scale(0.96);
+  }
+
+  .visual .hero-mobile-landing {
+    width: min(238px, 100%);
+    margin-top: 9px;
+    border-radius: 11px;
+    box-shadow: none;
+  }
+
+  .visual .hero-mobile-landing::before {
+    display: none;
+  }
+
+  .visual .hero-copy-mobile {
+    margin-bottom: 7px;
+  }
+
+  .visual .hero-copy-mobile__text {
+    max-width: 17ch;
+    font-size: 9.5px;
+    line-height: 1.4;
+  }
+
+  .visual .btn--hero-primary,
+  .visual .btn--hero-secondary {
+    padding: 0 10px;
+    font-size: 11px;
+    border-radius: 8px;
+  }
+
+  .visual .btn--hero-primary {
+    min-height: 40px;
+  }
+
+  .visual .btn--hero-secondary {
+    min-height: 38px;
+  }
+
+  .visual .hero-link {
+    font-size: 9px;
+  }
+
+  .season-drinks__card {
+    padding: 16px 12px 16px;
+    border-radius: 20px;
+  }
+
+  .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+  }
+
+  .season-drinks__card--featured .season-drinks__visual {
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .season-drinks__visual img,
+  .season-drinks__card--featured .season-drinks__visual img {
+    max-width: none;
+    max-height: none;
+  }
+
+  .season-drinks__copy {
+    gap: 9px;
+    padding-top: 12px;
+  }
+
+  .season-drinks__copy h3 {
+    min-height: 2.5em;
+    font-size: 16px;
+  }
+
+  .season-drinks__copy p {
+    min-height: calc(1.46em * 2);
+    font-size: 11px;
+    line-height: 1.46;
+    -webkit-line-clamp: 2;
+  }
+
+  .season-drinks__copy a {
+    min-width: 104px;
+    height: 38px;
+    font-size: 12px;
+  }
+}
