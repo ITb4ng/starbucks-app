@@ -376,7 +376,7 @@
     line-height: 1;
   }
 
-  /* Mobile polish: season card rhythm */
+  /* season-drinks legacy responsive rhythm
   .season-drinks__copy h3 {
     min-height: 2.45em;
     font-size: 18px;
@@ -400,6 +400,7 @@
     min-width: 118px;
     height: 38px;
   }
+  */
 
   /* 모바일 헤더 */
   header > .inner {
@@ -637,6 +638,7 @@
   }
 
   /* 시즌 카드 섹션: 겹침 방지 */
+  /* season-drinks legacy responsive layout
   .season-drinks {
     padding: 72px 20px 80px;
   }
@@ -711,6 +713,593 @@
   .season-drinks__copy p {
     min-height: 5.2em;
     font-size: 13px;
+  }
+
+  /* 모바일 전용 개편 영역
+     - season-drinks 다음 흐름을 회원/매장/프로모션/공지 순으로 재배치
+     - 기존 notice ~ store 섹션은 유지하되 모바일에서는 아래에서 숨김 처리 */
+  .whats-new {
+    display: block;
+    position: relative;
+    padding: 58px 0 72px;
+    background: linear-gradient(180deg, #f7f4ee 0%, #f3efe7 100%);
+  }
+
+  .whats-new__inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .whats-new__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+
+  .whats-new__heading {
+    min-width: 0;
+  }
+
+  .whats-new__eyebrow {
+    margin-bottom: 8px;
+    color: #00704a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .whats-new__title {
+    color: #1e3932;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+  }
+
+  .whats-new__link {
+    flex-shrink: 0;
+    color: #1e3932;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .whats-new .whats-new__swiper.swiper-container {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .whats-new .whats-new__slide.swiper-slide {
+    width: min(304px, calc(100vw - 116px));
+  }
+
+  .whats-new__card {
+    overflow: hidden;
+    min-height: 100%;
+    border-radius: 26px;
+    background-color: #fff;
+    border: 1px solid rgba(30, 57, 50, 0.08);
+  }
+
+  .whats-new__thumb {
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background-color: #d9d6d0;
+  }
+
+  .whats-new__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .whats-new__thumb--spring {
+    background-color: #f7dce8;
+  }
+
+  .whats-new__thumb--spring img {
+    /* 2번째 카드만 원본 비율을 유지하면서 상단 타이포가 보이도록 별도 조정 */
+    object-fit: contain;
+    object-position: 50% 0;
+  }
+
+  .whats-new__thumb--snack {
+    background-color: #dcead3;
+  }
+
+  .whats-new__thumb--snack img {
+    /* 5번째 카드도 상단 카피가 잘리지 않도록 개별 보정 */
+    object-fit: contain;
+    object-position: 50% 0;
+  }
+
+  .whats-new__body {
+    padding: 18px 18px 20px;
+  }
+
+  .whats-new__body h3 {
+    overflow: hidden;
+    color: #1e3932;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.36;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .whats-new__body p {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 8px;
+    color: #5f6c67;
+    font-size: 13px;
+    line-height: 1.56;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .whats-new__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+
+  .whats-new__pagination {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: rgba(30, 57, 50, 0.08);
+    color: #1e3932;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-flow {
+    --mobile-flow-bg: #f6f5ef;
+    --mobile-flow-card: rgba(255, 255, 255, 0.92);
+    --mobile-flow-border: rgba(30, 57, 50, 0.08);
+    --mobile-flow-text: #1e3932;
+    --mobile-flow-muted: #5f6e68;
+    --mobile-flow-accent: #006241;
+    display: block;
+    position: relative;
+    padding: 40px 20px 72px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(246, 245, 239, 0) 0%,
+        rgba(246, 245, 239, 0.82) 8%,
+        var(--mobile-flow-bg) 100%
+      );
+  }
+
+  .mobile-flow__inner {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+  }
+
+  .mobile-flow__section {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 20px;
+    border: 1px solid var(--mobile-flow-border);
+    border-radius: 28px;
+    background: var(--mobile-flow-card);
+    box-shadow: 0 16px 30px rgba(30, 57, 50, 0.08);
+  }
+
+  .mobile-flow__section--rewards {
+    background: linear-gradient(140deg, #1e3932 0%, #285246 100%);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 32px rgba(13, 34, 29, 0.18);
+  }
+
+  .mobile-flow__section--store {
+    background: linear-gradient(180deg, #f7faf8 0%, #fff 100%);
+    border-color: rgba(0, 98, 65, 0.12);
+    box-shadow: 0 12px 24px rgba(30, 57, 50, 0.06);
+  }
+
+  .mobile-flow__section--promotion {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: #faf7f1;
+    box-shadow: 0 10px 18px rgba(30, 57, 50, 0.05);
+  }
+
+  .mobile-flow__section--notice {
+    padding-top: 17px;
+    padding-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.82);
+    box-shadow: none;
+  }
+
+  .mobile-flow__section--compact {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .mobile-flow__section--notice.mobile-flow__section--compact {
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+
+  .mobile-flow__section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .mobile-flow__section-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobile-flow__section-top .mobile-flow__section-head {
+    margin-bottom: 0;
+  }
+
+  .mobile-flow__symbol {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    background-color: #edf4ef;
+    color: var(--mobile-flow-accent);
+    font-size: 20px;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__symbol {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+
+  .mobile-flow__label {
+    color: #63746c;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__label {
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .mobile-flow__title {
+    color: var(--mobile-flow-text);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.34;
+    letter-spacing: -0.03em;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__title {
+    color: #fff;
+  }
+
+  .mobile-flow__text {
+    margin-top: 8px;
+    color: var(--mobile-flow-muted);
+    font-size: 14px;
+    line-height: 1.62;
+    letter-spacing: -0.01em;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__text {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .mobile-flow__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .mobile-flow__item {
+    padding: 8px 12px;
+    border: 1px solid rgba(30, 57, 50, 0.08);
+    border-radius: 999px;
+    background-color: #f1f3ee;
+    color: #31584d;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__item {
+    padding: 6px 10px;
+    border-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 11px;
+  }
+
+  .mobile-flow__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .mobile-flow__action {
+    flex: 1 1 calc(50% - 4px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 16px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .mobile-flow__action--wide {
+    flex-basis: 100%;
+  }
+
+  .mobile-flow__action--primary {
+    background-color: var(--mobile-flow-accent);
+    border-color: var(--mobile-flow-accent);
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 98, 65, 0.14);
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__action--primary {
+    background-color: #fff;
+    border-color: #fff;
+    color: #1e3932;
+    box-shadow: none;
+  }
+
+  .mobile-flow__action--secondary {
+    background-color: rgba(255, 255, 255, 0.86);
+    border-color: rgba(30, 57, 50, 0.16);
+    color: #1e3932;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__action--secondary {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+
+  .mobile-flow__action:hover,
+  .mobile-flow__promo-card:hover,
+  .mobile-flow__subaction:hover,
+  .mobile-flow__more:hover,
+  .mobile-flow__notice-link:hover {
+    text-decoration: none;
+  }
+
+  .mobile-flow__action--primary:hover {
+    background-color: #004f33;
+    border-color: #004f33;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__action--primary:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+    border-color: rgba(255, 255, 255, 0.92);
+  }
+
+  .mobile-flow__action--secondary:hover {
+    border-color: rgba(0, 98, 65, 0.28);
+    color: #24473d;
+    background-color: #fff;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__action--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-flow__subactions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(30, 57, 50, 0.08);
+  }
+
+  .mobile-flow__assist {
+    color: #5f6e68;
+    font-size: 12px;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+
+  .mobile-flow__subaction,
+  .mobile-flow__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .mobile-flow__subaction {
+    flex-shrink: 0;
+    color: var(--mobile-flow-accent);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .mobile-flow__subaction::after,
+  .mobile-flow__more::after {
+    content: ">";
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .mobile-flow__promo-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mobile-flow__promo-card {
+    display: grid;
+    grid-template-columns: 78px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(30, 57, 50, 0.08);
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #1e3932;
+  }
+
+  .mobile-flow__promo-thumb {
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    aspect-ratio: 1 / 1;
+    background-color: #e7e0d5;
+  }
+
+  .mobile-flow__promo-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobile-flow__promo-copy {
+    min-width: 0;
+  }
+
+  .mobile-flow__promo-title {
+    display: block;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-flow__promo-text {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-top: 3px;
+    color: #64736c;
+    font-size: 11.5px;
+    line-height: 1.46;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .mobile-flow__promo-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5px;
+    color: var(--mobile-flow-accent);
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  .mobile-flow__more {
+    flex-shrink: 0;
+    padding-top: 6px;
+    color: #5f746d;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .mobile-flow__notice-list {
+    margin-top: 8px;
+  }
+
+  .mobile-flow__notice-item + .mobile-flow__notice-item {
+    border-top: 1px solid rgba(30, 57, 50, 0.08);
+  }
+
+  .mobile-flow__title--compact {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .mobile-flow__notice-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #1e3932;
+  }
+
+  .mobile-flow__notice-tag {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    padding: 4px 7px;
+    border-radius: 999px;
+    background-color: #edf4ef;
+    color: var(--mobile-flow-accent);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-flow__notice-text {
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    color: #1e3932;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-flow__action:focus-visible,
+  .mobile-flow__promo-card:focus-visible,
+  .mobile-flow__subaction:focus-visible,
+  .mobile-flow__more:focus-visible,
+  .mobile-flow__notice-link:focus-visible {
+    outline: 2px solid var(--mobile-flow-accent);
+    outline-offset: 3px;
+  }
+
+  .notice,
+  #new-rewards_wrap,
+  #main-bean-wrap,
+  #first_reserve_wrap,
+  #fav_wrap,
+  #reserve_magazine_wrap,
+  #storewrap {
+    display: none;
   }
 }
 
@@ -886,6 +1475,7 @@
     font-size: 12px;
   }
 
+  /* season-drinks legacy responsive layout
   .season-drinks {
     padding: 64px 18px 72px;
   }
@@ -933,6 +1523,49 @@
     min-height: calc(1.56em * 3);
     font-size: 12px;
     line-height: 1.56;
+  }
+  */
+
+  .whats-new {
+    padding: 52px 0 64px;
+  }
+
+  .whats-new__inner {
+    padding: 0 18px;
+  }
+
+  .whats-new__title {
+    font-size: 25px;
+  }
+
+  .whats-new .whats-new__slide.swiper-slide {
+    width: min(292px, calc(100vw - 108px));
+  }
+
+  .whats-new__card {
+    border-radius: 22px;
+  }
+
+  .mobile-flow {
+    padding: 40px 16px 64px;
+  }
+
+  .mobile-flow__section {
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+
+  .mobile-flow__title {
+    font-size: 22px;
+  }
+
+  .mobile-flow__text {
+    font-size: 13px;
+  }
+
+  .mobile-flow__promo-card {
+    grid-template-columns: 74px minmax(0, 1fr);
+    border-radius: 20px;
   }
 }
 
@@ -1010,6 +1643,7 @@
     font-size: 10px;
   }
 
+  /* season-drinks legacy responsive layout
   .season-drinks {
     padding: 36px 14px 64px;
   }
@@ -1054,7 +1688,7 @@
     aspect-ratio: 1 / 1;
   }
 
-  /* Mobile card visual: keep the higher-res asset sharp by preserving its ratio and only trimming outer whitespace a little. */
+  Mobile card visual: keep the higher-res asset sharp by preserving its ratio and only trimming outer whitespace a little.
   .season-drinks__visual picture {
     display: flex;
     align-items: center;
@@ -1088,6 +1722,129 @@
     min-height: calc(1.54em * 3);
     font-size: 12px;
     line-height: 1.54;
+  }
+  */
+
+  .whats-new {
+    padding: 44px 0 56px;
+  }
+
+  .whats-new__inner {
+    padding: 0 14px;
+  }
+
+  .whats-new__header {
+    align-items: start;
+    margin-bottom: 18px;
+  }
+
+  .whats-new__title {
+    font-size: 22px;
+  }
+
+  .whats-new__link {
+    font-size: 12px;
+  }
+
+  .whats-new .whats-new__slide.swiper-slide {
+    width: calc(100vw - 104px);
+  }
+
+  .whats-new__card {
+    border-radius: 20px;
+  }
+
+  .whats-new__body {
+    padding: 16px 16px 18px;
+  }
+
+  .whats-new__body h3 {
+    font-size: 17px;
+  }
+
+  .whats-new__body p {
+    font-size: 12px;
+  }
+
+  .whats-new__footer {
+    margin-top: 14px;
+  }
+
+  .mobile-flow {
+    padding: 20px 14px 56px;
+  }
+
+  .mobile-flow__inner {
+    gap: 12px;
+  }
+
+  .mobile-flow__section {
+    padding: 18px 16px;
+    border-radius: 20px;
+  }
+
+  .mobile-flow__symbol {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .mobile-flow__title {
+    font-size: 20px;
+  }
+
+  .mobile-flow__text {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.56;
+  }
+
+  .mobile-flow__actions {
+    margin-top: 16px;
+  }
+
+  .mobile-flow__action {
+    flex-basis: 100%;
+    min-height: 44px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+
+  .mobile-flow__promo-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .mobile-flow__subactions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .mobile-flow__assist,
+  .mobile-flow__subaction,
+  .mobile-flow__more {
+    font-size: 11.5px;
+  }
+
+  .mobile-flow__promo-title {
+    font-size: 14px;
+  }
+
+  .mobile-flow__promo-text,
+  .mobile-flow__notice-text {
+    font-size: 12px;
+  }
+
+  .mobile-flow__title--compact {
+    font-size: 17px;
+  }
+
+  .mobile-flow__notice-link {
+    gap: 8px;
   }
 }
 
@@ -1161,6 +1918,7 @@
     font-size: 9.5px;
   }
 
+  /* season-drinks legacy responsive layout
   .season-drinks__heading h2 {
     font-size: 28px;
   }
@@ -1186,6 +1944,54 @@
     font-size: 11.5px;
     line-height: 1.5;
     -webkit-line-clamp: 2;
+  }
+  */
+
+  .whats-new__title {
+    font-size: 20px;
+  }
+
+  .whats-new .whats-new__slide.swiper-slide {
+    width: calc(100vw - 96px);
+  }
+
+  .whats-new__card {
+    border-radius: 18px;
+  }
+
+  .whats-new__body {
+    padding: 15px 14px 16px;
+  }
+
+  .whats-new__body h3 {
+    font-size: 16px;
+  }
+
+  .whats-new__pagination {
+    min-width: 48px;
+    font-size: 11.5px;
+  }
+
+  .mobile-flow__title {
+    font-size: 18px;
+  }
+
+  .mobile-flow__item {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .mobile-flow__section--rewards .mobile-flow__item {
+    padding: 5px 9px;
+    font-size: 10.5px;
+  }
+
+  .mobile-flow__promo-card {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .mobile-flow__notice-text {
+    font-size: 11.5px;
   }
 }
 
@@ -1257,6 +2063,7 @@
     font-size: 9px;
   }
 
+  /* season-drinks legacy responsive layout
   .season-drinks__card {
     padding: 16px 12px 16px;
     border-radius: 20px;
@@ -1300,5 +2107,27 @@
     min-width: 104px;
     height: 38px;
     font-size: 12px;
+  }
+  */
+
+  .whats-new {
+    padding: 40px 0 48px;
+  }
+
+  .whats-new .whats-new__slide.swiper-slide {
+    width: calc(100vw - 88px);
+  }
+
+  .whats-new__body h3 {
+    font-size: 15px;
+  }
+
+  .whats-new__body p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .whats-new__pagination {
+    padding: 5px 9px;
   }
 }
