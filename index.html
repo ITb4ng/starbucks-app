@@ -505,6 +505,7 @@
       </div>
     </section>
 
+    <!-- season-drinks legacy markup
     <section class="season-drinks" id="season_drinks">
       <div class="season-drinks__inner">
         <div class="season-drinks__heading">
@@ -629,7 +630,213 @@
         </div>
       </div>
     </section>
+    -->
 
+    <!-- season-drinks 대체: 모바일에서만 노출되는 What’s New 카드 슬라이드 -->
+    <section class="whats-new" aria-labelledby="whats_new_title">
+      <div class="whats-new__inner">
+        <div class="whats-new__header">
+          <div class="whats-new__heading">
+            <p class="whats-new__eyebrow">WHAT'S NEW</p>
+            <h2 class="whats-new__title" id="whats_new_title">이벤트와 뉴스를 가볍게 둘러보세요.</h2>
+          </div>
+          <a href="javascript:void(0);" class="whats-new__link" role="button">See all</a>
+        </div>
+
+        <div class="whats-new__swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="whats-new__slide swiper-slide">
+              <article class="whats-new__card">
+                <div class="whats-new__thumb">
+                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_kbocollaboration_01_260323.jpg" alt="ESG 활동 소식 썸네일">
+                </div>
+                <div class="whats-new__body">
+                  <h3>ESG와 함께하는 리유저블 위크</h3>
+                  <p>일상 속 작은 실천을 함께할 수 있는 친환경 캠페인 소식을 확인해보세요.</p>
+                </div>
+              </article>
+            </div>
+            <div class="whats-new__slide swiper-slide">
+              <article class="whats-new__card">
+                <div class="whats-new__thumb whats-new__thumb--spring">
+                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_spring1ph1_03_260225.jpg" alt="봄 프로모션 소식 썸네일">
+                </div>
+                <div class="whats-new__body">
+                  <h3>봄 시즌 프로모션 하이라이트</h3>
+                  <p>시즌 음료와 함께 즐기기 좋은 이번 달 주요 프로모션을 짧게 모았습니다.</p>
+                </div>
+              </article>
+            </div>
+            <div class="whats-new__slide swiper-slide">
+              <article class="whats-new__card">
+                <div class="whats-new__thumb">
+                  <img src="https://image.istarbucks.co.kr/img/event/2024/gif_buddypass_logo.gif" alt="리워드 소식 썸네일">
+                </div>
+                <div class="whats-new__body">
+                  <h3>Rewards 회원 전용 소식</h3>
+                  <p>별 적립과 쿠폰 혜택을 더 알차게 활용할 수 있는 회원 전용 안내를 만나보세요.</p>
+                </div>
+              </article>
+            </div>
+            <div class="whats-new__slide swiper-slide">
+              <article class="whats-new__card">
+                <div class="whats-new__thumb">
+                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_onlinestorecoffetime_01_260407.jpg" alt="매장 이벤트 소식 썸네일">
+                </div>
+                <div class="whats-new__body">
+                  <h3>매장 한정 이벤트 안내</h3>
+                  <p>일부 매장에서 진행 중인 체험형 이벤트와 현장 소식을 빠르게 살펴볼 수 있어요.</p>
+                </div>
+              </article>
+            </div>
+            <div class="whats-new__slide swiper-slide">
+              <article class="whats-new__card">
+                <div class="whats-new__thumb whats-new__thumb--snack">
+                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_packagefoodbag_01_260402.jpg" alt="시즌 캠페인 소식 썸네일">
+                </div>
+                <div class="whats-new__body">
+                  <h3>시즌 캠페인 업데이트</h3>
+                  <p>새롭게 공개된 시즌 캠페인과 비주얼 스토리를 카드처럼 가볍게 둘러보세요.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="whats-new__footer">
+          <div class="whats-new__pagination" aria-live="polite">1/5</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기존 구조 유지: 모바일에서는 아래 개편 영역이 먼저 보이고, notice 이하 기존 섹션은 CSS로 숨김 처리합니다. -->
+    <section class="mobile-flow" aria-labelledby="mobile_flow_title">
+      <!-- 모바일 전용 개편 영역 -->
+      <div class="mobile-flow__inner">
+        <h2 class="blind" id="mobile_flow_title">모바일 전용 주요 서비스 흐름</h2>
+
+        <article class="mobile-flow__section mobile-flow__section--rewards">
+          <div class="mobile-flow__section-head">
+            <span class="material-icons mobile-flow__symbol" aria-hidden="true">stars</span>
+            <p class="mobile-flow__label">스타벅스 리워드</p>
+          </div>
+          <h3 class="mobile-flow__title">스타벅스만의 특별한 혜택</h3>
+          <p class="mobile-flow__text">
+            로그인 후 내 리워드를 확인하거나, 회원가입으로 별 적립과 쿠폰 혜택을 자연스럽게 시작할 수 있어요.
+          </p>
+          <ul class="mobile-flow__list" aria-label="스타벅스 리워드 핵심 혜택">
+            <li class="mobile-flow__item">별 적립</li>
+            <li class="mobile-flow__item">쿠폰 혜택</li>
+            <!-- <li class="mobile-flow__item">모바일 카드 등록</li> -->
+            <li class="mobile-flow__item">My 리워드 확인</li>
+          </ul>
+          <div class="mobile-flow__actions">
+            <a href="javascript:void(0)" class="mobile-flow__action mobile-flow__action--primary" role="button">회원가입</a>
+            <a href="./signup/" class="mobile-flow__action mobile-flow__action--secondary" role="button">로그인</a>
+          </div>
+        </article>
+
+        <article class="mobile-flow__section mobile-flow__section--store">
+          <div class="mobile-flow__section-head">
+            <span class="material-icons mobile-flow__symbol" aria-hidden="true">place</span>
+            <p class="mobile-flow__label">Store</p>
+          </div>
+          <h3 class="mobile-flow__title">가까운 매장을 먼저 찾아보세요.</h3>
+          <p class="mobile-flow__text">
+            내 주변 매장을 찾고, 리저브나 드라이브 스루처럼 원하는 이용 방식도 이어서 선택할 수 있어요.
+          </p>
+          <ul class="mobile-flow__list" aria-label="매장 이용 흐름">
+            <li class="mobile-flow__item">가까운 매장 찾기</li>
+            <li class="mobile-flow__item">리저브 매장</li>
+            <li class="mobile-flow__item">드라이브 스루</li>
+          </ul>
+          <div class="mobile-flow__actions">
+            <a
+              href="javascript:void(0)"
+              class="mobile-flow__action mobile-flow__action--primary mobile-flow__action--wide"
+              role="button"
+              aria-label="내 주변 스타벅스 매장 찾기">
+              매장 찾기
+            </a>
+          </div>
+          <div class="mobile-flow__subactions" aria-label="보조 이동">
+            <p class="mobile-flow__assist">메뉴를 먼저 보고 싶다면</p>
+            <a
+              href="https://www.starbucks.co.kr/menu/drink_list.do"
+              class="mobile-flow__subaction"
+              data-order-trigger="mobile-flow-order"
+              role="button"
+              aria-haspopup="dialog"
+              aria-controls="order_choice_layer">
+              주문 이어가기
+            </a>
+          </div>
+        </article>
+
+        <article class="mobile-flow__section mobile-flow__section--promotion">
+          <div class="mobile-flow__section-top">
+            <div class="mobile-flow__section-head">
+              <span class="material-icons mobile-flow__symbol" aria-hidden="true">campaign</span>
+              <p class="mobile-flow__label">Promotion</p>
+            </div>
+            <a href="javascript:void(0)" class="mobile-flow__more" role="button">전체 보기</a>
+          </div>
+          <h3 class="mobile-flow__title">지금 확인할 프로모션만 담았습니다.</h3>
+          <p class="mobile-flow__text">
+            지금 확인하면 좋은 프로모션 하이라이트만 먼저 보여줍니다.
+          </p>
+          <div class="mobile-flow__promo-list">
+            <a href="javascript:void(0)" class="mobile-flow__promo-card" role="button">
+              <span class="mobile-flow__promo-thumb">
+                <img src="https://image.istarbucks.co.kr/upload/banner/HzzZLq_20250414090813721.jpg" alt="Spring 두 번째 프로모션">
+              </span>
+              <span class="mobile-flow__promo-copy">
+                <strong class="mobile-flow__promo-title">Spring 두 번째 프로모션</strong>
+                <span class="mobile-flow__promo-text">봄 시즌 하이라이트를 짧게 확인해보세요.</span>
+                <span class="mobile-flow__promo-link">자세히 보기</span>
+              </span>
+            </a>
+            <a href="javascript:void(0)" class="mobile-flow__promo-card mobile-flow__promo-card--compact" role="button">
+              <span class="mobile-flow__promo-thumb">
+                <img src="https://image.istarbucks.co.kr/upload/banner/D6HIaa_20250306152142850.jpg" alt="리저브 스프링 커피 & 원두 출시">
+              </span>
+              <span class="mobile-flow__promo-copy">
+                <strong class="mobile-flow__promo-title">리저브 스프링 커피 &amp; 원두</strong>
+                <span class="mobile-flow__promo-text">리저브 시즌 소식을 가볍게 둘러볼 수 있어요.</span>
+                <span class="mobile-flow__promo-link">자세히 보기</span>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="mobile-flow__section mobile-flow__section--notice mobile-flow__section--compact">
+          <div class="mobile-flow__section-top">
+            <div class="mobile-flow__section-head">
+              <span class="material-icons mobile-flow__symbol" aria-hidden="true">notifications_none</span>
+              <p class="mobile-flow__label">Notice</p>
+            </div>
+            <a href="javascript:void(0)" class="mobile-flow__more" role="button">더 보기</a>
+          </div>
+          <h3 class="mobile-flow__title mobile-flow__title--compact">지금 확인할 공지</h3>
+          <ul class="mobile-flow__notice-list">
+            <li class="mobile-flow__notice-item">
+              <a href="javascript:void(0)" class="mobile-flow__notice-link">
+                <span class="mobile-flow__notice-tag">안내</span>
+                <span class="mobile-flow__notice-text">본인인증 서비스 점검 안내</span>
+              </a>
+            </li>
+            <li class="mobile-flow__notice-item">
+              <a href="javascript:void(0)" class="mobile-flow__notice-link">
+                <span class="mobile-flow__notice-tag">공지</span>
+                <span class="mobile-flow__notice-text">Buddy Pass 이용약관 개정 안내</span>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 기존 구조 유지: 아래 기존 섹션들은 삭제하지 않고 데스크탑 레이아웃용으로 그대로 유지합니다. -->
     <!-- 노티스 섹션 -->
     <section class="notice">
 

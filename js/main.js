@@ -75,8 +75,7 @@ const orderChoiceEl = document.querySelector('#order_choice_layer');
 const orderChoicePanelEl = orderChoiceEl ? orderChoiceEl.querySelector('.order-choice__panel') : null;
 const orderChoiceCloseEls = orderChoiceEl ? orderChoiceEl.querySelectorAll('[data-order-close]') : [];
 const orderChoiceActionEls = orderChoiceEl ? orderChoiceEl.querySelectorAll('.order-choice__button') : [];
-const orderChoiceTriggerEls = document.querySelectorAll('.season-drinks__order-trigger');
-const heroOrderTriggerEl = document.querySelector('.visual .btn--hero-secondary[data-order-trigger]');
+const orderChoiceTriggerEls = document.querySelectorAll('[data-order-trigger]');
 const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 let lastOrderTriggerEl = null;
@@ -194,9 +193,8 @@ function handleOrderChoiceKeydown(event) {
   }
 }
 
-if (orderChoiceEl && orderChoicePanelEl && (orderChoiceTriggerEls.length || heroOrderTriggerEl)) {
+if (orderChoiceEl && orderChoicePanelEl && orderChoiceTriggerEls.length) {
   orderChoiceTriggerEls.forEach(function (triggerEl) {
-    triggerEl.textContent = '주문하러 가기';
     triggerEl.setAttribute('aria-expanded', 'false');
 
     triggerEl.addEventListener('click', function (event) {
@@ -204,14 +202,6 @@ if (orderChoiceEl && orderChoicePanelEl && (orderChoiceTriggerEls.length || hero
       openOrderChoice(triggerEl);
     });
   });
-
-  if (heroOrderTriggerEl) {
-    heroOrderTriggerEl.setAttribute('aria-expanded', 'false');
-    heroOrderTriggerEl.addEventListener('click', function (event) {
-      event.preventDefault();
-      openOrderChoice(heroOrderTriggerEl);
-    });
-  }
 
   orderChoiceCloseEls.forEach(function (closeEl) {
     closeEl.addEventListener('click', closeOrderChoice);
@@ -227,6 +217,41 @@ if (orderChoiceEl && orderChoicePanelEl && (orderChoiceTriggerEls.length || hero
 }
 
 // promotion Swiper 공지사항
+/** What's New Swiper **/
+const whatsNewSectionEl = document.querySelector('.whats-new');
+const whatsNewPaginationEl = whatsNewSectionEl ? whatsNewSectionEl.querySelector('.whats-new__pagination') : null;
+
+function updateWhatsNewPagination(swiper) {
+  if (!whatsNewPaginationEl) {
+    return;
+  }
+
+  const totalSlides = swiper.slides.length - (swiper.loopedSlides * 2);
+  whatsNewPaginationEl.textContent = (swiper.realIndex + 1) + '/' + totalSlides;
+}
+
+if (whatsNewSectionEl) {
+  const whatsNewSwiper = new Swiper('.whats-new .swiper-container', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    centeredSlides: false,
+    grabCursor: true,
+    observer: true,
+    observeParents: true,
+    on: {
+      init: function () {
+        updateWhatsNewPagination(this);
+      },
+      slideChange: function () {
+        updateWhatsNewPagination(this);
+      }
+    }
+  });
+
+  updateWhatsNewPagination(whatsNewSwiper);
+}
+
 new Swiper('.notice-line .swiper-container', {
   direction: 'vertical',
   autoplay: true,
