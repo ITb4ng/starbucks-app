@@ -70,24 +70,41 @@
               <span class="material-icons" aria-hidden="true">close</span>
               <span class="blind">전체 메뉴 닫기</span>
             </button>
+            <div class="header-quick-links" aria-label="빠른 이동">
+              <a href="https://www.starbucks.co.kr/store/store_map.do" class="header-quick-link">
+                <span class="material-icons header-quick-link__icon" aria-hidden="true">place</span>
+                <span class="header-quick-link__text">매장 찾기</span>
+              </a>
+              <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="header-quick-link">
+                <span class="material-icons header-quick-link__icon" aria-hidden="true">local_cafe</span>
+                <span class="header-quick-link__text">메뉴</span>
+              </a>
+              <a href="./signup/" class="header-quick-link">
+                <span class="material-icons header-quick-link__icon" aria-hidden="true">person</span>
+                <span class="header-quick-link__text">로그인</span>
+              </a>
+            </div>
             <div class="sub-menu">
             <ul class="menu">
               <li>
                 <a href="./signup/">Sign In</a>  
               </li>
               <li>
-                <a href="javascript:void(0)">My Starbucks</a>
+                <a href="https://www.starbucks.co.kr/msr/msreward/about.do">My Starbucks</a>
               </li>
               <li>
-                <a href="javascript:void(0)">Customer Service & ideas</a>
+                <a href="https://www.starbucks.co.kr/util/index.do">Customer Service & ideas</a>
               </li>
               <li>
-                <a href="javascript:void(0)">Find a Store</a>
+                <a href="https://www.starbucks.co.kr/store/store_map.do">Find a Store</a>
               </li>
             </ul>
-            <div class="search" role="button" aria-label="통합검색">
-              <input type="text">
-              <span class="material-icons">search</span>
+            <div class="search">
+              <input type="text" placeholder="통합검색" aria-label="통합검색">
+              <span class="material-icons search__icon" aria-hidden="true">search</span>
+              <button type="button" class="search__clear" aria-label="검색어 지우기">
+                <span class="material-icons" aria-hidden="true">close</span>
+              </button>
             </div>
           </div>
           </div>
@@ -346,7 +363,7 @@
                 </div>
               </div>
             </li>
-            <li class="item">
+            <li class="item item--whats-new">
               <button class="item__name" type="button" aria-expanded="false">WHAT'S NEW</button>
               <div class="item__contents">
                 <div class="contents__menu">
@@ -388,6 +405,9 @@
               </div>
             </li>
           </ul>
+          <button type="button" class="header-close header-close--floating" aria-label="전체 메뉴 닫기">
+            <span class="material-icons" aria-hidden="true">close</span>
+          </button>
           </div>
       </div>
       <div class="header-overlay"></div>
@@ -478,12 +498,12 @@
         <div class="hero-mobile-landing" data-hero-fade data-fade-mobile-order="3">
           <div class="hero-copy-mobile">
             <p class="hero-copy-mobile__text">
-              가까운 매장을 찾고 원하는 메뉴를 빠르게 확인해보세요.
+              이번 시즌 음료와 혜택을 확인하고 가까운 매장이나 앱 주문으로 이어가세요.
             </p>
           </div>
 
           <div class="hero-actions" aria-label="스타벅스 빠른 이동">
-            <a href="javascript:void(0)" class="btn btn--hero-primary" role="button" aria-label="내 주변 스타벅스 매장 찾기">
+            <a href="https://www.starbucks.co.kr/store/store_map.do" class="btn btn--hero-primary" aria-label="내 주변 스타벅스 매장 찾기">
               내 주변 매장 찾기
             </a>
             <a
@@ -496,8 +516,11 @@
               aria-label="스타벅스 앱에서 주문하기">
               앱에서 주문하기
             </a>
-            <a href="javascript:void(0)" class="hero-link" aria-label="스타벅스 리저브 매장 찾기">
-              <span class="hero-link__label">리저브 매장 찾기</span>
+            <a
+              href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296"
+              class="hero-link"
+              aria-label="이번 시즌 프로모션 자세히 보기">
+              <span class="hero-link__label">이번 시즌 프로모션 보기</span>
               <span class="hero-link__icon" aria-hidden="true">&gt;</span>
             </a>
           </div>
@@ -638,9 +661,9 @@
         <div class="whats-new__header">
           <div class="whats-new__heading">
             <p class="whats-new__eyebrow">WHAT'S NEW</p>
-            <h2 class="whats-new__title" id="whats_new_title">이벤트와 뉴스를 가볍게 둘러보세요.</h2>
+            <h2 class="whats-new__title" id="whats_new_title">이번 시즌과 브랜드 소식을 가볍게 둘러보세요.</h2>
           </div>
-          <a href="javascript:void(0);" class="whats-new__link" role="button">See all</a>
+          <a href="https://www.starbucks.co.kr/whats_new/index.do" class="whats-new__link">이벤트/뉴스 전체보기</a>
         </div>
 
         <div class="whats-new__swiper swiper-container">
@@ -651,8 +674,8 @@
                   <img src="https://image.istarbucks.co.kr/img/event/2026/wn_kbocollaboration_01_260323.jpg" alt="ESG 활동 소식 썸네일">
                 </div>
                 <div class="whats-new__body">
-                  <h3>ESG와 함께하는 리유저블 위크</h3>
-                  <p>일상 속 작은 실천을 함께할 수 있는 친환경 캠페인 소식을 확인해보세요.</p>
+                  <h3>리유저블 위크와 친환경 이야기</h3>
+                  <p>일상 속 작은 실천과 함께 보는 스타벅스의 이번 시즌 브랜드 소식을 확인해보세요.</p>
                 </div>
               </article>
             </div>
@@ -662,30 +685,30 @@
                   <img src="https://image.istarbucks.co.kr/img/event/2026/wn_spring1ph1_03_260225.jpg" alt="봄 프로모션 소식 썸네일">
                 </div>
                 <div class="whats-new__body">
-                  <h3>봄 시즌 프로모션 하이라이트</h3>
-                  <p>시즌 음료와 함께 즐기기 좋은 이번 달 주요 프로모션을 짧게 모았습니다.</p>
+                  <h3>봄 시즌 메뉴와 비주얼 스토리</h3>
+                  <p>이번 시즌 음료와 함께 공개된 비주얼, 캠페인 포인트를 한눈에 살펴보세요.</p>
                 </div>
               </article>
             </div>
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb">
-                  <img src="https://image.istarbucks.co.kr/img/event/2024/gif_buddypass_logo.gif" alt="리워드 소식 썸네일">
+                  <img src="./images/reserve_magazine_visual.png" alt="리저브 커피 스토리 썸네일">
                 </div>
                 <div class="whats-new__body">
-                  <h3>Rewards 회원 전용 소식</h3>
-                  <p>별 적립과 쿠폰 혜택을 더 알차게 활용할 수 있는 회원 전용 안내를 만나보세요.</p>
+                  <h3>리저브 커피 스토리 만나보기</h3>
+                  <p>원두와 브루잉, 리저브 매거진처럼 브랜드의 깊이를 보여주는 이야기를 살펴보세요.</p>
                 </div>
               </article>
             </div>
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb">
-                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_onlinestorecoffetime_01_260407.jpg" alt="매장 이벤트 소식 썸네일">
+                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_onlinestorecoffetime_01_260407.jpg" alt="온라인 스토어 신규 아이템 썸네일">
                 </div>
                 <div class="whats-new__body">
-                  <h3>매장 한정 이벤트 안내</h3>
-                  <p>일부 매장에서 진행 중인 체험형 이벤트와 현장 소식을 빠르게 살펴볼 수 있어요.</p>
+                  <h3>온라인 스토어 신규 아이템 미리 보기</h3>
+                  <p>집에서도 이어지는 스타벅스 무드와 새롭게 선보인 커피타임 아이템을 둘러볼 수 있어요.</p>
                 </div>
               </article>
             </div>
@@ -720,19 +743,18 @@
             <span class="material-icons mobile-flow__symbol" aria-hidden="true">stars</span>
             <p class="mobile-flow__label">스타벅스 리워드</p>
           </div>
-          <h3 class="mobile-flow__title">스타벅스만의 특별한 혜택</h3>
+          <h3 class="mobile-flow__title">로그인하고 내 리워드 확인</h3>
           <p class="mobile-flow__text">
-            로그인 후 내 리워드를 확인하거나, 회원가입으로 별 적립과 쿠폰 혜택을 자연스럽게 시작할 수 있어요.
+            자주 이용하는 혜택과 별 적립 안내를 더 빠르게 확인하고, 필요한 서비스로 바로 이어갈 수 있어요.
           </p>
           <ul class="mobile-flow__list" aria-label="스타벅스 리워드 핵심 혜택">
             <li class="mobile-flow__item">별 적립</li>
-            <li class="mobile-flow__item">쿠폰 혜택</li>
-            <!-- <li class="mobile-flow__item">모바일 카드 등록</li> -->
-            <li class="mobile-flow__item">My 리워드 확인</li>
+            <li class="mobile-flow__item">등급별 혜택</li>
+            <li class="mobile-flow__item">My 리워드</li>
           </ul>
           <div class="mobile-flow__actions">
-            <a href="javascript:void(0)" class="mobile-flow__action mobile-flow__action--primary" role="button">회원가입</a>
-            <a href="./signup/" class="mobile-flow__action mobile-flow__action--secondary" role="button">로그인</a>
+            <a href="./signup/" class="mobile-flow__action mobile-flow__action--primary">로그인</a>
+            <a href="https://www.starbucks.co.kr/msr/msreward/about.do" class="mobile-flow__action mobile-flow__action--secondary">리워드 소개 보기</a>
           </div>
         </article>
 
@@ -743,7 +765,7 @@
           </div>
           <h3 class="mobile-flow__title">가까운 매장을 먼저 찾아보세요.</h3>
           <p class="mobile-flow__text">
-            내 주변 매장을 찾고, 리저브나 드라이브 스루처럼 원하는 이용 방식도 이어서 선택할 수 있어요.
+            내 주변 매장을 찾고, 리저브나 드라이브 스루처럼 원하는 이용 방식도 이어서 살펴볼 수 있어요.
           </p>
           <ul class="mobile-flow__list" aria-label="매장 이용 흐름">
             <li class="mobile-flow__item">가까운 매장 찾기</li>
@@ -752,23 +774,18 @@
           </ul>
           <div class="mobile-flow__actions">
             <a
-              href="javascript:void(0)"
+              href="https://www.starbucks.co.kr/store/store_map.do"
               class="mobile-flow__action mobile-flow__action--primary mobile-flow__action--wide"
-              role="button"
               aria-label="내 주변 스타벅스 매장 찾기">
               매장 찾기
             </a>
           </div>
           <div class="mobile-flow__subactions" aria-label="보조 이동">
-            <p class="mobile-flow__assist">메뉴를 먼저 보고 싶다면</p>
+            <p class="mobile-flow__assist">리저브 매장을 찾고 싶다면</p>
             <a
-              href="https://www.starbucks.co.kr/menu/drink_list.do"
-              class="mobile-flow__subaction"
-              data-order-trigger="mobile-flow-order"
-              role="button"
-              aria-haspopup="dialog"
-              aria-controls="order_choice_layer">
-              주문 이어가기
+              href="https://www.starbucks.co.kr/store/store_reserve.do"
+              class="mobile-flow__subaction">
+              리저브 매장 보기
             </a>
           </div>
         </article>
@@ -779,33 +796,35 @@
               <span class="material-icons mobile-flow__symbol" aria-hidden="true">campaign</span>
               <p class="mobile-flow__label">Promotion</p>
             </div>
-            <a href="javascript:void(0)" class="mobile-flow__more" role="button">전체 보기</a>
           </div>
-          <h3 class="mobile-flow__title">지금 확인할 프로모션만 담았습니다.</h3>
+          <h3 class="mobile-flow__title">지금 확인할 프로모션만 모아봤어요.</h3>
           <p class="mobile-flow__text">
-            지금 확인하면 좋은 프로모션 하이라이트만 먼저 보여줍니다.
+            이벤트와 매장별 혜택은 여기서만 짧게 확인하고 필요한 정보로 바로 이동할 수 있어요.
           </p>
           <div class="mobile-flow__promo-list">
-            <a href="javascript:void(0)" class="mobile-flow__promo-card" role="button">
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" class="mobile-flow__promo-card">
               <span class="mobile-flow__promo-thumb">
                 <img src="https://image.istarbucks.co.kr/upload/banner/HzzZLq_20250414090813721.jpg" alt="Spring 두 번째 프로모션">
               </span>
               <span class="mobile-flow__promo-copy">
-                <strong class="mobile-flow__promo-title">Spring 두 번째 프로모션</strong>
-                <span class="mobile-flow__promo-text">봄 시즌 하이라이트를 짧게 확인해보세요.</span>
-                <span class="mobile-flow__promo-link">자세히 보기</span>
+                <strong class="mobile-flow__promo-title">진행 중인 시즌 프로모션</strong>
+                <span class="mobile-flow__promo-text">지금 참여할 수 있는 이벤트와 혜택을 한 번에 확인해보세요.</span>
+                <span class="mobile-flow__promo-link">프로모션 보기</span>
               </span>
             </a>
-            <a href="javascript:void(0)" class="mobile-flow__promo-card mobile-flow__promo-card--compact" role="button">
+            <a href="https://www.starbucks.co.kr/whats_new/store_event_list.do" class="mobile-flow__promo-card mobile-flow__promo-card--compact">
               <span class="mobile-flow__promo-thumb">
                 <img src="https://image.istarbucks.co.kr/upload/banner/D6HIaa_20250306152142850.jpg" alt="리저브 스프링 커피 & 원두 출시">
               </span>
               <span class="mobile-flow__promo-copy">
-                <strong class="mobile-flow__promo-title">리저브 스프링 커피 &amp; 원두</strong>
-                <span class="mobile-flow__promo-text">리저브 시즌 소식을 가볍게 둘러볼 수 있어요.</span>
-                <span class="mobile-flow__promo-link">자세히 보기</span>
+                <strong class="mobile-flow__promo-title">매장별 이벤트 살펴보기</strong>
+                <span class="mobile-flow__promo-text">신규 매장과 일부 매장에서 진행 중인 이벤트를 빠르게 확인할 수 있어요.</span>
+                <span class="mobile-flow__promo-link">매장 이벤트 보기</span>
               </span>
             </a>
+          </div>
+          <div class="mobile-flow__footer">
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" class="mobile-flow__more mobile-flow__more--footer">프로모션 전체보기</a>
           </div>
         </article>
 
@@ -815,18 +834,18 @@
               <span class="material-icons mobile-flow__symbol" aria-hidden="true">notifications_none</span>
               <p class="mobile-flow__label">Notice</p>
             </div>
-            <a href="javascript:void(0)" class="mobile-flow__more" role="button">더 보기</a>
+            <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__more">공지 전체보기</a>
           </div>
           <h3 class="mobile-flow__title mobile-flow__title--compact">지금 확인할 공지</h3>
           <ul class="mobile-flow__notice-list">
             <li class="mobile-flow__notice-item">
-              <a href="javascript:void(0)" class="mobile-flow__notice-link">
+              <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__notice-link">
                 <span class="mobile-flow__notice-tag">안내</span>
                 <span class="mobile-flow__notice-text">본인인증 서비스 점검 안내</span>
               </a>
             </li>
             <li class="mobile-flow__notice-item">
-              <a href="javascript:void(0)" class="mobile-flow__notice-link">
+              <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__notice-link">
                 <span class="mobile-flow__notice-tag">공지</span>
                 <span class="mobile-flow__notice-text">Buddy Pass 이용약관 개정 안내</span>
               </a>
