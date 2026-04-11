@@ -161,7 +161,7 @@ header .sub-menu .search input:focus {
   width: 190px;
   border-color: #669900;
 }
-header .sub-menu .search .material-icons {
+header .sub-menu .search > .search__icon {
   height: 24px;
   position: absolute;
   top: 0;
@@ -170,8 +170,42 @@ header .sub-menu .search .material-icons {
   margin: auto;
   transition: .4s;
 }
-header .sub-menu .search.focused .material-icons {
+header .sub-menu .search.focused > .search__icon,
+header .sub-menu .search.has-value > .search__icon {
   opacity: 0;
+}
+header .sub-menu .search .search__clear {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #666;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, background-color .2s ease, color .2s ease;
+}
+header .sub-menu .search.has-value .search__clear {
+  opacity: 1;
+  pointer-events: auto;
+}
+header .sub-menu .search .search__clear:hover,
+header .sub-menu .search .search__clear:focus-visible {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: #1e3932;
+}
+header .sub-menu .search .search__clear .material-icons {
+  font-size: 18px;
+  line-height: 1;
 }
 header .main-menu {
   position: absolute;

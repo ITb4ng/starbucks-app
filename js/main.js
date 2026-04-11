@@ -85,8 +85,8 @@ if (visualCampaignLinkEl) {
   visualCampaignLinkEl.href = 'https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296';
   visualCampaignLinkEl.target = '_blank';
   visualCampaignLinkEl.rel = 'noopener noreferrer';
-  visualCampaignLinkEl.textContent = '자세히 보기';
-  visualCampaignLinkEl.setAttribute('aria-label', '시즌 캠페인 페이지를 새 탭에서 열기');
+  visualCampaignLinkEl.textContent = '시즌 프로모션 보기';
+  visualCampaignLinkEl.setAttribute('aria-label', '시즌 프로모션 페이지를 새 탭에서 열기');
 }
 
 function lockOrderChoiceScroll() {
