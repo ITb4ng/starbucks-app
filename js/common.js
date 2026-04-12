@@ -218,7 +218,10 @@ if (headerEl && headerToggleEl && headerCloseEls.length && headerOverlayEl) {
 }
 
 // Footer copyright
-const thisYear = document.querySelector('.this-year');
-if (thisYear) {
-    thisYear.textContent = new Date().getFullYear();
+const thisYearEls = document.querySelectorAll('.this-year');
+if (thisYearEls.length) {
+    const currentYear = new Date().getFullYear();
+    thisYearEls.forEach(function (thisYearEl) {
+        thisYearEl.textContent = currentYear;
+    });
 }

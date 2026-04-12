@@ -45,6 +45,14 @@
    - 여기서는 데스크탑에서 모바일 CTA가 노출되지 않도록 보강
 ========================================================= */
 
+@media screen and (min-width: 950px) {
+  .footer a:hover {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 2px;
+  }
+}
+
 /* =========================================================
    태블릿 ~ 모바일 시작 | 950px 이하
    - Hero는 대표 음료 1개만
@@ -83,6 +91,35 @@
     position: static;
     display: inline-block;
     margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #footer {
+    padding: 34px 0 calc(28px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .footer-desktop {
+    display: none;
+  }
+
+  .mobile-flow-footer {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 959px) {
+  .mobile-flow-footer__inner {
+    max-width: 700px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 36px;
+    row-gap: 0;
+  }
+
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer__info,
+  .mobile-flow-footer__copyright {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1460,6 +1497,17 @@
   }
 }
 
+/* 949px 이하 */
+@media screen and (max-width: 949px) {
+  .footer a:focus,
+  .footer a:focus-visible,
+  .footer a:active {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-underline-offset: 2px;
+  }
+}
+
 /* 899px 이하 */
 @media screen and (max-width: 899px) {
   .visual {
@@ -1753,6 +1801,27 @@
   .mobile-flow__promo-card {
     grid-template-columns: 74px minmax(0, 1fr);
     border-radius: 20px;
+  }
+
+  .mobile-flow-footer__inner {
+    padding: 0 16px;
+  }
+
+  .mobile-flow-footer__section {
+    padding: 20px 0 16px;
+  }
+
+  .mobile-flow-footer__title {
+    font-size: 15.5px;
+  }
+
+  .mobile-flow-footer__list .mobile-flow-footer__link {
+    font-size: 13px;
+  }
+
+  .mobile-flow-footer__info {
+    font-size: 11.6px;
+    line-height: 1.7;
   }
 }
 
@@ -2053,6 +2122,51 @@
   .mobile-flow__notice-link {
     gap: 8px;
   }
+
+  #footer {
+    padding: 30px 0 calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-flow-footer__inner {
+    padding: 0 14px;
+  }
+
+  .mobile-flow-footer__section {
+    padding: 18px 0 15px;
+  }
+
+  .mobile-flow-footer__title {
+    margin-bottom: 9px;
+    font-size: 15px;
+    line-height: 1.46;
+  }
+
+  .mobile-flow-footer__list .mobile-flow-footer__link {
+    font-size: 12.75px;
+    line-height: 1.56;
+  }
+
+  .mobile-flow-footer__policy {
+    gap: 5px 12px;
+    padding-top: 15px;
+  }
+
+  .mobile-flow-footer__policy .mobile-flow-footer__link {
+    font-size: 11px;
+  }
+
+  .mobile-flow-footer__info {
+    margin-top: 12px;
+    font-size: 11.4px;
+    line-height: 1.68;
+  }
+
+  .mobile-flow-footer__copyright {
+    padding-top: 10px;
+    font-size: 10.55px;
+    line-height: 1.6;
+    letter-spacing: 0.026em;
+  }
 }
 
 /* 390px 이하 */
@@ -2199,6 +2313,42 @@
 
   .mobile-flow__notice-text {
     font-size: 11.5px;
+  }
+
+  .mobile-flow-footer__inner {
+    padding: 0 12px;
+  }
+
+  .mobile-flow-footer__section {
+    padding: 17px 0 14px;
+  }
+
+  .mobile-flow-footer__title {
+    font-size: 14.5px;
+  }
+
+  .mobile-flow-footer__list .mobile-flow-footer__link {
+    font-size: 12.5px;
+    line-height: 1.58;
+  }
+
+  .mobile-flow-footer__policy {
+    gap: 5px 10px;
+  }
+
+  .mobile-flow-footer__policy .mobile-flow-footer__link {
+    font-size: 10.75px;
+  }
+
+  .mobile-flow-footer__info {
+    font-size: 11px;
+    line-height: 1.64;
+  }
+
+  .mobile-flow-footer__copyright {
+    font-size: 10.3px;
+    line-height: 1.58;
+    letter-spacing: 0.024em;
   }
 }
 
@@ -2433,5 +2583,37 @@
 
   .whats-new__pagination {
     padding: 5px 9px;
+  }
+
+  #footer {
+    padding: 28px 0 calc(22px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-flow-footer__inner {
+    padding: 0 10px;
+  }
+
+  .mobile-flow-footer__title {
+    font-size: 13.5px;
+  }
+
+  .mobile-flow-footer__list .mobile-flow-footer__link {
+    font-size: 11.75px;
+    line-height: 1.54;
+  }
+
+  .mobile-flow-footer__policy .mobile-flow-footer__link {
+    font-size: 10.5px;
+  }
+
+  .mobile-flow-footer__info {
+    font-size: 10.8px;
+    line-height: 1.62;
+  }
+
+  .mobile-flow-footer__copyright {
+    font-size: 10.1px;
+    line-height: 1.56;
+    letter-spacing: 0.022em;
   }
 }
