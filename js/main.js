@@ -1,19 +1,21 @@
 // badge 컨트롤 gsap
 const badgeEl = document.querySelector('aside .badges');
 
-window.addEventListener('scroll', _.throttle(function () {
-  if (window.scrollY > 500) {
-    gsap.to(badgeEl, 0.6, {
-      opacity: 0,
-      display: 'none'
-    });
-  } else {
-    gsap.to(badgeEl, 0.6, {
-      opacity: 1,
-      display: 'block'
-    });
-  }
-}, 300));
+if (badgeEl && typeof gsap !== 'undefined' && typeof _ !== 'undefined') {
+  window.addEventListener('scroll', _.throttle(function () {
+    if (window.scrollY > 500) {
+      gsap.to(badgeEl, 0.6, {
+        opacity: 0,
+        display: 'none'
+      });
+    } else {
+      gsap.to(badgeEl, 0.6, {
+        opacity: 1,
+        display: 'block'
+      });
+    }
+  }, 300));
+}
 
 /** Hero fade sequence **/
 const heroFadeMediaQuery = window.matchMedia('(max-width: 950px)');
@@ -220,17 +222,37 @@ if (orderChoiceEl && orderChoicePanelEl && orderChoiceTriggerEls.length) {
 /** What's New Swiper **/
 const whatsNewSectionEl = document.querySelector('.whats-new');
 const whatsNewPaginationEl = whatsNewSectionEl ? whatsNewSectionEl.querySelector('.whats-new__pagination') : null;
+const whatsNewSlideEls = whatsNewSectionEl ? whatsNewSectionEl.querySelectorAll('.whats-new__swiper .whats-new__slide') : [];
+
+function getWhatsNewTotalSlides(swiper) {
+  if (whatsNewSectionEl) {
+    const originalSlideEls = whatsNewSectionEl.querySelectorAll('.whats-new__swiper .whats-new__slide:not(.swiper-slide-duplicate)');
+    if (originalSlideEls.length) {
+      return originalSlideEls.length;
+    }
+  }
+
+  if (whatsNewSlideEls.length) {
+    return whatsNewSlideEls.length;
+  }
+
+  return swiper && swiper.slides ? swiper.slides.length : 0;
+}
 
 function updateWhatsNewPagination(swiper) {
   if (!whatsNewPaginationEl) {
     return;
   }
 
-  const totalSlides = swiper.slides.length - (swiper.loopedSlides * 2);
-  whatsNewPaginationEl.textContent = (swiper.realIndex + 1) + '/' + totalSlides;
+  const totalSlides = getWhatsNewTotalSlides(swiper);
+  const currentSlide = totalSlides
+    ? ((swiper.realIndex % totalSlides) + totalSlides) % totalSlides + 1
+    : 0;
+
+  whatsNewPaginationEl.textContent = currentSlide + '/' + totalSlides;
 }
 
-if (whatsNewSectionEl) {
+if (whatsNewSectionEl && typeof Swiper !== 'undefined') {
   const whatsNewSwiper = new Swiper('.whats-new .swiper-container', {
     loop: true,
     slidesPerView: 'auto',
@@ -252,56 +274,64 @@ if (whatsNewSectionEl) {
   updateWhatsNewPagination(whatsNewSwiper);
 }
 
-new Swiper('.notice-line .swiper-container', {
-  direction: 'vertical',
-  autoplay: true,
-  loop: true
-});
+if (document.querySelector('.notice-line .swiper-container') && typeof Swiper !== 'undefined') {
+  new Swiper('.notice-line .swiper-container', {
+    direction: 'vertical',
+    autoplay: true,
+    loop: true
+  });
+}
 
 // promotion Swiper 시즌 프로모션 슬라이더
-new Swiper('.promotion .swiper-container', {
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true
-  },
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 10,
-  centeredSlides: true,
-  pagination: {
-    el: '.promotion .swiper-pagination',
-    clickable: true,
-    type: 'bullets'
-  },
-  navigation: {
-    prevEl: '.promotion .swiper-prev',
-    nextEl: '.promotion .swiper-next'
-  }
-});
+if (document.querySelector('.promotion .swiper-container') && typeof Swiper !== 'undefined') {
+  new Swiper('.promotion .swiper-container', {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true
+    },
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: {
+      el: '.promotion .swiper-pagination',
+      clickable: true,
+      type: 'bullets'
+    },
+    navigation: {
+      prevEl: '.promotion .swiper-prev',
+      nextEl: '.promotion .swiper-next'
+    }
+  });
+}
 
 /** Promotion 슬라이드 토글 기능 **/
 const noticeEl = document.querySelector('.notice');
-const toggleMenuEl = noticeEl.querySelector('.menu-toggler');
+const toggleMenuEl = noticeEl ? noticeEl.querySelector('.menu-toggler') : null;
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
 
-promotionToggleBtn.addEventListener('click', function () {
-  isHidePromotion = !isHidePromotion;
-  if (isHidePromotion) {
-    promotionEl.classList.remove('hide');
-  } else {
-    promotionEl.classList.add('hide');
-  }
-});
+if (promotionEl && promotionToggleBtn) {
+  promotionToggleBtn.addEventListener('click', function () {
+    isHidePromotion = !isHidePromotion;
+    if (isHidePromotion) {
+      promotionEl.classList.remove('hide');
+    } else {
+      promotionEl.classList.add('hide');
+    }
+  });
+}
 
-toggleMenuEl.addEventListener('click', function () {
-  if (noticeEl.classList.contains('menuing')) {
-    hideNoticeProMenu();
-  } else {
-    showNoticeProMenu();
-  }
-});
+if (noticeEl && toggleMenuEl) {
+  toggleMenuEl.addEventListener('click', function () {
+    if (noticeEl.classList.contains('menuing')) {
+      hideNoticeProMenu();
+    } else {
+      showNoticeProMenu();
+    }
+  });
+}
 
 function showNoticeProMenu() {
   noticeEl.classList.add('menuing');
@@ -313,11 +343,13 @@ function hideNoticeProMenu() {
 
 // event triggerHook
 const spyEls = document.querySelectorAll('section.scroll-spy');
-spyEls.forEach(function (spyEl) {
-  new ScrollMagic.Scene({
-    triggerElement: spyEl,
-    triggerHook: 0.8
-  })
-    .setClassToggle(spyEl, 'show')
-    .addTo(new ScrollMagic.Controller());
-});
+if (spyEls.length && typeof ScrollMagic !== 'undefined') {
+  spyEls.forEach(function (spyEl) {
+    new ScrollMagic.Scene({
+      triggerElement: spyEl,
+      triggerHook: 0.8
+    })
+      .setClassToggle(spyEl, 'show')
+      .addTo(new ScrollMagic.Controller());
+  });
+}

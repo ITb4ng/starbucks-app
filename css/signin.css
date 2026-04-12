@@ -12,7 +12,7 @@
     background-attachment: fixed;
 }
 
-h2 {
+#signin > h2 {
     color: #fefefe;
     font-size: 30px;
     font-weight: normal;

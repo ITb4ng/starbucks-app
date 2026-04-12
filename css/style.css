@@ -1551,12 +1551,23 @@ body.order-choice-open {
 }
 
 .footer-desktop__menu-title {
-  margin: 0 0 10px;
-  color: var(--footer-text);
-  font-size: 14px;
-  font-weight: 400;
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: "Nanum Gothic", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 12.75px;
+  font-weight: 700;
+  line-height: 1.46;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.085em;
+}
+
+.footer-desktop__menu-title::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 1px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, rgba(0, 168, 98, 0.72), rgba(0, 168, 98, 0));
 }
 
 .footer-desktop__menu-list {
@@ -1682,6 +1693,17 @@ body.order-choice-open {
   margin: 0;
 }
 
+.footer-desktop__info a[x-apple-data-detectors],
+.mobile-flow-footer__info a[x-apple-data-detectors],
+.footer-desktop__copyright a[x-apple-data-detectors],
+.mobile-flow-footer__copyright a[x-apple-data-detectors] {
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+}
+
 .footer-desktop__copyright,
 .mobile-flow-footer__copyright {
   margin: 11px 0 0;
@@ -1709,8 +1731,8 @@ body.order-choice-open {
 .mobile-flow-footer__section {
   position: relative;
   overflow: visible;
-  padding: 22px 0 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 23px 0 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 0;
   background: none;
   box-shadow: none;
@@ -1723,13 +1745,16 @@ body.order-choice-open {
 
 
 .mobile-flow-footer__title {
-  margin: 0 0 11px;
+  display: block;
+  margin: 0 0 15px;
   padding-left: 0;
-  color: rgba(255, 255, 255, 0.96);
-  font-size: 16px;
+  color: rgba(255, 255, 255, 0.985);
+  font-family: "Nanum Gothic", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 15.9px;
   font-weight: 700;
-  line-height: 1.48;
-  letter-spacing: -0.025em;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
   text-wrap: balance;
 }
 
@@ -1761,10 +1786,10 @@ body.order-choice-open {
   display: block;
   width: auto;
   padding: 4px 0;
-  color: rgba(241, 235, 228, 0.94);
+  color: rgba(241, 235, 228, 0.9);
   font-size: 13.5px;
   font-weight: 500;
-  line-height: 1.62;
+  line-height: 1.64;
 }
 
 .mobile-flow-footer__list .mobile-flow-footer__link::after {
