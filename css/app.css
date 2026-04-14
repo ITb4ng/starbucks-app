@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+/* 반응형 구조 가이드
+   common.css : 공통 리셋/유틸
+   style.css  : 기본(데스크탑) 컴포넌트
+   app.css    : 브레이크포인트 오버라이드 */
 .header-quick-links {
   display: none;
 }
@@ -7,14 +10,267 @@
 .header-nav__actions {
   display: none;
 }
+/* =========================================================
+   Rewards 섹션 구간 최소 대응 | 951px ~ 1600px
+   - 2열 유지
+   - 로고 / 본문 비율 재조정
+   - 버튼은 흐트러지지 않게 flex 정렬
+========================================================= */
+@media screen and (min-width: 951px) and (max-width: 1600px) {
+  .new-rewards_inner {
+    max-width: 980px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
 
-/* 반응형 구조 가이드
-   common.css : 공통 리셋/유틸
-   style.css  : 기본(데스크탑) 컴포넌트
-   app.css    : 브레이크포인트 오버라이드 */
+  .new-rewards_inner::after {
+    content: none;
+  }
 
-/* 데스크탑 | 1480px 이상
-   기본 레이아웃은 style.css에서 관리합니다. */
+  .new-rewards_logo {
+    float: none;
+    flex: 0 0 220px;
+    width: 220px;
+    margin: 8px 0 0;
+  }
+
+  .new-rewards_logo img {
+    width: 100%;
+    max-width: 176px;
+    height: auto;
+  }
+
+  .new-rewards_conts {
+    float: none;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  .new-rewards_inner .pc-br {
+    display: none;
+  }
+
+  .new-rewards_conts .info-cont {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+
+  .new-rewards_conts .info-cont_txt {
+    margin-bottom: 14px;
+  }
+
+  .new-rewards_conts .info-cont_txt h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.35;
+    word-break: keep-all;
+  }
+
+  .new-rewards_conts .info-cont_txt p {
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  .new-rewards_conts .btn-signin_group {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .new-rewards_conts .btn-signin_group a {
+    height: 36px;
+    line-height: 34px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .new-rewards_conts .btn-signin_login {
+    margin-left: 0;
+  }
+
+  .new-rewards_conts .gift-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .new-rewards_conts .gift-cont_txt p,
+  .new-rewards_conts .gift-cont_txt p strong {
+    font-size: 13px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  .new-rewards_conts .btn_egift {
+    position: static;
+    width: fit-content;
+    max-width: 100%;
+    height: 36px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .new-rewards_conts .btn_egift a {
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+
+/* =========================================================
+   메인 bean 섹션부터 store까지 | 951px ~ 1600px 최소 대응
+   - HTML 흐름 기준: bean → favorite → reserve → 스토어
+========================================================= */
+@media screen and (min-width: 951px) and (max-width: 1600px) {
+  /* Main bean */
+  #main-bean-wrap {
+    height: clamp(489px, 52vw, 578px);
+  }
+
+  .main-bean-inner {
+    transform-origin: top center;
+  }
+
+  /* Favorite */
+  #fav_wrap {
+    height: clamp(594px, 63vw, 800px);
+  }
+
+  .fav_wrap_inner {
+    transform: scale(min(1, calc(100vw / 1280px)));
+    transform-origin: top center;
+  }
+
+  /* Store */
+  #storewrap {
+    height: clamp(297px, 32vw, 400px);
+  }
+
+  .store_inner {
+    transform: scale(min(1, calc(100vw / 1280px)));
+    transform-origin: top center;
+  }
+}
+
+.visual .visual_stage__group {
+  display: contents;
+}
+
+/* =========================================================
+   #first_reserve 섹션대응 구조 조정 후 미디어쿼리 | 951px ~ 1279px
+========================================================= */
+@media screen and (min-width: 951px) and (max-width: 1279px) {
+  /* First Reserve: scale the whole scene together */
+  #first_reserve_wrap {
+    height: 400px;
+  }
+
+  .first_reserve_inner {
+    transform: scale(clamp(0.8, calc(0.8 + ((100vw - 951px) / 328px) * 0.2), 1));
+    transform-origin: center center;
+  }
+}
+
+@media screen and (min-width: 1170px) and (max-width: 1279px) {
+  /* Reserve Magazine: one-third down from the desktop baseline */
+  .reserve_title img {
+    transform: translateX(calc(107px + (100vw - 1170px) * 54 / 109));
+  }
+
+  .reserve_detail-btn {
+    padding-left: calc(150px + (100vw - 1170px) * 75 / 109);
+  }
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1169px) {
+  /* Reserve Magazine: two-thirds down from the desktop baseline */
+  .reserve_title img {
+    transform: translateX(calc(54px + (100vw - 1060px) * 53 / 109));
+  }
+
+  .reserve_detail-btn {
+    padding-left: calc(75px + (100vw - 1060px) * 75 / 109);
+  }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1059px) {
+  /* Reserve Magazine: approach zero by 951px */
+  .reserve_title img {
+    transform: translateX(calc((100vw - 951px) * 54 / 108));
+  }
+
+  .reserve_detail-btn {
+    padding-left: calc((100vw - 951px) * 75 / 108);
+  }
+}
+
+/* =========================================================
+   중간 데스크톱 헤더 보정 | 950px ~ 1699px
+   - style.css 데스크톱 구조는 유지
+   - header만 app.css에서 정밀 보정
+========================================================= */
+
+@media screen and (min-width: 950px) and (max-width: 1699px) {
+  /* ---------------------------------
+     Header
+  --------------------------------- */
+  header > .inner {
+    max-width: 980px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header .sub-menu {
+    top: 8px;
+    gap: 8px;
+  }
+
+  header .sub-menu ul.menu li a {
+    padding: 10px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  header .sub-menu .search input {
+    width: 34px;
+  }
+
+  header .sub-menu .search input:focus {
+    width: 150px;
+  }
+
+  header .main-menu {
+    right: 0;
+    gap: 0;
+  }
+
+  header .main-menu .item > .item__name {
+    padding: 10px 12px 30px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  header .main-menu .item .item__contents .contents__menu > ul {
+    max-width: 1180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
+  header .main-menu .item .item__contents .contents__menu > ul > li {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 0;
+  }
+}
 
 /* 랩탑 | 960px ~ 1479px */
 @media screen and (max-width: 1479px) {
@@ -40,57 +296,134 @@
 }
 
 /* =========================================================
+   비쥬얼 섹션 미디어 쿼리
+   절대배치로 인해 대응이 안 되는 구간
+   재조정 후 미디어 쿼리 재작성
+========================================================= */
+@media screen and (min-width: 950px) and (max-width: 1279px) {
+  .visual {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .visual .visual-inner {
+    height: clamp(430px, 35vw, 540px);
+    min-height: 430px;
+    max-height: 540px;
+  }
+
+  .visual .visual_slogan,
+  .visual .btn_slogan {
+    left: 7.2%;
+    width: 25.8%;
+  }
+
+  .visual .visual_slogan {
+    top: 32.6%;
+  }
+
+  .visual .btn_slogan {
+    top: 57.4%;
+  }
+
+  .visual .btn_slogan a {
+    min-width: 132px;
+    width: auto;
+    padding: 0 18px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .visual .visual_stage__group {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    transform: none;
+  }
+
+  .visual .visual_stage__group--left {
+    top: 27.6%;
+    left: 40%;
+    width: 21.6%;
+  }
+
+  .visual .visual_stage__group--right {
+    top: 27%;
+    left: 57%;
+    width: 33.2%;
+  }
+
+  .visual .visual_stage__item {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    flex: 0 0 auto;
+    margin: 0;
+    transform: none;
+  }
+
+  .visual .visual_stage__item--drink-01 {
+    z-index: 10;
+    width: 57%;
+  }
+
+  .visual .visual_stage__item--drink-02 {
+    z-index: 10;
+    width: 60%;
+    margin-left: -12%;
+    margin-top: clamp(18px, 1.6vw, 24px);
+  }
+
+  .visual .visual_stage__item--drink-03 {
+    z-index: 10;
+    width: 43%;
+  }
+
+  .visual .visual_stage__item--drink-04 {
+    z-index: 9;
+    width: 36%;
+    margin-left: -11%;
+  }
+
+  .visual .visual_stage__item--drink-05 {
+    z-index: 8;
+    width: 35%;
+    margin-left: -9%;
+  }
+
+}
+
+/* =========================================================
    데스크탑 보정 구간 | 951px 이상
    - Hero는 style.css에서 absolute 포스터형으로 처리
    - 여기서는 데스크탑에서 모바일 CTA가 노출되지 않도록 보강
 ========================================================= */
 
 @media screen and (min-width: 950px) {
+  /* ---------------------------------
+     Focus visibility
+  --------------------------------- */
+  header .sub-menu a:focus-visible,
+  header .main-menu .item > .item__name:focus-visible,
+  .visual .btn_slogan a:focus-visible {
+    outline: 2px solid #006241;
+    outline-offset: 3px;
+  }
+
+  .footer-desktop__menu-title::after {
+    content: none;
+    display: none;
+  }
+
   .footer a:hover {
     text-decoration: underline;
     text-decoration-color: currentColor;
     text-underline-offset: 2px;
-  }
-}
-
-/* =========================================================
-   태블릿 ~ 모바일 시작 | 950px 이하
-   - Hero는 대표 음료 1개만
-   - 모바일 CTA 활성화
-========================================================= */
-@media screen and (max-width: 1020px) {
-  .new-rewards_logo {
-    width: 35%;
-    margin-top: 30px;
-    margin-right: 30px;
-  }
-
-  .new-rewards_logo img {
-    width: auto;
-    max-width: 100%;
-  }
-
-  .new-rewards_inner .pc-br {
-    display: block;
-  }
-
-  .new-rewards_conts .btn-signin_group {
-    position: static;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-
-  .new-rewards_conts {
-    width: calc(65% - 80px);
-  }
-
-  .new-rewards_conts .btn_egift {
-    position: static;
-    display: inline-block;
-    margin: 20px 0;
   }
 }
 
@@ -123,8 +456,8 @@
   }
 }
 
+
 @media screen and (max-width: 950px) {
-  /* Mobile polish: soften the header/hero seam */
   header {
     border-bottom-color: rgba(200, 196, 199, 0.58);
   }
@@ -157,13 +490,14 @@
   }
 
   .order-choice__panel h2 {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.24;
   }
 
   .order-choice__panel > p {
     margin-top: 10px;
-    font-size: 13.5px;
+    margin-bottom: 8px;
+    font-size: 12px;
     line-height: 1.56;
   }
 
@@ -192,7 +526,7 @@
         rgba(246, 245, 240, 0.14) 34%,
         rgba(246, 245, 240, 0) 46%
       ),
-      url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_top_bg_mo_260220.jpg");
+      url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_bg_mo_260407.jpg");
     background-position: center top, center top;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
@@ -409,6 +743,7 @@
     line-height: 1.4;
     text-decoration: none;
     opacity: 1;
+    height: 25px;
   }
 
   .visual .hero-link__label {
@@ -420,32 +755,6 @@
     font-size: 11px;
     line-height: 1;
   }
-
-  /* season-drinks legacy responsive rhythm
-  .season-drinks__copy h3 {
-    min-height: 2.45em;
-    font-size: 18px;
-  }
-
-  .season-drinks__card--featured .season-drinks__copy h3 {
-    font-size: 20px;
-  }
-
-  .season-drinks__copy p {
-    display: -webkit-box;
-    overflow: hidden;
-    min-height: calc(1.58em * 3);
-    font-size: 12.5px;
-    line-height: 1.58;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
-
-  .season-drinks__copy a {
-    min-width: 118px;
-    height: 38px;
-  }
-  */
 
   /* 모바일 헤더 */
   header > .inner {
@@ -2588,53 +2897,6 @@
   .visual .hero-link {
     font-size: 10px;
   }
-
-  /* season-drinks legacy responsive layout
-  .season-drinks__card {
-    padding: 16px 12px 16px;
-    border-radius: 20px;
-  }
-
-  .season-drinks__visual {
-    height: auto;
-    aspect-ratio: 1 / 1;
-    padding: 0;
-  }
-
-  .season-drinks__card--featured .season-drinks__visual {
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-
-  .season-drinks__visual img,
-  .season-drinks__card--featured .season-drinks__visual img {
-    max-width: none;
-    max-height: none;
-  }
-
-  .season-drinks__copy {
-    gap: 9px;
-    padding-top: 12px;
-  }
-
-  .season-drinks__copy h3 {
-    min-height: 2.5em;
-    font-size: 16px;
-  }
-
-  .season-drinks__copy p {
-    min-height: calc(1.46em * 2);
-    font-size: 11px;
-    line-height: 1.46;
-    -webkit-line-clamp: 2;
-  }
-
-  .season-drinks__copy a {
-    min-width: 104px;
-    height: 38px;
-    font-size: 12px;
-  }
-  */
 
   .whats-new {
     padding: 40px 0 40px;

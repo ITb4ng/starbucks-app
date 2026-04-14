@@ -11,7 +11,6 @@
     background-size: cover;
     background-attachment: fixed;
 }
-
 #signin > h2 {
     color: #fefefe;
     font-size: 30px;
@@ -38,6 +37,7 @@
 }
 .signin__card__title span {
     color: #006633;
+    text-transform: uppercase;
 }
 .signin__card form {
     padding: 20px 20px 0;
@@ -50,12 +50,31 @@
     border-radius: 4px;
     outline: none;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+.signin__card form input:focus {
+    border-color: #006633;
+    box-shadow: 0 0 0 2px rgba(0, 102, 51, 0.12);
+}
+
+.signin__card form input::placeholder {
+    color: #9b9b9b;
+    font-size: 13px;
+    opacity: 1;
 }
 
 .signin__card form .form__login{
+    display: block;
+    width: 100%;
+    min-height: 54px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 4px;
     color: #fff;
     font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
     background: #006633;
     cursor: pointer;
     margin: 0;
@@ -63,6 +82,12 @@
 
 .signin__card form .form__login:hover{
     text-decoration: underline;
+}
+
+.signin__card form .form__login:focus-visible,
+.signin__card .siginin__card__utils a:focus-visible {
+    outline: 2px solid #006633;
+    outline-offset: 2px;
 }
 
 .signin__card form p {
@@ -93,4 +118,104 @@
     text-decoration: underline;
 }
 
+@media screen and (max-width:950px){
+    #signin {
+        margin-top: 85px;
+        padding: 72px 0 96px;
+        background-attachment: scroll;
+        background-position: center top;
+    }
+    #signin > h2 {
+        font-size: 24px;
+        margin-bottom: 18px;
+        padding: 0 14px;
+    }
+    .signin__card {
+        width: calc(100% - 28px);
+        max-width: 520px;
+    }
+    .signin__card .signin__card__title {
+        padding: 24px 16px 18px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .signin__card form {
+        padding: 16px 16px 0;
+    }
+    .signin__card form input {
+        margin-bottom: 10px;
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+    .signin__card form input::placeholder {
+        font-size: 12px;
+    }
+    .signin__card form .form__login{
+        min-height: 48px;
+        font-size: 18px;
+    }
+    .signin__card form p {
+        margin: 12px 0;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    .signin__card .siginin__card__utils a {
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+}
 
+@media screen and (max-width:767px){
+    #signin {
+        margin-top: 68px;
+        padding: 56px 0 76px;
+    }
+    #signin > h2 {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+    .signin__card {
+        width: calc(100% - 20px);
+    }
+    .signin__card .signin__card__title {
+        padding: 20px 14px 16px;
+        font-size: 15px;
+    }
+    .signin__card form {
+        padding: 14px 14px 0;
+    }
+    .signin__card form input {
+        padding: 12px 13px;
+        font-size: 16px;
+    }
+    .signin__card form input::placeholder {
+        font-size: 11.5px;
+    }
+    .signin__card form .form__login{
+        min-height: 44px;
+        font-size: 16px;
+    }
+    .signin__card form p {
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    .signin__card .siginin__card__utils {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+    }
+    .signin__card .siginin__card__utils a {
+        padding: 14px 10px;
+        border-bottom: 1px solid #ddd;
+        border-right: 0;
+    }
+    .signin__card .siginin__card__utils a:first-child {
+        grid-column: 1 / -1;
+    }
+    .signin__card .siginin__card__utils a:last-child {
+        border-bottom: 0;
+    }
+    .signin__card .siginin__card__utils a:nth-child(2) {
+        border-right: 1px solid #ddd;
+    }
+}  

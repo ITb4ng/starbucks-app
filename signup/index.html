@@ -5,573 +5,463 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <title>Starbucks Korea</title>
+  <meta name="description" content="스타벅스 코리아 로그인 페이지">
+  <title>Starbucks Korea | 로그인</title>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Starbucks" />
-  <meta property="og:title" content="Starbucks Coffee Korea" />
-  <meta property="og:description" content="Starbucks" />
-  <meta property="og:image" content="../images/starbucks_seo.jpg" />
-  <meta property="og:url" content="https://starbucks.co.kr" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Starbucks">
+  <meta property="og:title" content="Starbucks Coffee Korea">
+  <meta property="og:description" content="Starbucks Korea 로그인 페이지">
+  <meta property="og:image" content="../images/starbucks_seo.jpg">
+  <meta property="og:url" content="https://starbucks.co.kr">
 
-  <!---- CDN  ----->
-
-  <!--Google Material Icons-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <!--root 상대경로 파비콘 지정-->
-  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon"> 
-  <!-- CSS -->
+  <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/app.css">
   <link rel="stylesheet" href="../css/signin.css">
-  
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <script defer src="../js/common.js"></script>
 </head>
 <body>
-  
-  <main>
-    <!-- 헤더 -->
-    <header>
-      <div class="inner">
-          <h1>
-            <a href="/" class="logo" title="스타벅스 메인 홈페이지로 바로가기">
-              <img src="../images/starbucks_logo.png" alt="STARBUCKS" />
-            </a>
-          </h1>
-          <button type="button" class="header-toggle" aria-controls="header-nav" aria-expanded="false">
-            <span class="blind">전체 메뉴 열기</span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+  <header>
+    <div class="inner">
+      <h1>
+        <a href="../index.html" class="logo" aria-label="스타벅스 메인 페이지로 이동" title="스타벅스 메인 홈페이지로 바로가기">
+          <img src="../images/starbucks_logo.png" alt="STARBUCKS">
+        </a>
+      </h1>
+
+      <button type="button" class="header-toggle" aria-controls="header-nav" aria-expanded="false">
+        <span class="blind">전체 메뉴 열기</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="header-nav" id="header-nav" aria-label="전체 메뉴">
+        <div class="header-nav__top">
+          <button type="button" class="header-close">
+            <span class="material-icons" aria-hidden="true">close</span>
+            <span class="blind">전체 메뉴 닫기</span>
           </button>
-          <div class="header-nav" id="header-nav" aria-label="전체 메뉴">
-          <div class="header-nav__top">
-            <button type="button" class="header-close">
-              <span class="material-icons" aria-hidden="true">close</span>
-              <span class="blind">전체 메뉴 닫기</span>
-            </button>
-            <div class="header-quick-links" aria-label="빠른 이동">
-              <a href="https://www.starbucks.co.kr/store/store_map.do" class="header-quick-link">
-                <span class="material-icons header-quick-link__icon" aria-hidden="true">place</span>
-                <span class="header-quick-link__text">매장 찾기</span>
-              </a>
-              <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="header-quick-link">
-                <span class="material-icons header-quick-link__icon" aria-hidden="true">local_cafe</span>
-                <span class="header-quick-link__text">메뉴</span>
-              </a>
-              <a href="./" class="header-quick-link">
-                <span class="material-icons header-quick-link__icon" aria-hidden="true">person</span>
-                <span class="header-quick-link__text">로그인</span>
-              </a>
-            </div>
-            <div class="sub-menu">
-            <ul class="menu">
-              <li>
-                <a href="./">Sign In</a>  
-              </li>
-              <li>
-                <a href="https://www.starbucks.co.kr/msr/msreward/about.do">My Starbucks</a>
-              </li>
-              <li>
-                <a href="https://www.starbucks.co.kr/util/index.do">Customer Service & ideas</a>
-              </li>
-              <li>
-                <a href="https://www.starbucks.co.kr/store/store_map.do">Find a Store</a>
-              </li>
+
+          <nav class="header-quick-links" aria-label="빠른 이동">
+            <a href="https://www.starbucks.co.kr/store/store_map.do" class="header-quick-link">
+              <span class="material-icons header-quick-link__icon" aria-hidden="true">place</span>
+              <span class="header-quick-link__text">매장 찾기</span>
+            </a>
+            <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="header-quick-link">
+              <span class="material-icons header-quick-link__icon" aria-hidden="true">local_cafe</span>
+              <span class="header-quick-link__text">메뉴</span>
+            </a>
+            <a href="./" class="header-quick-link" aria-current="page">
+              <span class="material-icons header-quick-link__icon" aria-hidden="true">person</span>
+              <span class="header-quick-link__text">로그인</span>
+            </a>
+          </nav>
+
+          <div class="sub-menu">
+            <ul class="menu" aria-label="유틸리티 링크">
+              <li><a href="./" aria-current="page">Sign In</a></li>
+              <li><a href="https://www.starbucks.co.kr/msr/msreward/about.do">My Starbucks</a></li>
+              <li><a href="https://www.starbucks.co.kr/util/index.do">Customer Service &amp; ideas</a></li>
+              <li><a href="https://www.starbucks.co.kr/store/store_map.do">Find a Store</a></li>
             </ul>
-            <div class="search">
-              <input type="text" placeholder="통합검색" aria-label="통합검색">
+
+            <form class="search" role="search" action="javascript:void(0)">
+              <label for="header-search" class="blind">통합검색</label>
+              <input id="header-search" type="search" placeholder="통합검색" aria-label="통합검색">
               <span class="material-icons search__icon" aria-hidden="true">search</span>
               <button type="button" class="search__clear" aria-label="검색어 지우기">
                 <span class="material-icons" aria-hidden="true">close</span>
               </button>
-            </div>
-          </div>
-          </div>
-          <ul class="main-menu">
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">COFFEE</button> <!--오버시 가려짐 ->  보여짐-->
-              <div class="item__contents">  <!--가려짐-->
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>커피</h2>
-                      <ul>
-                        <li>스타벅스 원두</li>
-                        <li>스타벅스 비아</li>
-                        <li>스타벅스 오리가미</li>
-                        <li>스타벅스앳홈 by 캡슐</li>
-                        <li>나와 어울리는 커피</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>커피 이야기</h2>
-                      <ul>
-                        <li>농장에서 우리의 손으로</li>
-                        <li>최상의 아라비카 원두</li>
-                        <li>스타벅스 로스트 스펙트럼</li>
-                        <li>스타벅스 디카페인</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>스타벅스 리저브</h2>
-                      <ul>
-                        <li style="text-transform: uppercase;">reserve magazine</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>에스프레소 음료</h2>
-                      <ul>
-                        <li>도피오</li>
-                        <li>에스프레소 마키아또</li>
-                        <li>아메리카노</li>
-                        <li>마키아또</li>
-                        <li>카푸치노</li>
-                        <li>라떼</li>
-                        <li>모카</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>최상의 커피를 즐기는 법</h2>
-                      <ul>
-                        <li>커피 프레스</li>
-                        <li>푸어 오버</li>
-                        <li>아이스 푸어 오버</li>
-                        <li>커피 메이커</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">MENU</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>음료</h2>
-                      <ul>
-                        <li>콜드 브루</li>
-                        <li>브루드 커피</li>
-                        <li>에스프레소</li>
-                        <li>프라푸치노</li>
-                        <li>블렌디드</li>
-                        <li>스타벅스 리프레셔</li>
-                        <li>스타벅스 피지오</li>
-                        <li>티(티바나)</li>
-                        <li>기타 제조 음료</li>
-                        <li>스타벅스 주스(병음료)</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>푸드</h2>
-                      <ul>
-                        <li>브레드</li>
-                        <li>케이크</li>
-                        <li>샌드위치 & 샐러드</li>
-                        <li>따뜻한 푸드</li>
-                        <li>과일 & 요거트</li>
-                        <li>스낵 & 미니 디저트</li>
-                        <li>아이스크림</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>상품</h2>
-                      <ul>
-                        <li>머그</li>
-                        <li>글라스</li>
-                        <li>플라스틱 텀블러</li>
-                        <li>스테인리스 텀블러</li>
-                        <li>보온병</li>
-                        <li>액세서리</li>
-                        <li>선물세트</li>
-                        <li>커피 용품</li>
-                        <li>패키지 티(티바나)</li>
-                        <li>시럽</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>카드</h2>
-                      <ul>
-                        <li>실물카드</li>
-                        <li>스타벅스 모바일 카드</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>메뉴 이야기</h2>
-                      <ul>
-                        <li>스타벅스 티바나</li>
-                        <li>스타벅스 콜드 브루</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">STORE</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>매장 찾기</h2>
-                      <ul>
-                        <li>퀵 검색</li>
-                        <li>지역 검색</li>
-                        <li><a href="javascript:void(0)">My 매장</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>드라이브 스루 매장</h2>
-                    </li>
-                    <li>
-                      <h2>스타벅스 리저브 매장</h2>
-                    </li>
-                    <li>
-                      <h2>커뮤니티 스토어 매장</h2>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">RESPONSIBILITY</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>사회공헌 캠페인 소개</h2>
-                    </li>
-                    <li>
-                      <h2>지역 사회 참여 활동</h2>
-                      <ul>
-                        <li>희망배달 켐페인</li>
-                        <li>재능기부 카페 소식</li>
-                        <li>커뮤니티 스토어</li>
-                        <li>청젼 지원 프로그램</li>
-                        <li>우리 농산물 사랑 캠페인</li>
-                        <li>국가유산 지킴이 활동</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>환경보호 활동</h2>
-                      <ul>
-                        <li>친환경 활동</li>
-                        <li>일회용 컵 없는 매장</li>
-                        <li>커피 원두 재활용</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>윤리 구매</h2>
-                      <ul>
-                        <li>윤리적 원두 구매</li>
-                        <li>공정무역 인증</li>
-                        <li>커피 농가 지원 활동</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>글로벌 사회 공헌</h2>
-                      <ul>
-                        <li>윤리경영 보고서</li>
-                        <li>스타벅스 재단</li>
-                        <li>지구촌 봉사의 달</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">STARBUCKS REWARDS</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>스타벅스 리워드</h2>
-                      <ul>
-                        <li>스타벅스 리워드 소개</li>
-                        <li>등급 및 혜택</li>
-                        <li>스타벅스 별</li>
-                        <li>자주하는 질문</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>스타벅스 카드</h2>
-                      <ul>
-                        <li>스타벅스 카드 소개</li>
-                        <li>스타벅스 카드 갤러리</li>
-                        <li>자주하는 질문</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>스타벅스 모바일 카드</h2>
-                      <ul>
-                        <li>스타벅스 모바일 카드 소개</li>
-                        <li>이용안내</li>
-                        <li>선물하기</li>
-                        <li>자주하는 질문</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">CORPORATE SALES</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>단체 및 기업 구매 안내</h2>
-                      <ul>
-                        <li>MD상품</li>
-                        <li>실물카드</li>
-                        <li>스타벅스 모바일 카드(MMS)</li>
-                        <li>스타벅스 모바일 카드(BULK)</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>단체 주문 배달 안내</h2>
-                      <ul>
-                        <li>단체 주문 배달 안내</li>
-                        <li>단체 주문 신청</li>
-                        <li>신청 내역 조회</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li class="item item--whats-new">
-              <button class="item__name" type="button" aria-expanded="false">WHAT'S NEW</button>
-              <div class="item__contents">
-                <div class="contents__menu">
-                  <ul class="inner">
-                    <li>
-                      <h2>이벤트</h2>
-                      <ul>
-                        <li>전체</li>
-                        <li>스타벅스 카드</li>
-                        <li>스타벅스 리워드</li>
-                        <li>온라인</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>뉴스</h2>
-                      <ul>
-                        <li>전체</li>
-                        <li>상품 출시</li>
-                        <li>스타벅스와 문화</li>
-                        <li>스타벅스 사회공헌</li>
-                        <li>스타벅스 카드출시</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>매장별 이벤트</h2>
-                      <ul>
-                        <li>일반 매장</li>
-                        <li>신규 매장</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h2>공지사항</h2>
-                    </li>
-                    <li>
-                      <h2>월페이퍼</h2>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="header-nav__actions">
-            <button type="button" class="header-nav__close-action">메뉴 닫기</button>
-          </div>
-          </div>
-      </div>
-      <div class="header-overlay"></div>
-    </header>
-    <section id="signin">
-        <h2>로그인</h2>
-        <div class="signin__card">
-            <div class="signin__card__title">
-                <span>Welcome!</span>            
-                    스타벅스 코리아에 오신 것을 환영합니다.
-            </div>
-            <form action="javascript:void(0)">
-                <input type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required="required">
-                <input type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required="required" autocomplete="off">
-                <input type="submit" value="로그인" class="form__login">
-                <p>
-                    * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다. <br>
-                    * 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.
-                </p>
             </form>
-            <div class="siginin__card__utils">
-                <a href="javascript:void(0)">회원가입</a>
-                <a href="javascript:void(0)">아이디 찾기</a>
-                <a href="javascript:void(0)">비밀번호 찾기</a>
-            </div>
-        </div>
-    </section>
-    <!-- 푸터 -->
-    <footer id="footer" class="footer">
-      <!-- Desktop footer -->
-      <div class="footer-desktop">
-        <div class="footer-desktop__inner">
-          <div class="footer-desktop__top">
-            <nav class="footer-desktop__menu" aria-label="스타벅스 데스크탑 푸터 메뉴">
-              <section class="footer-desktop__menu-group">
-                <h2 class="footer-desktop__menu-title">Company</h2>
-                <ul class="footer-desktop__menu-list">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">한눈에 보기</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">스타벅스 사명</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">스타벅스 소개</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">컴플라이언스</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">국내 뉴스룸</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">세계의 스타벅스</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">글로벌 뉴스룸</a></li>
-                </ul>
-              </section>
-              <section class="footer-desktop__menu-group">
-                <h2 class="footer-desktop__menu-title">Corporate Sales</h2>
-                <ul class="footer-desktop__menu-list">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 및 기업 구매 안내</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 주문 배달 안내</a></li>
-                </ul>
-              </section>
-              <section class="footer-desktop__menu-group">
-                <h2 class="footer-desktop__menu-title">Partnership</h2>
-                <ul class="footer-desktop__menu-list">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">신규 입점 제의</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">협력 고객사 등록신청</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">중개업체 확인</a></li>
-                </ul>
-              </section>
-              <section class="footer-desktop__menu-group">
-                <h2 class="footer-desktop__menu-title">Online Community</h2>
-                <ul class="footer-desktop__menu-list">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">페이스북</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">트위터</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">유튜브</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">인스타그램</a></li>
-                </ul>
-              </section>
-              <section class="footer-desktop__menu-group">
-                <h2 class="footer-desktop__menu-title">Recruit</h2>
-                <ul class="footer-desktop__menu-list">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 소개</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 지원하기</a></li>
-                </ul>
-              </section>
-            </nav>
-          </div>
-          <div class="footer-desktop__awards" aria-label="스타벅스 수상 내역">
-            <ul>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_01.jpg" alt="2020 여성가족부장관상"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_02.jpg" alt="2020 행정안전부장관 표창"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_03.jpg" alt="2020 농림축산식품부 장관상"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_04.jpg" alt="2020 대한민국 중소중견기업혁신대상"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_05.jpg" alt="2020 대한민국 일자리 유공 표창"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_06.jpg" alt="2020 사랑나눔 사회공헌대상"></a></li>
-              <li><a href="javascript:void(0)"><img src="../images/footer_award_image_07.jpg" alt="CCM 인증획득"></a></li>
-            </ul>
-          </div>
-          <div class="footer-desktop__bottom">
-            <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 링크">
-              <a href="javascript:void(0)">개인정보처리방침</a>
-              <a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a>
-              <a href="javascript:void(0)">홈페이지 이용약관</a>
-              <a href="javascript:void(0)">위치정보 이용약관</a>
-              <a href="javascript:void(0)">스타벅스 카드 이용약관</a>
-              <a href="javascript:void(0)">신세계 유니버스 클럽 이용약관</a>
-              <a href="javascript:void(0)">비회원 이용약관</a>
-              <a href="javascript:void(0)">My DT Pass 서비스 이용약관</a>
-              <a href="javascript:void(0)">윤리경영 핫라인</a>
-            </div>
-            <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 바로가기">
-              <a href="javascript:void(0)">찾아오시는 길</a>
-              <a href="javascript:void(0)">신규입점제의</a>
-              <a href="javascript:void(0)">사이트 맵</a>
-            </div>
-            <div class="footer-desktop__info" aria-label="스타벅스 사업자 정보">
-              <p>사업자등록번호 : 201-81-21515</p>
-              <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-              <p>TEL : 1522-3232</p>
-              <p>개인정보 책임자 : 이찬우</p>
-            </div>
-            <p class="footer-desktop__copyright">
-              &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
-            </p>
           </div>
         </div>
-      </div>
 
-      <!-- Mobile footer -->
-      <div class="mobile-flow-footer">
-        <div class="mobile-flow-footer__inner">
-          <section class="mobile-flow-footer__section mobile-flow-footer__section--service">
-            <h2 class="mobile-flow-footer__title">스타벅스를 이용해보세요</h2>
-            <ul class="mobile-flow-footer__list">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">매장 찾기</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사이렌 오더</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">딜리버스</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">e-Gift Card</a></li>
-            </ul>
-          </section>
-          <section class="mobile-flow-footer__section mobile-flow-footer__section--menu">
-            <h2 class="mobile-flow-footer__title">메뉴와 커피를 더 알고 싶다면</h2>
-            <ul class="mobile-flow-footer__list">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">음료</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">푸드</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">상품</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">커피 이야기</a></li>
-            </ul>
-          </section>
-          <section class="mobile-flow-footer__section mobile-flow-footer__section--brand">
-            <h2 class="mobile-flow-footer__title">스타벅스가 궁금하다면</h2>
-            <ul class="mobile-flow-footer__list">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 소개</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">국내 뉴스룸</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사회공헌</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">채용 소개</a></li>
-            </ul>
-          </section>
-          <section class="mobile-flow-footer__section mobile-flow-footer__section--support">
-            <h2 class="mobile-flow-footer__title">더 필요한 안내</h2>
-            <ul class="mobile-flow-footer__list">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">공지사항</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">고객의 소리</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">자주 하는 질문</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">매장 이용 안내</a></li>
-            </ul>
-          </section>
-          <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 링크">
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">개인정보처리방침</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">홈페이지 이용약관</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">위치정보 이용약관</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 카드 이용약관</a>
+        <ul class="main-menu">
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-coffee">COFFEE</button>
+            <div class="item__contents" id="menu-coffee" aria-label="COFFEE 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>커피</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">스타벅스 원두</a></li>
+                      <li><a href="javascript:void(0)">스타벅스 비아</a></li>
+                      <li><a href="javascript:void(0)">스타벅스 오리가미</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>커피 이야기</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">농장에서 우리 손으로</a></li>
+                      <li><a href="javascript:void(0)">최상의 아라비카 원두</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>스타벅스 리저브</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">Reserve Magazine</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-menu">MENU</button>
+            <div class="item__contents" id="menu-menu" aria-label="MENU 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>음료</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">콜드 브루</a></li>
+                      <li><a href="javascript:void(0)">에스프레소</a></li>
+                      <li><a href="javascript:void(0)">프라푸치노</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>푸드</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">케이크</a></li>
+                      <li><a href="javascript:void(0)">샌드위치</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>상품</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">머그</a></li>
+                      <li><a href="javascript:void(0)">텀블러</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-store">STORE</button>
+            <div class="item__contents" id="menu-store" aria-label="STORE 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>매장 찾기</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">퀵 검색</a></li>
+                      <li><a href="javascript:void(0)">지역 검색</a></li>
+                      <li><a href="javascript:void(0)">My 매장</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>드라이브 스루 매장</h2>
+                  </li>
+                  <li>
+                    <h2>스타벅스 리저브 매장</h2>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-responsibility">RESPONSIBILITY</button>
+            <div class="item__contents" id="menu-responsibility" aria-label="RESPONSIBILITY 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>지역 사회 참여</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">청년 지원</a></li>
+                      <li><a href="javascript:void(0)">친환경 활동</a></li>
+                      <li><a href="javascript:void(0)">윤리 구매</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>환경 보호</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">재활용 프로그램</a></li>
+                      <li><a href="javascript:void(0)">친환경 매장</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-rewards">STARBUCKS REWARDS</button>
+            <div class="item__contents" id="menu-rewards" aria-label="STARBUCKS REWARDS 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>스타벅스 리워드</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">리워드 소개</a></li>
+                      <li><a href="javascript:void(0)">등급 및 혜택</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>스타벅스 카드</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">카드 소개</a></li>
+                      <li><a href="javascript:void(0)">카드 등록</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-sales">CORPORATE SALES</button>
+            <div class="item__contents" id="menu-sales" aria-label="CORPORATE SALES 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>단체 및 기업 구매 안내</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">MD 상품</a></li>
+                      <li><a href="javascript:void(0)">e-Gift Card</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>단체 주문 배달 안내</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">단체 주문 안내</a></li>
+                      <li><a href="javascript:void(0)">주문 신청</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="item item--whats-new">
+            <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-whats-new">WHAT'S NEW</button>
+            <div class="item__contents" id="menu-whats-new" aria-label="WHAT'S NEW 하위 메뉴">
+              <div class="contents__menu">
+                <ul class="inner">
+                  <li>
+                    <h2>이벤트</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">전체</a></li>
+                      <li><a href="javascript:void(0)">스타벅스 카드</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h2>뉴스</h2>
+                    <ul>
+                      <li><a href="javascript:void(0)">전체</a></li>
+                      <li><a href="javascript:void(0)">상품 출시</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="header-nav__actions">
+          <button type="button" class="header-nav__close-action">메뉴 닫기</button>
+        </div>
+      </nav>
+    </div>
+    <div class="header-overlay"></div>
+  </header>
+
+  <main id="main-content">
+    <section id="signin" aria-labelledby="signin-title">
+      <h2 id="signin-title">로그인</h2>
+      <div class="signin__card">
+        <div class="signin__card__title" id="signin-card-title">
+          <span>welcome!</span>
+          스타벅스 코리아에 오신 것을 환영합니다.
+        </div>
+
+        <form action="javascript:void(0)" aria-labelledby="signin-card-title" aria-describedby="signin-notice">
+          <label for="signin-id" class="blind">아이디</label>
+          <input id="signin-id" name="signin-id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required autocomplete="username">
+
+          <label for="signin-password" class="blind">비밀번호</label>
+          <input id="signin-password" name="signin-password" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required autocomplete="current-password">
+
+          <button type="submit" class="form__login">로그인</button>
+
+          <p id="signin-notice">
+            * 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다. <br>
+            * 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화되어 있습니다.
+          </p>
+        </form>
+
+        <nav class="siginin__card__utils" aria-label="회원 관련 링크">
+          <a href="javascript:void(0)">회원가입</a>
+          <a href="javascript:void(0)">아이디 찾기</a>
+          <a href="javascript:void(0)">비밀번호 찾기</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer-desktop">
+      <div class="footer-desktop__inner">
+        <div class="footer-desktop__top">
+          <nav class="footer-desktop__menu" aria-label="스타벅스 데스크톱 푸터 메뉴">
+            <section class="footer-desktop__menu-group">
+              <h2 class="footer-desktop__menu-title">Company</h2>
+              <ul class="footer-desktop__menu-list">
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">한눈에 보기</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">스타벅스 소개</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">인재 채용</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">국내 뉴스룸</a></li>
+              </ul>
+            </section>
+
+            <section class="footer-desktop__menu-group">
+              <h2 class="footer-desktop__menu-title">Corporate Sales</h2>
+              <ul class="footer-desktop__menu-list">
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 및 기업 구매 안내</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 주문 배달 안내</a></li>
+              </ul>
+            </section>
+
+            <section class="footer-desktop__menu-group">
+              <h2 class="footer-desktop__menu-title">Partnership</h2>
+              <ul class="footer-desktop__menu-list">
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">입점 문의</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">제휴 문의</a></li>
+              </ul>
+            </section>
+
+            <section class="footer-desktop__menu-group">
+              <h2 class="footer-desktop__menu-title">Online Community</h2>
+              <ul class="footer-desktop__menu-list">
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">페이스북</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">인스타그램</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">유튜브</a></li>
+              </ul>
+            </section>
+
+            <section class="footer-desktop__menu-group">
+              <h2 class="footer-desktop__menu-title">Recruit</h2>
+              <ul class="footer-desktop__menu-list">
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 소개</a></li>
+                <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 지원하기</a></li>
+              </ul>
+            </section>
+          </nav>
+        </div>
+
+        <div class="footer-desktop__awards" aria-label="스타벅스 수상 내역">
+          <ul>
+            <li><a href="javascript:void(0)"><img src="../images/footer_award_image_01.jpg" alt="대한민국 소비자만족도 1위"></a></li>
+            <li><a href="javascript:void(0)"><img src="../images/footer_award_image_02.jpg" alt="한국산업 서비스품질지수 1위"></a></li>
+            <li><a href="javascript:void(0)"><img src="../images/footer_award_image_03.jpg" alt="품질경영 대상"></a></li>
+            <li><a href="javascript:void(0)"><img src="../images/footer_award_image_04.jpg" alt="전문경영 대상"></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-desktop__bottom">
+          <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 링크">
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a>
+            <a href="javascript:void(0)">홈페이지 이용약관</a>
+            <a href="javascript:void(0)">위치정보 이용약관</a>
+            <a href="javascript:void(0)">스타벅스 카드 이용약관</a>
+            <a href="javascript:void(0)">비회원 이용약관</a>
           </div>
-          <div class="mobile-flow-footer__info" aria-label="스타벅스 사업자 정보">
-            <p>사업자등록번호 : 201-81-21515</p>
-            <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-            <p>TEL : 1522-3232</p>
-            <p>개인정보 책임자 : 이찬우</p>
+
+          <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 바로가기">
+            <a href="javascript:void(0)">찾아오시는 길</a>
+            <a href="javascript:void(0)">신규입점제의</a>
+            <a href="javascript:void(0)">사이트 맵</a>
           </div>
-          <p class="mobile-flow-footer__copyright">
+
+          <div class="footer-desktop__info" aria-label="스타벅스 사업자 정보">
+            <p>사업자등록번호: 201-81-21515</p>
+            <p>주식회사 에스씨케이컴퍼니 대표이사: 정정수</p>
+            <p>TEL: 1522-3232</p>
+            <p>개인정보 책임자: 이경수</p>
+          </div>
+
+          <p class="footer-desktop__copyright">
             &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
           </p>
         </div>
       </div>
-    </footer>
+    </div>
 
-  </main>
+    <div class="mobile-flow-footer">
+      <div class="mobile-flow-footer__inner">
+        <section class="mobile-flow-footer__section mobile-flow-footer__section--service">
+          <h2 class="mobile-flow-footer__title">스타벅스를 이용해보세요</h2>
+          <ul class="mobile-flow-footer__list">
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">매장 찾기</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사이렌 오더</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">리저브</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">e-Gift Card</a></li>
+          </ul>
+        </section>
 
+        <section class="mobile-flow-footer__section mobile-flow-footer__section--menu">
+          <h2 class="mobile-flow-footer__title">메뉴와 커피를 더 알고 싶다면</h2>
+          <ul class="mobile-flow-footer__list">
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">음료</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">푸드</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">상품</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">커피 이야기</a></li>
+          </ul>
+        </section>
+
+        <section class="mobile-flow-footer__section mobile-flow-footer__section--brand">
+          <h2 class="mobile-flow-footer__title">스타벅스가 궁금하다면</h2>
+          <ul class="mobile-flow-footer__list">
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 소개</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">국내 뉴스룸</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사회공헌</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">인재 채용</a></li>
+          </ul>
+        </section>
+
+        <section class="mobile-flow-footer__section mobile-flow-footer__section--support">
+          <h2 class="mobile-flow-footer__title">더 필요한 안내</h2>
+          <ul class="mobile-flow-footer__list">
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">공지사항</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">고객센터</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">자주 묻는 질문</a></li>
+            <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">매장 이용 안내</a></li>
+          </ul>
+        </section>
+
+        <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 링크">
+          <a href="javascript:void(0)" class="mobile-flow-footer__link">개인정보처리방침</a>
+          <a href="javascript:void(0)" class="mobile-flow-footer__link">홈페이지 이용약관</a>
+          <a href="javascript:void(0)" class="mobile-flow-footer__link">위치정보 이용약관</a>
+          <a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 카드 이용약관</a>
+        </div>
+
+        <div class="mobile-flow-footer__info" aria-label="스타벅스 사업자 정보">
+          <p>사업자등록번호: 201-81-21515</p>
+          <p>주식회사 에스씨케이컴퍼니 대표이사: 정정수</p>
+          <p>TEL: 1522-3232</p>
+          <p>개인정보 책임자: 이경수</p>
+        </div>
+
+        <p class="mobile-flow-footer__copyright">
+          &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
