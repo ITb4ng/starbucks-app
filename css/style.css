@@ -99,6 +99,7 @@ header .logo {
   bottom: 0;
   left: 0;
   margin: auto;
+  z-index: 1;
 }
 header .sub-menu {
   position: absolute;
@@ -222,13 +223,22 @@ header .main-menu .item > .item__name {
   text-transform: uppercase;
   color: #333;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
 }
-header .main-menu .item > .item__name:hover {
+header .main-menu .item > .item__name:hover:not(:focus-visible):not(:active) {
   color: #669900;
   text-decoration: underline;
   text-underline-position: under;
 }
-header .main-menu .item:hover > .item__name {
+header .main-menu .item:hover > .item__name:not(:focus-visible):not(:active) {
+  background-color: #2C2A29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+header .main-menu .item:focus-within > .item__name,
+header .main-menu .item.is-open > .item__name,
+header .main-menu .item > .item__name:focus-visible,
+header .main-menu .item > .item__name:active {
   background-color: #2C2A29;
   color: #669900;
   border-radius: 6px 6px 0 0;
@@ -242,11 +252,32 @@ header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
-  top: 120px;
-  display: none;
-} 
-header .main-menu .item:hover .item__contents {
+  top: 118px;
   display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  pointer-events: none;
+  z-index: 20;
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.4s;
+}
+header .main-menu .item:hover .item__contents {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+header .main-menu .item:focus-within .item__contents,
+header .main-menu .item.is-open .item__contents {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 header .main-menu .item .item__contents .contents__menu {
   background-color: #2C2A29;
@@ -269,6 +300,12 @@ header .main-menu .item .item__contents .contents__menu > ul > li h2 {
   font-size: 14px;
   color: #fff;
 }
+header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus,
+header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus-visible {
+  outline: 2px solid #669900;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
@@ -279,6 +316,13 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   text-decoration: underline;
   text-underline-position: under;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li[tabindex="0"]:focus-visible {
+  text-decoration: underline;
+  text-underline-position: under;
+  outline: 2px solid #669900;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* 뱃지 */
@@ -301,7 +345,7 @@ aside .badges img {
   .visual {
     margin-top: 120px;
     padding: 24px 14px 22px;
-    background-color: #d8c9e2;
+    background-color: #fde792;
     background-image: none;
   }
 
@@ -314,7 +358,7 @@ aside .badges img {
     margin: 0 auto;
     padding: 0;
     display: block;
-    background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_top_bg_260220.jpg");
+    background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_bg_260407.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -806,7 +850,7 @@ body.order-choice-open {
   display: flex;
 }
 .notice .notice-line .inner__left {
-  width: 60%;
+  width: 50%;
   height: 100%;
   background-color: #000;
   display: flex;
@@ -857,6 +901,7 @@ body.order-choice-open {
   width: 62px;
   height: 62px;
   display: flex;
+  margin-right: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -868,11 +913,10 @@ body.order-choice-open {
   font-size: 230%;
 }
 .notice .notice-line .inner__right {
-  width: 40%;
+  width: 50%;
   height: 100%;
-  left: 10%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -1149,7 +1193,7 @@ body.order-choice-open {
 
 /* 메인 원두 리워드  섹션  */
 #main-bean-wrap {
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_promotion_bg.jpg');    
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_promotion_bg_260220.jpg');    
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1164,11 +1208,9 @@ body.order-choice-open {
 
 .main-bean-imgBox {
   position: absolute;
-  top: 15.917%;
-  /* transform: translateY(-50%); */
   z-index: 9;
-  width: 21.072%;
-  left: 28.5694%;
+  width: 100%;
+  left: 15%;
   margin-left: -5%;
 }
 .main-bean-txt {
@@ -1186,65 +1228,103 @@ body.order-choice-open {
 }
 
 /* 리저브 섹션 */
-
 #first_reserve_wrap {
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/250305_pc_reserve_bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-  background-size: cover;
+  background: #faefe0;
   overflow: hidden;
   height: 400px;
 }
+
 .first_reserve_inner {
   position: relative;
-  width: 100%;
+  max-width: 1180px;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 32px;
 }
-.first_reserve_title {
+
+.first_reserve_copy {
   position: relative;
-  z-index: 10;
-  padding-top: 64px;
-  max-width: 1080px;
+  z-index: 2;
+  display: flex;
+  flex: 0 0 50%;
+  width: 50%;
+  min-width: 0;
+  max-width: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.first_reserve_title {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.first_reserve_title img,
-.first_reserve_visual img {
-  width: auto;
-}
-.first_reserve_visual .reserve_visual-m {
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 
 .first_reserve_title img {
-  transform: translateX(70px);
-}
-.first_reserve_visual {
-  right: -2%;
   display: block;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  max-width: 100%;
+  height: auto;
 }
 
-.first_reserve_visual img {
-  width: auto;
-  max-width: none;
-}
 .first_reserve_detail-btn_wrap {
-  position: relative;
-  z-index: 10;
-  max-width: 1080px;
-  margin: 30px auto;
-  padding-left: 306px;
+  width: 100%;
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
 }
+
 .first_reserve_detail-btn {
   width: 125px;
   height: 38px;
 }
+
+.first_reserve_detail-btn .btn {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.first_reserve_visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 0 0 50%;
+  width: 50%;
+  min-width: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.first_reserve_visual img {
+  display: block;
+  width: auto;
+  flex-shrink: 0;
+  max-width: none;
+  height: 340px;
+  transform: translateX(-20%);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+/* 1280 이하부터 조금씩 중앙으로 */
+
+/* 1100 이하에서는 더 중앙 쪽으로 */
+
+/* 951 ~ 1020 구간은 거의 중앙에 가깝게 */
 
 /* favorite Section */
 #fav_wrap {
@@ -1347,8 +1427,7 @@ body.order-choice-open {
   position: relative;
   z-index: 10;
   padding-top: 135px;
-  padding-left: 55px;
-  max-width: 1100px;
+  max-width: 1320px;
   width: 100%;
   margin: 0 auto;
 }

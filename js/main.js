@@ -315,6 +315,10 @@ let isHidePromotion = false;
 if (promotionEl && promotionToggleBtn) {
   promotionToggleBtn.addEventListener('click', function () {
     isHidePromotion = !isHidePromotion;
+    if (toggleMenuEl) {
+      toggleMenuEl.setAttribute('aria-expanded', String(!isHidePromotion));
+    }
+    promotionEl.setAttribute('aria-hidden', String(isHidePromotion));
     if (isHidePromotion) {
       promotionEl.classList.remove('hide');
     } else {
