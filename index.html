@@ -32,6 +32,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
 
+    <style>
+      .skip-links {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 10000;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        max-width: calc(100vw - 24px);
+        pointer-events: none;
+      }
+
+      .skip-link {
+        padding: 10px 14px;
+        border-radius: 6px;
+        background: #006241;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        transform: translateY(-180%);
+        opacity: 0;
+        pointer-events: auto;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .skip-link:focus,
+      .skip-link:focus-visible {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      </style>
+
   <!-- script -->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
@@ -49,8 +84,13 @@
 
 </head>
 <body>
+  <nav class="skip-links" aria-label="바로가기">
+    <a href="./signup/" class="skip-link">로그인 바로가기</a>
+    <a href="#main-menu-first-item" class="skip-link" data-skip-menu>메뉴 바로가기</a>
+    <a href="#main_content" class="skip-link">콘텐츠 바로가기</a>
+  </nav>
   
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- 헤더 -->
     <header>
       <div class="inner">
@@ -65,7 +105,7 @@
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </button>
-          <div class="header-nav" id="header-nav" aria-label="전체 메뉴">
+          <div class="header-nav" id="header-nav" aria-label="전체 메뉴" tabindex="-1">
           <div class="header-nav__top">
             <button type="button" class="header-close">
               <span class="material-icons" aria-hidden="true">close</span>
@@ -111,8 +151,8 @@
           </div>
           <ul class="main-menu">
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">COFFEE</button> <!--오버시 가려짐 ->  보여짐-->
-              <div class="item__contents">  <!--가려짐-->
+              <button class="item__name" id="main-menu-first-item" type="button" aria-expanded="false" aria-controls="menu-coffee-panel">COFFEE</button> <!--오버시 가려짐 ->  보여짐-->
+              <div class="item__contents" id="menu-coffee-panel">  <!--가려짐-->
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -166,8 +206,8 @@
               </div>
             </li>
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">MENU</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-menu-panel">MENU</button>
+              <div class="item__contents" id="menu-menu-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -231,8 +271,8 @@
               </div>
             </li>
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">STORE</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-store-panel">STORE</button>
+              <div class="item__contents" id="menu-store-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -257,8 +297,8 @@
               </div>
             </li>
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">RESPONSIBILITY</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-responsibility-panel">RESPONSIBILITY</button>
+              <div class="item__contents" id="menu-responsibility-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -304,8 +344,8 @@
               </div>
             </li>
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">STARBUCKS REWARDS</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-rewards-panel">STARBUCKS REWARDS</button>
+              <div class="item__contents" id="menu-rewards-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -339,8 +379,8 @@
               </div>
             </li>
             <li class="item">
-              <button class="item__name" type="button" aria-expanded="false">CORPORATE SALES</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-sales-panel">CORPORATE SALES</button>
+              <div class="item__contents" id="menu-sales-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -365,8 +405,8 @@
               </div>
             </li>
             <li class="item item--whats-new">
-              <button class="item__name" type="button" aria-expanded="false">WHAT'S NEW</button>
-              <div class="item__contents">
+              <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-whats-new-panel">WHAT'S NEW</button>
+              <div class="item__contents" id="menu-whats-new-panel">
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
@@ -426,7 +466,8 @@
     </aside> -->
 
     <!-- ViSUAL Main-->
-    <section class="visual" id="main_content">
+    <section class="visual" id="main_content" aria-labelledby="main-visual-title" tabindex="-1">
+      <h2 class="blind" id="main-visual-title">현재 진행중인 프로모션</h2>
       <div class="visual-inner">
         <div class="visual_slogan" data-hero-fade data-fade-desktop-order="1" data-fade-mobile-order="1">
           <picture>
@@ -862,7 +903,8 @@
 
     <!-- 기존 구조 유지: 아래 기존 섹션들은 삭제하지 않고 데스크탑 레이아웃용으로 그대로 유지합니다. -->
     <!-- 노티스 섹션 -->
-    <section class="notice">
+    <section class="notice" aria-labelledby="notice-title">
+      <h2 class="blind" id="notice-title">공지사항 및 프로모션</h2>
 
       <!--NOTICE LINE-->
       <div class="notice-line">
@@ -902,7 +944,7 @@
                 접근성 role 버튼 aria-label 펼치기 
                 키보드 상호작용 JS이벤트 active 이 후 프로모션이 펼쳐짐 
                 -->
-              <div class="menu-toggler" role="button" aria-label="펼치기"></div> 
+              <button type="button" class="menu-toggler" aria-label="프로모션 펼치기" aria-expanded="false" aria-controls="promotion_layer"></button>
             </div>
           </div>
 
@@ -912,7 +954,7 @@
       
       <!--PROMOTION-->
       <!--기존 펼쳐짐에서 html hide 클래스를 추가 할당-->
-      <div class="promotion hide">
+      <div class="promotion hide" id="promotion_layer" aria-hidden="true">
 
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -953,7 +995,8 @@
     <!-- 노티스 섹션 끝 -->
 
     <!-- 메인 스타벅스 리뉴얼 -->
-    <section id="new-rewards_wrap">
+    <section id="new-rewards_wrap" aria-labelledby="new-rewards-title">
+      <h2 class="blind" id="new-rewards-title">스타벅스 리워드</h2>
       <div class="new-rewards_inner">
         <div class="new-rewards_logo">
           <img src="./images/rewards-logo.png" alt="Starbucks Rewards"> 
@@ -996,7 +1039,8 @@
     <!-- 메인 스타벅스 리뉴얼 끝 -->
 
     <!-- 스타벅스 원두 섹션 -->
-    <section id="main-bean-wrap" class="scroll-spy">
+    <section id="main-bean-wrap" class="scroll-spy" aria-labelledby="main-bean-title">
+      <h2 class="blind" id="main-bean-title">스프링 시즌 블렌드 250g</h2>
       <div class="main-bean-inner">
         <div class="main-bean-imgBox">
           <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_promotion_beans_260220.png"
@@ -1016,7 +1060,8 @@
 
 
   <!-- 리저브 섹션 -->
-    <section id="first_reserve_wrap" class="scroll-spy">
+    <section id="first_reserve_wrap" class="scroll-spy" aria-labelledby="first-reserve-title">
+      <h2 class="blind" id="first-reserve-title">코스타리카 리저브</h2>
       <div class="first_reserve_inner">
         <div class="first_reserve_copy">
           <div class="first_reserve_title">
@@ -1039,7 +1084,8 @@
 
 
   <!-- favorite Section -->
-    <section id="fav_wrap" class="scroll-spy">
+    <section id="fav_wrap" class="scroll-spy" aria-labelledby="favorite-title">
+      <h2 class="blind" id="favorite-title">스타벅스 즐겨찾기 메뉴</h2>
       <div class="fav_wrap_inner">
         <div class="fav_txt_img back-to-position to-right delay-0">
           PICK YOUR FAVORITE
@@ -1055,7 +1101,8 @@
     </section>
 
   <!-- RESERVE Magazine section -->
-    <section id="reserve_magazine_wrap" class="scroll-spy">
+    <section id="reserve_magazine_wrap" class="scroll-spy" aria-labelledby="reserve-magazine-title">
+      <h2 class="blind" id="reserve-magazine-title">리저브 매거진</h2>
       <div class="reserve_inner">
         <div class="reserve_title">
           <img src="./images/reserve_magazine_text.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요.">
@@ -1072,7 +1119,8 @@
     </section>
 
     <!-- STORE Section -->
-    <section id="storewrap" class="scroll-spy">
+    <section id="storewrap" class="scroll-spy" aria-labelledby="store-title">
+      <h2 class="blind" id="store-title">매장 찾기</h2>
       <div class="store_inner">
         <div class="store_img01 back-to-position delay-1"></div> <!-- 작은 원 -->
         <div class="store_img02 back-to-position delay-2"></div> <!-- 큰 원 -->

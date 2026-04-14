@@ -1077,7 +1077,10 @@
     transition: transform 0.3s ease;
   }
 
-  header .main-menu .item.is-open > .item__name {
+  header .main-menu .item.is-open > .item__name,
+  header .main-menu .item:focus-within > .item__name,
+  header .main-menu .item > .item__name:focus-visible,
+  header .main-menu .item > .item__name:active {
     color: #006241;
     background-color: transparent;
     border-radius: 0;
@@ -1085,14 +1088,17 @@
     font-weight: 700;
   }
 
-  header .main-menu .item.is-open > .item__name::after {
+  header .main-menu .item.is-open > .item__name::after,
+  header .main-menu .item:focus-within > .item__name::after,
+  header .main-menu .item > .item__name:focus-visible::after,
+  header .main-menu .item > .item__name:active::after {
     border-right-color: #006241;
     border-bottom-color: #006241;
     transform: translateY(-30%) rotate(225deg);
   }
 
-  header .main-menu .item > .item__name:hover,
-  header .main-menu .item:hover > .item__name {
+  header .main-menu .item > .item__name:hover:not(:focus-visible):not(:active),
+  header .main-menu .item:hover > .item__name:not(:focus-visible):not(:active) {
     background-color: transparent;
     color: #333;
     text-decoration: none;
@@ -1148,6 +1154,12 @@
     font-size: 13px;
     color: #1e3932;
   }
+  header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus,
+  header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus-visible {
+    outline: 2px solid #006241;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 
   header .main-menu .item .item__contents .contents__menu > ul > li ul li {
     padding: 3px 0;
@@ -1161,6 +1173,14 @@
     font-size: inherit;
     line-height: inherit;
     text-decoration: none;
+  }
+
+  header .main-menu .item .item__contents .contents__menu > ul > li ul li[tabindex="0"]:focus-visible {
+    text-decoration: underline;
+    text-underline-position: under;
+    outline: 2px solid #006241;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 
   header .header-overlay {

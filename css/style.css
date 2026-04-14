@@ -223,13 +223,22 @@ header .main-menu .item > .item__name {
   text-transform: uppercase;
   color: #333;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
 }
-header .main-menu .item > .item__name:hover {
+header .main-menu .item > .item__name:hover:not(:focus-visible):not(:active) {
   color: #669900;
   text-decoration: underline;
   text-underline-position: under;
 }
-header .main-menu .item:hover > .item__name {
+header .main-menu .item:hover > .item__name:not(:focus-visible):not(:active) {
+  background-color: #2C2A29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+header .main-menu .item:focus-within > .item__name,
+header .main-menu .item.is-open > .item__name,
+header .main-menu .item > .item__name:focus-visible,
+header .main-menu .item > .item__name:active {
   background-color: #2C2A29;
   color: #669900;
   border-radius: 6px 6px 0 0;
@@ -243,11 +252,32 @@ header .main-menu .item .item__contents {
   width: 100%;
   position: fixed;
   left: 0;
-  top: 120px;
-  display: none;
-} 
-header .main-menu .item:hover .item__contents {
+  top: 118px;
   display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  pointer-events: none;
+  z-index: 20;
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.4s;
+}
+header .main-menu .item:hover .item__contents {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+header .main-menu .item:focus-within .item__contents,
+header .main-menu .item.is-open .item__contents {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 header .main-menu .item .item__contents .contents__menu {
   background-color: #2C2A29;
@@ -270,6 +300,12 @@ header .main-menu .item .item__contents .contents__menu > ul > li h2 {
   font-size: 14px;
   color: #fff;
 }
+header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus,
+header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus-visible {
+  outline: 2px solid #669900;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
 header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
@@ -280,6 +316,13 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   text-decoration: underline;
   text-underline-position: under;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li[tabindex="0"]:focus-visible {
+  text-decoration: underline;
+  text-underline-position: under;
+  outline: 2px solid #669900;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* 뱃지 */
