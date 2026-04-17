@@ -12,6 +12,33 @@
   border: 0;
 }
 
+#main_content {
+  scroll-margin-top: 132px;
+}
+
+#main_content:focus-visible {
+  outline: 3px solid #006241;
+  outline-offset: 6px;
+}
+
+@media screen and (max-width: 950px) {
+  #main_content {
+    scroll-margin-top: 96px;
+  }
+}
+
+header .header-toggle:focus-visible,
+header .header-close:focus-visible,
+.visual .hero-actions a:focus-visible,
+.visual .hero-actions button:focus-visible,
+.notice .notice-line .inner__left .notice-line__more:focus-visible,
+.notice .notice-line .inner__right .toggle-promotion .menu-toggler:focus-visible,
+.notice .promotion .swiper-prev:focus-visible,
+.notice .promotion .swiper-next:focus-visible {
+  outline: 3px solid #006241;
+  outline-offset: 3px;
+}
+
 
 /*HEADER*/
 header {
@@ -300,8 +327,12 @@ header .main-menu .item .item__contents .contents__menu > ul > li h2 {
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus,
-header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus-visible {
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a {
+  display: inline-block;
+  color: inherit;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a:focus,
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a:focus-visible {
   outline: 2px solid #669900;
   outline-offset: 3px;
   border-radius: 4px;
@@ -313,11 +344,15 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
   line-height: 1.4;
 }
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a {
+  display: inline-block;
+  color: inherit;
+}
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   text-decoration: underline;
   text-underline-position: under;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li[tabindex="0"]:focus-visible {
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a:focus-visible {
   text-decoration: underline;
   text-underline-position: under;
   outline: 2px solid #669900;
@@ -406,8 +441,8 @@ aside .badges img {
     min-width: 125px;
     height: 38px;
     margin: 0 auto;
-    color: #ac85ba;
-    border: 2px solid #ac85ba;
+    color: #994d13;
+    border: 2px solid #994d13;
     background: transparent;
     border-radius: 3px;
     text-decoration: none;
@@ -417,9 +452,10 @@ aside .badges img {
   }
 
   .visual .btn_slogan a:hover {
-    background-color: #ac85ba;
+    background-color: #994d13;
     color: #fff;
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .visual .visual_set {
@@ -509,7 +545,7 @@ aside .badges img {
   .visual .visual_stage__item--drink-07 {
     margin-bottom: 0 !important;
   }
-  .visual [data-hero-fade] {
+  .visual.is-hero-fade-ready [data-hero-fade] {
     opacity: 0;
   }
 
@@ -870,7 +906,9 @@ body.order-choice-open {
 .notice .promotion .swiper-next {
   width: 42px;
   height: 42px;
+  padding: 0;
   outline: none;
+  background-color: transparent;
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
@@ -1061,6 +1099,11 @@ body.order-choice-open {
   margin-top: 40px;
 }
 
+.main-bean-txt .btn_detail .btn {
+  width: 100%;
+  height: 100%;
+}
+
 /* 리저브 섹션 */
 #first_reserve_wrap {
   position: relative;
@@ -1122,12 +1165,8 @@ body.order-choice-open {
 }
 
 .first_reserve_detail-btn .btn {
-  display: inline-flex;
   width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
 }
 
 .first_reserve_visual {
@@ -1163,18 +1202,15 @@ body.order-choice-open {
 /* favorite Section */
 #fav_wrap {
   position: relative;
-  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_bg_250409.jpg') center center fixed no-repeat transparent;
+  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_bg_260407.jpg') center center fixed no-repeat transparent;
   background-size: auto 87%;
   background-position: bottom;
   height: 800px;
   padding: 0;
 }
 .fav_wrap_inner {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -640px;
-  bottom: 0;
+  position: relative;
+  margin: 0 auto;
   width: 1280px;
 }
 .fav_txt_img {
@@ -1210,7 +1246,7 @@ body.order-choice-open {
   right: -163px;
   width: 912px;
   height: 575px;
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_img_250409.png');
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_img_260407.png');
 }
 .fav_btn {
   position: absolute;
@@ -1220,26 +1256,10 @@ body.order-choice-open {
   left: 328px;
   z-index: 7;
 }
-.fav_btn a {
-  display: block;
+
+.fav_btn .btn {
   width: 100%;
   height: 100%;
-  color: #fff;
-  border: 2px solid #fff;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 36px;
-  text-align: center;
-  border-radius: 5px;
-  letter-spacing: -2px;
-  transition: background-color .7s, color .7s, border-color .7s;
-  -webkit-transition: background-color .7s, color .7s, border-color .7s;
-}
-.fav_btn a:hover {
-  background-color: #fff;
-  font-weight: normal;
-  color: #000;
-  text-decoration: underline;
 } 
 
 /* RESERVE Section */
@@ -1296,6 +1316,13 @@ body.order-choice-open {
   padding-left: 225px;
   width: 583px;
   height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve_detail-btn .btn {
+  --btn-width: 125px;
 }
 
 
@@ -1380,6 +1407,13 @@ body.order-choice-open {
   right: 408px;
   top: 290px;
   z-index: 4;
+  width: 125px;
+  height: 38px;
+}
+
+.store_inner .store_btn .btn {
+  width: 100%;
+  height: 100%;
 }
 
 /* =========================================================
@@ -1534,7 +1568,8 @@ body.order-choice-open {
   gap: 10px 0;
 }
 
-.footer-desktop__policy a {
+.footer-desktop__policy a,
+.footer-desktop__policy span {
   padding: 0 12px;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--footer-link-muted);
@@ -1542,17 +1577,21 @@ body.order-choice-open {
   line-height: 1.5;
 }
 
-.footer-desktop__policy a:last-child {
+.footer-desktop__policy a:last-child,
+.footer-desktop__policy span:last-child {
   border-right: 0;
 }
 
 .footer-desktop__policy a:first-child,
-.footer-desktop__policy a:nth-child(4) {
+.footer-desktop__policy a:nth-child(4),
+.footer-desktop__policy span:first-child,
+.footer-desktop__policy span:nth-child(4) {
   color: var(--footer-accent);
   font-weight: 700;
 }
 
-.footer-desktop__policy a:first-child {
+.footer-desktop__policy a:first-child,
+.footer-desktop__policy span:first-child {
   color: #00b050;
 }
 
@@ -1564,7 +1603,8 @@ body.order-choice-open {
   margin-top: 18px;
 }
 
-.footer-desktop__buttons a {
+.footer-desktop__buttons a,
+.footer-desktop__buttons span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
