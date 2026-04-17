@@ -12,6 +12,33 @@
   border: 0;
 }
 
+#main_content {
+  scroll-margin-top: 132px;
+}
+
+#main_content:focus-visible {
+  outline: 3px solid #006241;
+  outline-offset: 6px;
+}
+
+@media screen and (max-width: 950px) {
+  #main_content {
+    scroll-margin-top: 96px;
+  }
+}
+
+header .header-toggle:focus-visible,
+header .header-close:focus-visible,
+.visual .hero-actions a:focus-visible,
+.visual .hero-actions button:focus-visible,
+.notice .notice-line .inner__left .notice-line__more:focus-visible,
+.notice .notice-line .inner__right .toggle-promotion .menu-toggler:focus-visible,
+.notice .promotion .swiper-prev:focus-visible,
+.notice .promotion .swiper-next:focus-visible {
+  outline: 3px solid #006241;
+  outline-offset: 3px;
+}
+
 
 /*HEADER*/
 header {
@@ -300,8 +327,12 @@ header .main-menu .item .item__contents .contents__menu > ul > li h2 {
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus,
-header .main-menu .item .item__contents .contents__menu > ul > li > h2:focus-visible {
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a {
+  display: inline-block;
+  color: inherit;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a:focus,
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a:focus-visible {
   outline: 2px solid #669900;
   outline-offset: 3px;
   border-radius: 4px;
@@ -313,11 +344,15 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
   line-height: 1.4;
 }
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a {
+  display: inline-block;
+  color: inherit;
+}
 header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
   text-decoration: underline;
   text-underline-position: under;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li[tabindex="0"]:focus-visible {
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a:focus-visible {
   text-decoration: underline;
   text-underline-position: under;
   outline: 2px solid #669900;
@@ -374,8 +409,8 @@ aside .badges img {
   .visual .visual_slogan,
   .visual .btn_slogan {
     position: absolute;
-    left: 11.4%;
-    width: 23.5%;
+    left: 10%;
+    width: 20%;
     margin: 0;
   }
 
@@ -392,10 +427,10 @@ aside .badges img {
 
   .visual .btn_slogan {
     top: 59.29%;
-    left: 11.35%;
+    left: 10%;
     z-index: 4;
     text-align: center;
-    width: 23.5%;
+    width: 20%;
   }
 
   .visual .btn_slogan a {
@@ -406,8 +441,8 @@ aside .badges img {
     min-width: 125px;
     height: 38px;
     margin: 0 auto;
-    color: #ac85ba;
-    border: 2px solid #ac85ba;
+    color: #994d13;
+    border: 2px solid #994d13;
     background: transparent;
     border-radius: 3px;
     text-decoration: none;
@@ -417,9 +452,10 @@ aside .badges img {
   }
 
   .visual .btn_slogan a:hover {
-    background-color: #ac85ba;
+    background-color: #994d13;
     color: #fff;
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .visual .visual_set {
@@ -462,222 +498,56 @@ aside .badges img {
 
   .visual .visual_stage__item--drink-02 {
     z-index: 10;
-    top: 26.471%;
+    top: 17%;
     left: 44.4%;
     width: 10.95%;
   }
 
   .visual .visual_stage__item--drink-03 {
     z-index: 10;
-    top: 16.874%;
-    left: 50.7%;
-    width: 13.5%;
+    top: 47%;
+    left: 33%;
+    width: 18%;
   }
 
   .visual .visual_stage__item--drink-04 {
-    z-index: 9;
-    top: 16.874%;
-    left: 62%;
-    width: 11.15%;
+    z-index: 10;
+    top: 17%;
+    left: 60%;
+    width: 10.95%;
   }
 
   .visual .visual_stage__item--drink-05 {
-    z-index: 8;
+    z-index: 11;
     top: 16.874%;
     left: 70.2%;
-    width: 11.5%;
+    width: 10.95%;
+  }
+    .visual .visual_stage__item--drink-06 {
+    z-index: 12;
+    top: 47%;
+    left: 65%;
+    width: 18%;
+  }
+    .visual .visual_stage__item--drink-07 {
+    z-index: 13;
+    top: 25.5%;
+    left: 50%;
+    width: 13%;
   }
 
   .visual .visual_stage__item--drink-01,
   .visual .visual_stage__item--drink-02,
   .visual .visual_stage__item--drink-03,
   .visual .visual_stage__item--drink-04,
-  .visual .visual_stage__item--drink-05 {
+  .visual .visual_stage__item--drink-05,
+  .visual .visual_stage__item--drink-06,
+  .visual .visual_stage__item--drink-07 {
     margin-bottom: 0 !important;
   }
-.visual [data-hero-fade] {
-  opacity: 0;
-}
-
-/* season-drinks legacy desktop styles
-.season-drinks {
-  position: relative;
-  overflow: hidden;
-  padding: 104px 24px 112px;
-  background: linear-gradient(180deg, rgba(244, 232, 241, .94) 0%, rgba(255, 250, 247, .98) 14%, #fbf7f0 44%, #f6f1e8 100%);
-}
-.season-drinks__inner {
-  position: relative;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.season-drinks__heading {
-  max-width: 720px;
-  margin-bottom: 46px;
-  padding-left: 4px;
-}
-.season-drinks__eyebrow {
-  margin: 0 0 12px;
-  color: #7e63ab;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.season-drinks__heading h2 {
-  margin: 0;
-  color: #1e3932;
-  font-size: clamp(32px, 3vw, 44px);
-  line-height: 1.12;
-}
-.season-drinks__heading p {
-  margin: 14px 0 0;
-  max-width: 60ch;
-  color: #5a615f;
-  font-size: 16px;
-  line-height: 1.72;
-}
-.season-drinks__grid {
-  display: grid;
-  Desktop showcase: one lead card + four supporting cards
-  grid-template-columns: minmax(250px, 1.28fr) repeat(4, minmax(170px, 1fr));
-  grid-auto-flow: row;
-  gap: 18px;
-  row-gap: 24px;
-  align-items: stretch;
-  width: 100%;
-}
-.season-drinks__card {
-  position: relative;
-  grid-column: span 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  min-width: 0;
-  height: auto;
-  padding: 22px 18px 20px;
-  border-radius: 30px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .82) 0%, rgba(253, 250, 246, .95) 100%);
-  border: 1px solid rgba(255, 255, 255, .82);
-  box-shadow: 0 16px 30px rgba(99, 84, 118, .06);
-  overflow: hidden;
-  align-self: stretch;
-}
-.season-drinks__card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .3) 0%, rgba(255, 255, 255, 0) 28%);
-  pointer-events: none;
-}
-.season-drinks__card--featured {
-  grid-column: span 1;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .92) 0%, rgba(246, 249, 241, .96) 50%, rgba(249, 245, 235, .98) 100%);
-  box-shadow: 0 18px 34px rgba(30, 57, 50, .08);
-}
-.season-drinks__visual {
-  position: relative;
-  Desktop visual stage: rounded square so the product image has enough presence
-  height: auto;
-  aspect-ratio: 1 / 1;
-  padding: 0;
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .34) 0%, rgba(255, 246, 249, .8) 62%, rgba(250, 247, 240, .96) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.season-drinks__visual::after {
-  display: none;
-}
-.season-drinks__visual picture,
-.season-drinks__visual img {
-  display: block;
-  width: 100%;
-}
-.season-drinks__visual picture {
-  display: block;
-  height: 100%;
-  overflow: hidden;
-  border-radius: inherit;
-}
-.season-drinks__visual img {
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  max-height: none;
-  margin: 0;
-  object-fit: contain;
-  object-position: center center;
-  transform: scale(1.08);
-  transform-origin: center center;
-}
-.season-drinks__card--featured .season-drinks__visual img {
-  transform: scale(1.04);
-}
-.season-drinks__copy {
-  Copy rhythm: keep title/description/button on a stable vertical grid
-  display: grid;
-  grid-template-rows: auto minmax(calc(1.62em * 3), 1fr) auto;
-  flex: 1;
-  align-items: start;
-  gap: 12px;
-  min-height: 0;
-  padding-top: 16px;
-}
-.season-drinks__card--featured .season-drinks__copy {
-  grid-template-rows: auto minmax(calc(1.62em * 3), 1fr) auto;
-}
-.season-drinks__copy h3 {
-  margin: 0;
-  color: #1e3932;
-  font-size: 19px;
-  line-height: 1.22;
-  letter-spacing: -.03em;
-  min-height: 2.44em;
-}
-.season-drinks__card--featured .season-drinks__copy h3 {
-  font-size: 23px;
-  min-height: 2.34em;
-}
-.season-drinks__copy p {
-  margin: 0;
-  color: #5a615f;
-  font-size: 14px;
-  line-height: 1.62;
-  min-height: calc(1.62em * 3);
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-.season-drinks__copy a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  min-width: 118px;
-  height: 42px;
-  margin-top: 2px;
-  position: relative;
-  z-index: 1;
-  padding: 0 20px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 98, 65, .16);
-  background-color: rgba(255, 255, 255, .66);
-  color: #006241;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color .3s ease, color .3s ease, border-color .3s ease;
-}
-.season-drinks__copy a:hover {
-  background-color: #006241;
-  border-color: #006241;
-  color: #fff;
-}
-*/
+  .visual.is-hero-fade-ready [data-hero-fade] {
+    opacity: 0;
+  }
 
 /* whats-new
    - season-drinks 대체 영역
@@ -1036,7 +906,9 @@ body.order-choice-open {
 .notice .promotion .swiper-next {
   width: 42px;
   height: 42px;
+  padding: 0;
   outline: none;
+  background-color: transparent;
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
@@ -1227,6 +1099,11 @@ body.order-choice-open {
   margin-top: 40px;
 }
 
+.main-bean-txt .btn_detail .btn {
+  width: 100%;
+  height: 100%;
+}
+
 /* 리저브 섹션 */
 #first_reserve_wrap {
   position: relative;
@@ -1288,12 +1165,8 @@ body.order-choice-open {
 }
 
 .first_reserve_detail-btn .btn {
-  display: inline-flex;
   width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
 }
 
 .first_reserve_visual {
@@ -1329,18 +1202,15 @@ body.order-choice-open {
 /* favorite Section */
 #fav_wrap {
   position: relative;
-  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_bg_250409.jpg') center center fixed no-repeat transparent;
+  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_bg_260407.jpg') center center fixed no-repeat transparent;
   background-size: auto 87%;
   background-position: bottom;
   height: 800px;
   padding: 0;
 }
 .fav_wrap_inner {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-left: -640px;
-  bottom: 0;
+  position: relative;
+  margin: 0 auto;
   width: 1280px;
 }
 .fav_txt_img {
@@ -1376,7 +1246,7 @@ body.order-choice-open {
   right: -163px;
   width: 912px;
   height: 575px;
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2025/2025_spring_pick_img_250409.png');
+  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_img_260407.png');
 }
 .fav_btn {
   position: absolute;
@@ -1386,26 +1256,10 @@ body.order-choice-open {
   left: 328px;
   z-index: 7;
 }
-.fav_btn a {
-  display: block;
+
+.fav_btn .btn {
   width: 100%;
   height: 100%;
-  color: #fff;
-  border: 2px solid #fff;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 36px;
-  text-align: center;
-  border-radius: 5px;
-  letter-spacing: -2px;
-  transition: background-color .7s, color .7s, border-color .7s;
-  -webkit-transition: background-color .7s, color .7s, border-color .7s;
-}
-.fav_btn a:hover {
-  background-color: #fff;
-  font-weight: normal;
-  color: #000;
-  text-decoration: underline;
 } 
 
 /* RESERVE Section */
@@ -1462,6 +1316,13 @@ body.order-choice-open {
   padding-left: 225px;
   width: 583px;
   height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve_detail-btn .btn {
+  --btn-width: 125px;
 }
 
 
@@ -1546,6 +1407,13 @@ body.order-choice-open {
   right: 408px;
   top: 290px;
   z-index: 4;
+  width: 125px;
+  height: 38px;
+}
+
+.store_inner .store_btn .btn {
+  width: 100%;
+  height: 100%;
 }
 
 /* =========================================================
@@ -1700,7 +1568,8 @@ body.order-choice-open {
   gap: 10px 0;
 }
 
-.footer-desktop__policy a {
+.footer-desktop__policy a,
+.footer-desktop__policy span {
   padding: 0 12px;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--footer-link-muted);
@@ -1708,17 +1577,21 @@ body.order-choice-open {
   line-height: 1.5;
 }
 
-.footer-desktop__policy a:last-child {
+.footer-desktop__policy a:last-child,
+.footer-desktop__policy span:last-child {
   border-right: 0;
 }
 
 .footer-desktop__policy a:first-child,
-.footer-desktop__policy a:nth-child(4) {
+.footer-desktop__policy a:nth-child(4),
+.footer-desktop__policy span:first-child,
+.footer-desktop__policy span:nth-child(4) {
   color: var(--footer-accent);
   font-weight: 700;
 }
 
-.footer-desktop__policy a:first-child {
+.footer-desktop__policy a:first-child,
+.footer-desktop__policy span:first-child {
   color: #00b050;
 }
 
@@ -1730,7 +1603,8 @@ body.order-choice-open {
   margin-top: 18px;
 }
 
-.footer-desktop__buttons a {
+.footer-desktop__buttons a,
+.footer-desktop__buttons span {
   display: inline-flex;
   align-items: center;
   justify-content: center;

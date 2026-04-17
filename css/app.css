@@ -132,37 +132,54 @@
 @media screen and (min-width: 951px) and (max-width: 1600px) {
   /* Main bean */
   #main-bean-wrap {
-    height: clamp(489px, 52vw, 578px);
+    --main-bean-scale: min(1, calc(100vw / 1124px));
+    position: relative;
+    height: calc(578px * var(--main-bean-scale));
+    overflow: hidden;
   }
 
   .main-bean-inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1124px;
+    max-width: none;
+    height: 578px;
+    margin-left: -562px;
+    transform: scale(var(--main-bean-scale));
     transform-origin: top center;
   }
 
   /* Favorite */
   #fav_wrap {
-    height: clamp(594px, 63vw, 800px);
+    --fav-scale: min(1, calc(100vw / 1280px));
+    height: calc(800px * var(--fav-scale));
+    overflow: hidden;
   }
 
   .fav_wrap_inner {
-    transform: scale(min(1, calc(100vw / 1280px)));
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1280px;
+    height: 800px;
+    margin-left: -640px;
+    transform: scale(var(--fav-scale));
     transform-origin: top center;
   }
 
   /* Store */
   #storewrap {
-    height: clamp(297px, 32vw, 400px);
+    --store-scale: min(1, calc(100vw / 1280px));
+    height: calc(400px * var(--store-scale));
   }
 
   .store_inner {
-    transform: scale(min(1, calc(100vw / 1280px)));
+    transform: scale(var(--store-scale));
     transform-origin: top center;
   }
 }
 
-.visual .visual_stage__group {
-  display: contents;
-}
 
 /* =========================================================
    #first_reserve 섹션대응 구조 조정 후 미디어쿼리 | 951px ~ 1279px
@@ -295,11 +312,6 @@
   }
 }
 
-/* =========================================================
-   비쥬얼 섹션 미디어 쿼리
-   절대배치로 인해 대응이 안 되는 구간
-   재조정 후 미디어 쿼리 재작성
-========================================================= */
 @media screen and (min-width: 950px) and (max-width: 1279px) {
   .visual {
     padding-left: 14px;
@@ -307,95 +319,115 @@
   }
 
   .visual .visual-inner {
-    height: clamp(430px, 35vw, 540px);
+    height: clamp(430px, 24vw, 540px);
     min-height: 430px;
     max-height: 540px;
+    /* 재수정 */
+    background-position: center top;
+    /* background-size: 100% auto; */
   }
 
   .visual .visual_slogan,
   .visual .btn_slogan {
-    left: 7.2%;
-    width: 25.8%;
+    left: 7.5%;
+    width: 24%;
   }
 
   .visual .visual_slogan {
-    top: 32.6%;
+    top: 31.5%;
   }
 
   .visual .btn_slogan {
-    top: 57.4%;
+    top: 56%;
   }
 
   .visual .btn_slogan a {
-    min-width: 132px;
-    width: auto;
-    padding: 0 18px;
+    min-width: 120px;
     height: 36px;
+    padding: 0 18px;
     font-size: 13px;
+  }
+
+  .visual .visual_stage {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   .visual .visual_stage__group {
     position: absolute;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: block;
     margin: 0;
     padding: 0;
-    transform: none;
   }
 
   .visual .visual_stage__group--left {
-    top: 27.6%;
-    left: 40%;
-    width: 21.6%;
+    top: 17%;
+    left: 39%;
+    width: 24%;
+    height: 60%;
+  }
+
+  .visual .visual_stage__group--center {
+    top: 26%;
+    left: 56.5%;
+    width: 13%;
+    height: 50%;
   }
 
   .visual .visual_stage__group--right {
-    top: 27%;
-    left: 57%;
-    width: 33.2%;
+    top: 17%;
+    left: 65%;
+    width: 24%;
+    height: 60%;
   }
 
   .visual .visual_stage__item {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    flex: 0 0 auto;
+    position: absolute;
     margin: 0;
-    transform: none;
   }
 
-  .visual .visual_stage__item--drink-01 {
-    z-index: 10;
-    width: 57%;
+  .visual .visual_stage__group--left .visual_stage__item--drink-01 {
+    top: 0;
+    left: 10%;
+    width: 50%;
   }
 
-  .visual .visual_stage__item--drink-02 {
-    z-index: 10;
-    width: 60%;
-    margin-left: -12%;
-    margin-top: clamp(18px, 1.6vw, 24px);
+  .visual .visual_stage__group--left .visual_stage__item--drink-02 {
+    top: 0;
+    left: 48%;
+    width: 50%;
   }
 
-  .visual .visual_stage__item--drink-03 {
-    z-index: 10;
-    width: 43%;
+  .visual .visual_stage__group--left .visual_stage__item--drink-03 {
+    top: 50%;
+    left: 0%;
+    width: 80%;
   }
 
-  .visual .visual_stage__item--drink-04 {
-    z-index: 9;
-    width: 36%;
-    margin-left: -11%;
+  .visual .visual_stage__group--center .visual_stage__item--drink-07 {
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  .visual .visual_stage__item--drink-05 {
-    z-index: 8;
-    width: 35%;
-    margin-left: -9%;
+  .visual .visual_stage__group--right .visual_stage__item--drink-04 {
+    top: 0;
+    left: 0;
+    width: 50%;
   }
 
+  .visual .visual_stage__group--right .visual_stage__item--drink-05 {
+    top: 0;
+    left: 38%;
+    width: 50%;
+  }
+
+  .visual .visual_stage__group--right .visual_stage__item--drink-06 {
+    top: 51%;
+    left: 20%;
+    width: 80%;
+  }
 }
 
 /* =========================================================
@@ -606,12 +638,14 @@
   /* 950px 이하에서는 대표 음료 1개만 */
   .visual .visual_stage__item--drink-01,
   .visual .visual_stage__item--drink-02,
-  .visual .visual_stage__item--drink-04,
-  .visual .visual_stage__item--drink-05 {
+  .visual .visual_stage__item--drink-03,
+  .visual .visual_stage__item--drink-04,  
+  .visual .visual_stage__item--drink-05,
+  .visual .visual_stage__item--drink-06 {
     display: none !important;
   }
 
-  .visual .visual_stage__item--drink-03 {
+  .visual .visual_stage__item--drink-07 {
     display: block !important;
     order: 1;
     width: clamp(232px, 36vw, 296px);
@@ -620,7 +654,7 @@
     transform: translateX(5.5%);
   }
 
-  .visual .visual_stage__item--drink-03 img {
+  .visual .visual_stage__item--drink-07 img {
     display: block;
     width: 100%;
     height: auto;
@@ -1118,6 +1152,11 @@
 
   header .main-menu .item.is-open .item__contents {
     display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
     overflow: hidden;
     contain: paint;
   }
@@ -1353,6 +1392,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .whats-new__thumb--play img {
+    object-position: 50% 8%;
   }
 
   .whats-new__thumb--spring {
