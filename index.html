@@ -6,6 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <title>Starbucks Korea</title>
+  <script>
+    try {
+      if (sessionStorage.getItem('starbucksPortfolioSplashSeen') === 'true') {
+        document.documentElement.classList.add('splash-seen');
+      }
+    } catch (error) {}
+  </script>
+  <noscript>
+    <style>
+      .portfolio-splash {
+        display: none;
+      }
+    </style>
+  </noscript>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Starbucks" />
@@ -80,10 +94,33 @@
   <!--Lodash-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
   <script defer src="./js/common.js"></script>
+  <script defer src="./js/splash.js"></script>
   <script defer src="./js/main.js"></script>
 
 </head>
 <body>
+  <div class="portfolio-splash" id="portfolio-splash" data-splash>
+    <div class="portfolio-splash__inner" aria-labelledby="portfolio-splash-title" aria-describedby="portfolio-splash-desc">
+      <p class="portfolio-splash__eyebrow">Portfolio UI/UX Study</p>
+      <p class="portfolio-splash__title" id="portfolio-splash-title">Starbucks App Renewal</p>
+      <p class="portfolio-splash__copy">스타벅스 공홈을 참고해 재해석한 개인 웹 포트폴리오 프로젝트</p>
+      <p class="portfolio-splash__desc" id="portfolio-splash-desc">공식 사이트가 아닌, 브랜드 구조와 UX를 분석해 새롭게 구성한 데모 프로젝트입니다.</p>
+      <div
+        class="portfolio-splash__progress"
+        role="progressbar"
+        aria-label="인트로 로딩 진행률"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0">
+        <span class="portfolio-splash__progress-fill" data-splash-bar></span>
+      </div>
+      <div class="portfolio-splash__meta">
+        <span data-splash-status aria-live="polite">Preparing portfolio experience...</span>
+        <strong data-splash-progress>0%</strong>
+      </div>
+    </div>
+  </div>
+
   <nav class="skip-links" aria-label="바로가기">
     <a href="./signup/" class="skip-link">로그인 바로가기</a>
     <a href="#main-menu-first-item" class="skip-link" data-skip-menu>메뉴 바로가기</a>
