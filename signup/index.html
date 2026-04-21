@@ -44,7 +44,7 @@
         <span aria-hidden="true"></span>
       </button>
 
-      <nav class="header-nav" id="header-nav" aria-label="전체 메뉴">
+      <nav class="header-nav" id="header-nav" aria-label="전체 메뉴" aria-hidden="true" tabindex="-1">
         <div class="header-nav__top">
           <button type="button" class="header-close">
             <span class="material-icons" aria-hidden="true">close</span>
@@ -88,7 +88,7 @@
         <ul class="main-menu">
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-coffee">COFFEE</button>
-            <div class="item__contents" id="menu-coffee" aria-label="COFFEE 하위 메뉴">
+            <div class="item__contents" id="menu-coffee" aria-label="COFFEE 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -119,7 +119,7 @@
 
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-menu">MENU</button>
-            <div class="item__contents" id="menu-menu" aria-label="MENU 하위 메뉴">
+            <div class="item__contents" id="menu-menu" aria-label="MENU 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -151,7 +151,7 @@
 
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-store">STORE</button>
-            <div class="item__contents" id="menu-store" aria-label="STORE 하위 메뉴">
+            <div class="item__contents" id="menu-store" aria-label="STORE 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -175,7 +175,7 @@
 
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-responsibility">RESPONSIBILITY</button>
-            <div class="item__contents" id="menu-responsibility" aria-label="RESPONSIBILITY 하위 메뉴">
+            <div class="item__contents" id="menu-responsibility" aria-label="RESPONSIBILITY 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -200,7 +200,7 @@
 
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-rewards">STARBUCKS REWARDS</button>
-            <div class="item__contents" id="menu-rewards" aria-label="STARBUCKS REWARDS 하위 메뉴">
+            <div class="item__contents" id="menu-rewards" aria-label="STARBUCKS REWARDS 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -224,7 +224,7 @@
 
           <li class="item">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-sales">CORPORATE SALES</button>
-            <div class="item__contents" id="menu-sales" aria-label="CORPORATE SALES 하위 메뉴">
+            <div class="item__contents" id="menu-sales" aria-label="CORPORATE SALES 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -248,7 +248,7 @@
 
           <li class="item item--whats-new">
             <button class="item__name" type="button" aria-expanded="false" aria-controls="menu-whats-new">WHAT'S NEW</button>
-            <div class="item__contents" id="menu-whats-new" aria-label="WHAT'S NEW 하위 메뉴">
+            <div class="item__contents" id="menu-whats-new" aria-label="WHAT'S NEW 하위 메뉴" aria-hidden="true">
               <div class="contents__menu">
                 <ul class="inner">
                   <li>
@@ -303,11 +303,11 @@
           </p>
         </form>
 
-        <nav class="siginin__card__utils" aria-label="회원 관련 링크">
+        <div class="siginin__card__utils">
           <span data-link-status="planned" aria-disabled="true">회원가입</span>
           <span data-link-status="planned" aria-disabled="true">아이디 찾기</span>
           <span data-link-status="planned" aria-disabled="true">비밀번호 찾기</span>
-        </nav>
+        </div>
       </div>
     </section>
   </main>
@@ -316,7 +316,7 @@
     <div class="footer-desktop">
       <div class="footer-desktop__inner">
         <div class="footer-desktop__top">
-          <nav class="footer-desktop__menu" aria-label="스타벅스 데스크톱 푸터 메뉴">
+          <div class="footer-desktop__menu">
             <section class="footer-desktop__menu-group">
               <h2 class="footer-desktop__menu-title">Company</h2>
               <ul class="footer-desktop__menu-list">
@@ -359,7 +359,7 @@
                 <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">채용 지원하기</span></li>
               </ul>
             </section>
-          </nav>
+          </div>
         </div>
 
         <div class="footer-desktop__awards" aria-label="스타벅스 수상 내역">
@@ -372,7 +372,7 @@
         </div>
 
         <div class="footer-desktop__bottom">
-          <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 링크">
+          <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 항목">
             <span data-link-status="planned" aria-disabled="true">개인정보처리방침</span>
             <span data-link-status="planned" aria-disabled="true">영상정보처리기기 운영관리 방침</span>
             <span data-link-status="planned" aria-disabled="true">홈페이지 이용약관</span>
@@ -381,7 +381,7 @@
             <span data-link-status="planned" aria-disabled="true">비회원 이용약관</span>
           </div>
 
-          <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 바로가기">
+          <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 예정 항목">
             <span data-link-status="planned" aria-disabled="true">찾아오시는 길</span>
             <span data-link-status="planned" aria-disabled="true">신규입점제의</span>
             <span data-link-status="planned" aria-disabled="true">사이트 맵</span>
@@ -443,7 +443,7 @@
           </ul>
         </section>
 
-        <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 링크">
+        <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 항목">
           <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">개인정보처리방침</span>
           <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">홈페이지 이용약관</span>
           <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">위치정보 이용약관</span>

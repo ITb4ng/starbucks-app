@@ -21,6 +21,10 @@
   outline-offset: 6px;
 }
 
+[data-link-status="planned"] {
+  cursor: default;
+}
+
 @media screen and (max-width: 950px) {
   #main_content {
     scroll-margin-top: 96px;
