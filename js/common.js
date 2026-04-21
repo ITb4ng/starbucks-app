@@ -563,6 +563,13 @@ if (headerEl && headerToggleEl && headerNavEl && headerOverlayEl) {
 demoFormEls.forEach(function (formEl) {
     formEl.addEventListener('submit', function (event) {
         event.preventDefault();
+
+        const messageTargetId = formEl.dataset.demoMessageTarget;
+        const messageTargetEl = messageTargetId ? document.getElementById(messageTargetId) : null;
+
+        if (messageTargetEl) {
+            messageTargetEl.textContent = '포트폴리오 데모 페이지라 실제 제출은 진행되지 않습니다.';
+        }
     });
 });
 

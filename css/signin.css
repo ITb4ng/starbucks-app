@@ -72,7 +72,7 @@
     border: 0;
     border-radius: 4px;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1;
     background: #006633;
@@ -96,6 +96,18 @@
     line-height: 1.4;
     color: #006633;
 }
+
+.signin__card form .form__message {
+    min-height: 20px;
+    margin-top: 0;
+    color: #5f6e68;
+    font-size: 13px;
+}
+
+.signin__card form .form__message:empty {
+    display: none;
+}
+
 .signin__card .siginin__card__utils {
     display: flex;
     border-top: 1px solid #ddd;
@@ -118,6 +130,10 @@
 
 .signin__card .siginin__card__utils a:hover {
     text-decoration: underline;
+}
+
+.signin__card .siginin__card__utils [data-link-status="planned"] {
+    opacity: .68;
 }
 
 @media screen and (max-width:950px){

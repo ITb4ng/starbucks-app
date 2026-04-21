@@ -126,7 +126,7 @@
               </a>
             </nav>
             <div class="sub-menu">
-            <ul class="menu">
+            <ul class="menu" aria-label="유틸리티 링크">
               <li>
                 <a href="./signup/">Sign In</a>  
               </li>
@@ -140,13 +140,14 @@
                 <span data-link-status="planned" aria-disabled="true">Find a Store</span>
               </li>
             </ul>
-            <div class="search">
-              <input type="text" placeholder="통합검색" aria-label="통합검색">
+            <form class="search" role="search" data-demo-form>
+              <label for="header-search" class="blind">통합검색</label>
+              <input id="header-search" type="search" placeholder="통합검색" aria-label="통합검색">
               <span class="material-icons search__icon" aria-hidden="true">search</span>
               <button type="button" class="search__clear" aria-label="검색어 지우기">
                 <span class="material-icons" aria-hidden="true">close</span>
               </button>
-            </div>
+            </form>
           </div>
           </div>
           <ul class="main-menu">
@@ -1153,14 +1154,23 @@
               <span data-link-status="planned" aria-disabled="true">신규입점제의</span>
               <span data-link-status="planned" aria-disabled="true">사이트 맵</span>
             </div>
-            <div class="footer-desktop__info" aria-label="스타벅스 사업자 정보">
-              <p>사업자등록번호 : 201-81-21515</p>
-              <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-              <p>TEL : 1522-3232</p>
-              <p>개인정보 책임자 : 이찬우</p>
+            <div class="footer-desktop__info" aria-label="포트폴리오 연락처">
+              <p>Email : bangsiri@example.com</p>
+            </div>
+            <div class="footer-social" aria-label="소셜 채널">
+              <span class="footer-social__item" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                </svg>
+              </span>
+              <span class="footer-social__item" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+              </span>
             </div>
             <p class="footer-desktop__copyright">
-              &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+              &copy; <span class="this-year"></span> 방Siri All Right Reserved.
             </p>
           </div>
         </div>
@@ -1211,14 +1221,23 @@
             <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">위치정보 이용약관</span>
             <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">스타벅스 카드 이용약관</span>
           </div>
-          <div class="mobile-flow-footer__info" aria-label="스타벅스 사업자 정보">
-            <p>사업자등록번호 : 201-81-21515</p>
-            <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-            <p>TEL : 1522-3232</p>
-            <p>개인정보 책임자 : 이찬우</p>
+          <div class="mobile-flow-footer__info" aria-label="포트폴리오 연락처">
+            <p>Email : bangsiri@example.com</p>
+          </div>
+          <div class="footer-social" aria-label="소셜 채널">
+            <span class="footer-social__item" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </span>
+            <span class="footer-social__item" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </span>
           </div>
           <p class="mobile-flow-footer__copyright">
-            &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+            &copy; <span class="this-year"></span> 방Siri All Right Reserved.
           </p>
         </div>
       </div>

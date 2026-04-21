@@ -472,6 +472,18 @@
   .mobile-flow-footer {
     display: block;
   }
+
+  .mobile-flow-footer__inner,
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer__info,
+  .mobile-flow-footer__copyright {
+    text-align: left;
+  }
+
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer .footer-social {
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (min-width: 541px) and (max-width: 959px) {
@@ -486,6 +498,17 @@
   .mobile-flow-footer__info,
   .mobile-flow-footer__copyright {
     grid-column: 1 / -1;
+  }
+
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer__info,
+  .mobile-flow-footer__copyright {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .mobile-flow-footer .footer-social {
+    justify-content: flex-start;
   }
 }
 
