@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Starbucks" />
   <meta property="og:title" content="Starbucks Coffee Korea" />
   <meta property="og:description" content="Starbucks" />
-  <meta property="og:image" content="./images/starbucks_seo.jpg" />
+  <meta property="og:image" content="./images/common/starbucks_seo.jpg" />
   <meta property="og:url" content="https://starbucks.co.kr" />
 
   <!---- CDN  ----->
@@ -96,7 +96,7 @@
       <div class="inner">
           <h1>
             <a href="/" class="logo" title="스타벅스 메인 홈페이지로 바로가기">
-              <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
+              <img src="./images/common/starbucks_logo.png" alt="STARBUCKS" />
             </a>
           </h1>
           <button type="button" class="header-toggle" aria-controls="header-nav" aria-expanded="false">
@@ -112,11 +112,11 @@
               <span class="blind">전체 메뉴 닫기</span>
             </button>
             <nav class="header-quick-links" aria-label="빠른 이동">
-              <a href="https://www.starbucks.co.kr/store/store_map.do" class="header-quick-link">
+              <a href="https://www.starbucks.co.kr/store/store_map.do" target="_blank" rel="noopener noreferrer" class="header-quick-link" aria-label="매장 찾기, 새 탭에서 열림">
                 <span class="material-icons header-quick-link__icon" aria-hidden="true">place</span>
                 <span class="header-quick-link__text">매장 찾기</span>
               </a>
-              <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="header-quick-link">
+              <a href="https://www.starbucks.co.kr/menu/drink_list.do" target="_blank" rel="noopener noreferrer" class="header-quick-link" aria-label="메뉴 보기, 새 탭에서 열림">
                 <span class="material-icons header-quick-link__icon" aria-hidden="true">local_cafe</span>
                 <span class="header-quick-link__text">메뉴</span>
               </a>
@@ -126,27 +126,28 @@
               </a>
             </nav>
             <div class="sub-menu">
-            <ul class="menu">
+            <ul class="menu" aria-label="유틸리티 링크">
               <li>
                 <a href="./signup/">Sign In</a>  
               </li>
               <li>
-                <a href="https://www.starbucks.co.kr/msr/msreward/about.do">My Starbucks</a>
+                <span data-link-status="planned" aria-disabled="true">My Starbucks</span>
               </li>
               <li>
-                <a href="https://www.starbucks.co.kr/util/index.do">Customer Service & ideas</a>
+                <span data-link-status="planned" aria-disabled="true">Customer Service & ideas</span>
               </li>
               <li>
-                <a href="https://www.starbucks.co.kr/store/store_map.do">Find a Store</a>
+                <span data-link-status="planned" aria-disabled="true">Find a Store</span>
               </li>
             </ul>
-            <div class="search">
-              <input type="text" placeholder="통합검색" aria-label="통합검색">
+            <form class="search" role="search" data-demo-form>
+              <label for="header-search" class="blind">통합검색</label>
+              <input id="header-search" type="search" placeholder="통합검색" aria-label="통합검색">
               <span class="material-icons search__icon" aria-hidden="true">search</span>
               <button type="button" class="search__clear" aria-label="검색어 지우기">
                 <span class="material-icons" aria-hidden="true">close</span>
               </button>
-            </div>
+            </form>
           </div>
           </div>
           <ul class="main-menu">
@@ -156,49 +157,49 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">커피</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">커피</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">스타벅스 원두</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 비아</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 오리가미</a></li>
-                        <li><a href="javascript:void(0)">스타벅스앳홈 by 캡슐</a></li>
-                        <li><a href="javascript:void(0)">나와 어울리는 커피</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 원두</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 비아</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 오리가미</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스앳홈 by 캡슐</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">나와 어울리는 커피</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">커피 이야기</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">커피 이야기</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">농장에서 우리의 손으로</a></li>
-                        <li><a href="javascript:void(0)">최상의 아라비카 원두</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 로스트 스펙트럼</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 디카페인</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">농장에서 우리의 손으로</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">최상의 아라비카 원두</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 로스트 스펙트럼</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 디카페인</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">스타벅스 리저브</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">스타벅스 리저브</span></h2>
                       <ul>
-                        <li style="text-transform: uppercase;"><a href="javascript:void(0)">reserve magazine</a></li>
+                        <li style="text-transform: uppercase;"><span data-link-status="planned" aria-disabled="true">reserve magazine</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">에스프레소 음료</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">에스프레소 음료</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">도피오</a></li>
-                        <li><a href="javascript:void(0)">에스프레소 마키아또</a></li>
-                        <li><a href="javascript:void(0)">아메리카노</a></li>
-                        <li><a href="javascript:void(0)">마키아또</a></li>
-                        <li><a href="javascript:void(0)">카푸치노</a></li>
-                        <li><a href="javascript:void(0)">라떼</a></li>
-                        <li><a href="javascript:void(0)">모카</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">도피오</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">에스프레소 마키아또</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">아메리카노</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">마키아또</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">카푸치노</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">라떼</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">모카</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">최상의 커피를 즐기는 법</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">최상의 커피를 즐기는 법</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">커피 프레스</a></li>
-                        <li><a href="javascript:void(0)">푸어 오버</a></li>
-                        <li><a href="javascript:void(0)">아이스 푸어 오버</a></li>
-                        <li><a href="javascript:void(0)">커피 메이커</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커피 프레스</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">푸어 오버</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">아이스 푸어 오버</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커피 메이커</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -211,59 +212,59 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">음료</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">음료</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">콜드 브루</a></li>
-                        <li><a href="javascript:void(0)">브루드 커피</a></li>
-                        <li><a href="javascript:void(0)">에스프레소</a></li>
-                        <li><a href="javascript:void(0)">프라푸치노</a></li>
-                        <li><a href="javascript:void(0)">블렌디드</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 리프레셔</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 피지오</a></li>
-                        <li><a href="javascript:void(0)">티(티바나)</a></li>
-                        <li><a href="javascript:void(0)">기타 제조 음료</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 주스(병음료)</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">콜드 브루</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">브루드 커피</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">에스프레소</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">프라푸치노</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">블렌디드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 리프레셔</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 피지오</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">티(티바나)</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">기타 제조 음료</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 주스(병음료)</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">푸드</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">푸드</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">브레드</a></li>
-                        <li><a href="javascript:void(0)">케이크</a></li>
-                        <li><a href="javascript:void(0)">샌드위치 & 샐러드</a></li>
-                        <li><a href="javascript:void(0)">따뜻한 푸드</a></li>
-                        <li><a href="javascript:void(0)">과일 & 요거트</a></li>
-                        <li><a href="javascript:void(0)">스낵 & 미니 디저트</a></li>
-                        <li><a href="javascript:void(0)">아이스크림</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">브레드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">케이크</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">샌드위치 & 샐러드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">따뜻한 푸드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">과일 & 요거트</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스낵 & 미니 디저트</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">아이스크림</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">상품</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">상품</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">머그</a></li>
-                        <li><a href="javascript:void(0)">글라스</a></li>
-                        <li><a href="javascript:void(0)">플라스틱 텀블러</a></li>
-                        <li><a href="javascript:void(0)">스테인리스 텀블러</a></li>
-                        <li><a href="javascript:void(0)">보온병</a></li>
-                        <li><a href="javascript:void(0)">액세서리</a></li>
-                        <li><a href="javascript:void(0)">선물세트</a></li>
-                        <li><a href="javascript:void(0)">커피 용품</a></li>
-                        <li><a href="javascript:void(0)">패키지 티(티바나)</a></li>
-                        <li><a href="javascript:void(0)">시럽</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">머그</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">글라스</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">플라스틱 텀블러</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스테인리스 텀블러</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">보온병</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">액세서리</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">선물세트</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커피 용품</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">패키지 티(티바나)</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">시럽</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">카드</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">카드</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">실물카드</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 모바일 카드</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">실물카드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 모바일 카드</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">메뉴 이야기</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">메뉴 이야기</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">스타벅스 티바나</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 콜드 브루</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 티바나</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 콜드 브루</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -276,21 +277,21 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">매장 찾기</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">매장 찾기</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">퀵 검색</a></li>
-                        <li><a href="javascript:void(0)">지역 검색</a></li>
-                        <li><a href="javascript:void(0)">My 매장</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">퀵 검색</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">지역 검색</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">My 매장</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">드라이브 스루 매장</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">드라이브 스루 매장</span></h2>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">스타벅스 리저브 매장</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">스타벅스 리저브 매장</span></h2>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">커뮤니티 스토어 매장</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">커뮤니티 스토어 매장</span></h2>
                     </li>
                   </ul>
                 </div>
@@ -302,41 +303,41 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">사회공헌 캠페인 소개</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">사회공헌 캠페인 소개</span></h2>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">지역 사회 참여 활동</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">지역 사회 참여 활동</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">희망배달 켐페인</a></li>
-                        <li><a href="javascript:void(0)">재능기부 카페 소식</a></li>
-                        <li><a href="javascript:void(0)">커뮤니티 스토어</a></li>
-                        <li><a href="javascript:void(0)">청젼 지원 프로그램</a></li>
-                        <li><a href="javascript:void(0)">우리 농산물 사랑 캠페인</a></li>
-                        <li><a href="javascript:void(0)">국가유산 지킴이 활동</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">희망배달 켐페인</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">재능기부 카페 소식</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커뮤니티 스토어</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">청젼 지원 프로그램</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">우리 농산물 사랑 캠페인</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">국가유산 지킴이 활동</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">환경보호 활동</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">환경보호 활동</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">친환경 활동</a></li>
-                        <li><a href="javascript:void(0)">일회용 컵 없는 매장</a></li>
-                        <li><a href="javascript:void(0)">커피 원두 재활용</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">친환경 활동</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">일회용 컵 없는 매장</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커피 원두 재활용</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">윤리 구매</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">윤리 구매</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">윤리적 원두 구매</a></li>
-                        <li><a href="javascript:void(0)">공정무역 인증</a></li>
-                        <li><a href="javascript:void(0)">커피 농가 지원 활동</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">윤리적 원두 구매</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">공정무역 인증</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">커피 농가 지원 활동</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">글로벌 사회 공헌</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">글로벌 사회 공헌</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">윤리경영 보고서</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 재단</a></li>
-                        <li><a href="javascript:void(0)">지구촌 봉사의 달</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">윤리경영 보고서</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 재단</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">지구촌 봉사의 달</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -349,29 +350,29 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">스타벅스 리워드</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">스타벅스 리워드</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">스타벅스 리워드 소개</a></li>
-                        <li><a href="javascript:void(0)">등급 및 혜택</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 별</a></li>
-                        <li><a href="javascript:void(0)">자주하는 질문</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 리워드 소개</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">등급 및 혜택</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 별</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">자주하는 질문</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">스타벅스 카드</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">스타벅스 카드</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">스타벅스 카드 소개</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 카드 갤러리</a></li>
-                        <li><a href="javascript:void(0)">자주하는 질문</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 카드 소개</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 카드 갤러리</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">자주하는 질문</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">스타벅스 모바일 카드</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">스타벅스 모바일 카드</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">스타벅스 모바일 카드 소개</a></li>
-                        <li><a href="javascript:void(0)">이용안내</a></li>
-                        <li><a href="javascript:void(0)">선물하기</a></li>
-                        <li><a href="javascript:void(0)">자주하는 질문</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 모바일 카드 소개</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">이용안내</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">선물하기</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">자주하는 질문</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -384,20 +385,20 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">단체 및 기업 구매 안내</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">단체 및 기업 구매 안내</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">MD상품</a></li>
-                        <li><a href="javascript:void(0)">실물카드</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 모바일 카드(MMS)</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 모바일 카드(BULK)</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">MD상품</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">실물카드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 모바일 카드(MMS)</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 모바일 카드(BULK)</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">단체 주문 배달 안내</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">단체 주문 배달 안내</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">단체 주문 배달 안내</a></li>
-                        <li><a href="javascript:void(0)">단체 주문 신청</a></li>
-                        <li><a href="javascript:void(0)">신청 내역 조회</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">단체 주문 배달 안내</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">단체 주문 신청</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">신청 내역 조회</span></li>
                       </ul>
                     </li>
                   </ul>
@@ -410,36 +411,36 @@
                 <div class="contents__menu">
                   <ul class="inner">
                     <li>
-                      <h2><a href="javascript:void(0)">이벤트</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">이벤트</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">전체</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 카드</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 리워드</a></li>
-                        <li><a href="javascript:void(0)">온라인</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">전체</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 카드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 리워드</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">온라인</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">뉴스</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">뉴스</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">전체</a></li>
-                        <li><a href="javascript:void(0)">상품 출시</a></li>
-                        <li><a href="javascript:void(0)">스타벅스와 문화</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 사회공헌</a></li>
-                        <li><a href="javascript:void(0)">스타벅스 카드출시</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">전체</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">상품 출시</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스와 문화</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 사회공헌</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">스타벅스 카드출시</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">매장별 이벤트</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">매장별 이벤트</span></h2>
                       <ul>
-                        <li><a href="javascript:void(0)">일반 매장</a></li>
-                        <li><a href="javascript:void(0)">신규 매장</a></li>
+                        <li><span data-link-status="planned" aria-disabled="true">일반 매장</span></li>
+                        <li><span data-link-status="planned" aria-disabled="true">신규 매장</span></li>
                       </ul>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">공지사항</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">공지사항</span></h2>
                     </li>
                     <li>
-                      <h2><a href="javascript:void(0)">월페이퍼</a></h2>
+                      <h2><span data-link-status="planned" aria-disabled="true">월페이퍼</span></h2>
                     </li>
                   </ul>
                 </div>
@@ -459,8 +460,8 @@
     <!-- <aside>
       <div class="badges">
         <div class="badge">
-          <img src="./images/floating_badge01.png" alt="Badge" />
-          <img src="./images/floating_badge.png" alt="Badge" />
+          <img src="./images/common/floating_badge01.png" alt="Badge" />
+          <img src="./images/common/floating_badge.png" alt="Badge" />
         </div>
       </div>
     </aside> -->
@@ -471,8 +472,8 @@
       <div class="visual-inner">
         <div class="visual_slogan" data-hero-fade data-fade-desktop-order="1" data-fade-mobile-order="1">
           <picture>
-            <source media="(max-width: 950px)" srcset="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_slogan_mo_260407.png">
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_slogan_260407.png" alt="Play Your Day">
+            <source media="(max-width: 950px)" srcset="./images/hero/2026_spring2_top_slogan_mo_260407.png">
+            <img src="./images/hero/2026_spring2_top_slogan_260407.png" alt="Play Your Day">
           </picture>
         </div>
 
@@ -482,21 +483,21 @@
               <div class="visual_stage__item visual_stage__item--drink-01" data-hero-fade data-fade-desktop-order="2">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink04_260407.png" alt="슈크림 라떼">
+                    <img src="./images/hero/2026_spring2_top_drink04_260407.png" alt="슈크림 라떼">
                   </picture>
                 </div>
               </div>
               <div class="visual_stage__item visual_stage__item--drink-02" data-hero-fade data-fade-desktop-order="3">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink05_260407.png" alt="슈 폼 라떼">
+                    <img src="./images/hero/2026_spring2_top_drink05_260407.png" alt="슈 폼 라떼">
                   </picture>
                 </div>
               </div>
               <div class="visual_stage__item visual_stage__item--drink-03" data-hero-fade data-fade-desktop-order="7">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink02_260407.png" alt="버즈 키위 팝 에너지 피지오">
+                    <img src="./images/hero/2026_spring2_top_drink02_260407.png" alt="버즈 키위 팝 에너지 피지오">
                   </picture>
                 </div>
               </div>
@@ -505,8 +506,8 @@
               <div class="visual_stage__item visual_stage__item--drink-07" data-hero-fade data-fade-mobile-order="2" data-fade-desktop-order="6">
                 <div class="visual_stage__box">
                   <picture>
-                    <source media="(max-width: 950px)" srcset="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink01_mo_260407.png">
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink01_260407.png" alt="우디 카우보이 쿠키 콜드 브루">
+                    <source media="(max-width: 950px)" srcset="./images/hero/2026_spring2_top_drink01_mo_260407.png">
+                    <img src="./images/hero/2026_spring2_top_drink01_260407.png" alt="우디 카우보이 쿠키 콜드 브루">
                   </picture>
                 </div>
               </div>
@@ -515,7 +516,7 @@
               <div class="visual_stage__item visual_stage__item--drink-04" data-hero-fade data-fade-desktop-order="4">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink07_260407.png" alt="슈 폼 말차 라떼">
+                    <img src="./images/hero/2026_spring2_top_drink07_260407.png" alt="슈 폼 말차 라떼">
                   </picture>
                 </div>
               </div>
@@ -523,7 +524,7 @@
               <div class="visual_stage__item visual_stage__item--drink-05" data-hero-fade data-fade-desktop-order="5">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink06_260407.png" alt="슈크림 말차 라떼">
+                    <img src="./images/hero/2026_spring2_top_drink06_260407.png" alt="슈크림 말차 라떼">
                   </picture>
                 </div>
               </div>
@@ -531,7 +532,7 @@
               <div class="visual_stage__item visual_stage__item--drink-06" data-hero-fade data-fade-desktop-order="8">
                 <div class="visual_stage__box">
                   <picture>
-                    <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_drink03_260407.png" alt="제시 슈트로베리 프라푸치노">
+                    <img src="./images/hero/2026_spring2_top_drink03_260407.png" alt="제시 슈트로베리 프라푸치노">
                   </picture>
                 </div>
               </div>
@@ -558,7 +559,7 @@
           </div>
 
           <div class="hero-actions" aria-label="스타벅스 빠른 이동">
-            <a href="https://www.starbucks.co.kr/store/store_map.do" class="btn btn--hero-primary" aria-label="내 주변 스타벅스 매장 찾기">
+            <a href="https://www.starbucks.co.kr/store/store_map.do" target="_blank" rel="noopener noreferrer" class="btn btn--hero-primary" aria-label="내 주변 스타벅스 매장 찾기, 새 탭에서 열림">
               내 주변 매장 찾기
             </a>
             <button
@@ -572,8 +573,10 @@
             </button>
             <a
               href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296"
+              target="_blank"
+              rel="noopener noreferrer"
               class="hero-link"
-              aria-label="이번 시즌 프로모션 자세히 보기">
+              aria-label="이번 시즌 프로모션 자세히 보기, 새 탭에서 열림">
               <span class="hero-link__label">이번 시즌 프로모션 보기</span>
               <span class="hero-link__icon" aria-hidden="true">&gt;</span>
             </a>
@@ -590,7 +593,7 @@
             <p class="whats-new__eyebrow">WHAT'S NEW</p>
             <h2 class="whats-new__title" id="whats_new_title">이번 시즌과 브랜드 소식을 가볍게 둘러보세요.</h2>
           </div>
-          <a href="https://www.starbucks.co.kr/whats_new/index.do" class="whats-new__link">이벤트/뉴스 전체보기</a>
+          <span class="whats-new__link" data-link-status="planned" data-planned-label="준비중" aria-disabled="true">이벤트/뉴스 전체보기</span>
         </div>
 
         <div class="whats-new__swiper swiper-container">
@@ -598,7 +601,7 @@
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb whats-new__thumb--play">
-                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_playyourdaymd_260409_01.jpg" alt="ESG 활동 소식 썸네일">
+                  <img src="./images/promotion/wn_playyourdaymd_260409_01.jpg" alt="ESG 활동 소식 썸네일">
                 </div>
                 <div class="whats-new__body">
                   <h3>Play Your Day MD 출시</h3>
@@ -609,7 +612,7 @@
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb whats-new__thumb--spring">
-                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_spring1ph1_03_260225.jpg" alt="봄 프로모션 소식 썸네일">
+                  <img src="./images/promotion/wn_spring1ph1_03_260225.jpg" alt="봄 프로모션 소식 썸네일">
                 </div>
                 <div class="whats-new__body">
                   <h3>봄 시즌 메뉴와 비주얼 스토리</h3>
@@ -620,7 +623,7 @@
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb">
-                  <img src="./images/reserve_magazine_visual.png" alt="리저브 커피 스토리 썸네일">
+                  <img src="./images/reserve/reserve_magazine_visual.png" alt="리저브 커피 스토리 썸네일">
                 </div>
                 <div class="whats-new__body">
                   <h3>리저브 커피 스토리 만나보기</h3>
@@ -631,7 +634,7 @@
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb">
-                  <img src="https://image.istarbucks.co.kr/img/event/2026/wn_minitumblerpromotion_260414_01.jpg" alt="A Mini Tunbler for Bigger Days 작아져도 탱크는 탱크니까! 한 손에 쏙, 귀여움은 가득">
+                  <img src="./images/promotion/wn_minitumblerpromotion_260414_01.jpg" alt="A Mini Tunbler for Bigger Days 작아져도 탱크는 탱크니까! 한 손에 쏙, 귀여움은 가득">
                 </div>
                 <div class="whats-new__body">
                   <h3>미니 텀블러 프로모션</h3>
@@ -642,7 +645,7 @@
             <div class="whats-new__slide swiper-slide">
               <article class="whats-new__card">
                 <div class="whats-new__thumb whats-new__thumb--snack">
-                  <img src="https://image.istarbucks.co.kr/img/event/2024/gif_buddypass_logo.gif" alt="스타벅스 코리아 25주년 기념, 30일간 매일 만나는 30% 혜택">
+                  <img src="./images/promotion/gif_buddypass_logo.gif" alt="스타벅스 코리아 25주년 기념, 30일간 매일 만나는 30% 혜택">
                 </div>
                 <div class="whats-new__body">
                   <h3>더 좋아진 혜택, Buddy Pass</h3>
@@ -675,13 +678,13 @@
             자주 이용하는 혜택과 별 적립 안내를 더 빠르게 확인하고, 필요한 서비스로 바로 이어갈 수 있어요.
           </p>
           <ul class="mobile-flow__list" aria-label="스타벅스 리워드 핵심 혜택">
-            <li><a href="javascript:void(0)" class="mobile-flow__item">별 적립</a></li>
-            <li><a href="javascript:void(0)" class="mobile-flow__item">등급별 혜택</a></li>
-            <li><a href="javascript:void(0)" class="mobile-flow__item">My 리워드</a></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">별 적립</span></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">등급별 혜택</span></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">My 리워드</span></li>
           </ul>
           <div class="mobile-flow__actions">
             <a href="./signup/" class="mobile-flow__action mobile-flow__action--primary">로그인</a>
-            <a href="https://www.starbucks.co.kr/msr/msreward/about.do" class="mobile-flow__action mobile-flow__action--secondary">리워드 소개 보기</a>
+            <a href="https://www.starbucks.co.kr/msr/msreward/about.do" target="_blank" rel="noopener noreferrer" class="mobile-flow__action mobile-flow__action--secondary">리워드 소개 보기</a>
           </div>
         </article>
 
@@ -695,15 +698,17 @@
             내 주변 매장을 찾고, 리저브나 드라이브 스루처럼 원하는 이용 방식도 이어서 살펴볼 수 있어요.
           </p>
           <ul class="mobile-flow__list" aria-label="매장 이용 흐름">
-            <li><a href="javascript:void(0)" class="mobile-flow__item">가까운 매장 찾기</a></li>
-            <li><a href="javascript:void(0)" class="mobile-flow__item">리저브 매장</a></li>
-            <li><a href="javascript:void(0)" class="mobile-flow__item">드라이브 스루</a></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">가까운 매장 찾기</span></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">리저브 매장</span></li>
+            <li><span class="mobile-flow__item" data-link-status="planned" aria-disabled="true">드라이브 스루</span></li>
           </ul>
           <div class="mobile-flow__actions">
             <a
               href="https://www.starbucks.co.kr/store/store_map.do"
+              target="_blank"
+              rel="noopener noreferrer"
               class="mobile-flow__action mobile-flow__action--primary mobile-flow__action--wide"
-              aria-label="내 주변 스타벅스 매장 찾기">
+              aria-label="내 주변 스타벅스 매장 찾기, 새 탭에서 열림">
               매장 찾기
             </a>
           </div>
@@ -711,6 +716,8 @@
             <p class="mobile-flow__assist">리저브 매장을 찾고 싶다면</p>
             <a
               href="https://www.starbucks.co.kr/store/store_reserve.do"
+              target="_blank"
+              rel="noopener noreferrer"
               class="mobile-flow__subaction">
               리저브 매장 보기
             </a>
@@ -729,9 +736,9 @@
             이벤트와 매장별 혜택은 여기서만 짧게 확인하고 필요한 정보로 바로 이동할 수 있어요.
           </p>
           <div class="mobile-flow__promo-list">
-            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" class="mobile-flow__promo-card">
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" target="_blank" rel="noopener noreferrer" class="mobile-flow__promo-card">
               <span class="mobile-flow__promo-thumb">
-                <img src="https://image.istarbucks.co.kr/upload/promotion/WEB_THUM_20260414084720946.jpg" alt="Spring 두 번째 프로모션">
+                <img src="./images/promotion/WEB_THUM_20260414084720946.jpg" alt="Spring 두 번째 프로모션">
               </span>
               <span class="mobile-flow__promo-copy">
                 <strong class="mobile-flow__promo-title">진행 중인 시즌 프로모션</strong>
@@ -739,19 +746,19 @@
                 <span class="mobile-flow__promo-link">프로모션 보기</span>
               </span>
             </a>
-            <a href="https://www.starbucks.co.kr/whats_new/store_event_list.do" class="mobile-flow__promo-card mobile-flow__promo-card--compact">
+            <span class="mobile-flow__promo-card mobile-flow__promo-card--compact" data-link-status="planned" data-planned-label="준비중" aria-disabled="true">
               <span class="mobile-flow__promo-thumb">
-                <img src="https://image.istarbucks.co.kr//upload/store/2026/03/4777_20260329031733_klp71.jpg" alt="리저브 스프링 커피 & 원두 출시">
+                <img src="./images/store/4777_20260329031733_klp71.jpg" alt="리저브 스프링 커피 & 원두 출시">
               </span>
               <span class="mobile-flow__promo-copy">
                 <strong class="mobile-flow__promo-title">매장별 이벤트 살펴보기</strong>
                 <span class="mobile-flow__promo-text">신규 매장과 일부 매장에서 진행 중인 이벤트를 빠르게 확인할 수 있어요.</span>
                 <span class="mobile-flow__promo-link">매장 이벤트 보기</span>
               </span>
-            </a>
+            </span>
           </div>
           <div class="mobile-flow__footer">
-            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" class="mobile-flow__more mobile-flow__more--footer">프로모션 전체보기</a>
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" target="_blank" rel="noopener noreferrer" class="mobile-flow__more mobile-flow__more--footer">프로모션 전체보기</a>
           </div>
         </article>
 
@@ -761,21 +768,21 @@
               <span class="material-icons mobile-flow__symbol" aria-hidden="true">notifications_none</span>
               <p class="mobile-flow__label">Notice</p>
             </div>
-            <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__more">공지 전체보기</a>
+            <span class="mobile-flow__more" data-link-status="planned" data-planned-label="준비중" aria-disabled="true">공지 전체보기</span>
           </div>
           <h3 class="mobile-flow__title mobile-flow__title--compact">지금 확인할 공지</h3>
           <ul class="mobile-flow__notice-list">
             <li class="mobile-flow__notice-item">
-              <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__notice-link">
+              <span class="mobile-flow__notice-link" data-link-status="planned" aria-disabled="true">
                 <span class="mobile-flow__notice-tag">안내</span>
                 <span class="mobile-flow__notice-text">본인인증 서비스 점검 안내</span>
-              </a>
+              </span>
             </li>
             <li class="mobile-flow__notice-item">
-              <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow__notice-link">
+              <span class="mobile-flow__notice-link" data-link-status="planned" aria-disabled="true">
                 <span class="mobile-flow__notice-tag">공지</span>
                 <span class="mobile-flow__notice-text">Buddy Pass 이용약관 개정 안내</span>
-              </a>
+              </span>
             </li>
           </ul>
         </article>
@@ -799,23 +806,23 @@
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="https://www.starbucks.co.kr/whats_new/notice_list.do">서울평가정보 시스템 점검으로 인한 본인인증 서비스 일시 중단 안내</a>
+                  <span data-link-status="planned" aria-disabled="true">서울평가정보 시스템 점검으로 인한 본인인증 서비스 일시 중단 안내</span>
                 </div>
                 <div class="swiper-slide">
-                  <a href="https://www.starbucks.co.kr/whats_new/notice_list.do">Buddy Pass 서비스 이용 개정 안내</a>
+                  <span data-link-status="planned" aria-disabled="true">Buddy Pass 서비스 이용 개정 안내</span>
                 </div>
                 <div class="swiper-slide">
-                  <a href="https://www.starbucks.co.kr/whats_new/notice_list.do">딜리버스 예약 서비스 중단 안내</a>
+                  <span data-link-status="planned" aria-disabled="true">딜리버스 예약 서비스 중단 안내</span>
                 </div>
                 <div class="swiper-slide">
-                  <a href="https://www.starbucks.co.kr/whats_new/notice_list.do">사이렌 오더/딜리버스 음료 기본 설정 변경 안내 (HOT → ICED)</a>
+                  <span data-link-status="planned" aria-disabled="true">사이렌 오더/딜리버스 음료 기본 설정 변경 안내 (HOT → ICED)</span>
                 </div>
               </div>
             </div>
-            <a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="notice-line__more">
+            <span class="notice-line__more" data-link-status="planned" aria-disabled="true">
               <span class="material-icons" aria-hidden="true">add_circle</span>
               <span class="blind">공지사항 전체보기</span>
-            </a>
+            </span>
           </div>
 
           <div class="inner__right">
@@ -840,17 +847,17 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="https://image.istarbucks.co.kr/upload/banner/6U1ecL_20260410163726645.jpg" alt="Spring 2번째 프로모션" />
-              <a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296" class="btn btn--promotion">
+              <img src="./images/promotion/6U1ecL_20260410163726645.jpg" alt="Spring 2번째 프로모션" />
+              <a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296" target="_blank" rel="noopener noreferrer" class="btn btn--promotion">
                 <span aria-hidden="true">자세히 보기</span>
-                <span class="blind">시즌 프로모션 자세히 보기</span>
+                <span class="blind">시즌 프로모션 자세히 보기, 새 탭에서 열림</span>
               </a>
             </div>
               <div class="swiper-slide">
-                <img src="https://image.istarbucks.co.kr/upload/banner/2tMsoT_20260305082600480.jpg" alt="리저브 스프링 음료 및 원두 출시" />
-                <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="btn btn--promotion">
+                <img src="./images/promotion/2tMsoT_20260305082600480.jpg" alt="리저브 스프링 음료 및 원두 출시" />
+                <a href="https://www.starbucks.co.kr/menu/drink_list.do" target="_blank" rel="noopener noreferrer" class="btn btn--promotion">
                   <span aria-hidden="true">자세히 보기</span>
-                  <span class="blind">리저브 스프링 음료와 원두 자세히 보기</span>
+                  <span class="blind">리저브 스프링 음료와 원두 자세히 보기, 새 탭에서 열림</span>
                 </a>
               </div>
             </div>
@@ -875,7 +882,7 @@
       <h2 class="blind" id="new-rewards-title">스타벅스 리워드</h2>
       <div class="new-rewards_inner">
         <div class="new-rewards_logo">
-          <img src="./images/rewards-logo.png" alt="Starbucks Rewards"> 
+          <img src="./images/rewards/rewards-logo.png" alt="Starbucks Rewards"> 
         </div>
         
         <div class="new-rewards_conts">
@@ -919,18 +926,18 @@
       <h2 class="blind" id="main-bean-title">스프링 시즌 블렌드 250g</h2>
       <div class="main-bean-inner">
         <div class="main-bean-imgBox">
-          <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_promotion_beans_260220.png"
+          <img src="./images/promotion/2026_spring1_ph1_promotion_beans_260220.png"
                alt="스프링 시즌 블렌드 250g" 
              class="back-to-position to-right">
         </div>
         <div class="main-bean-txt">
-          <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_promotion_txt_260220.png"
+          <img src="./images/promotion/2026_spring1_ph1_promotion_txt_260220.png"
                alt="스프링 시즌 블렌드 250g"
                class="back-to-position to-left">
           <div class="btn_detail back-to-position to-left">
-            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" class="btn btn--spring" style="width: 100%;">
+            <a href="https://www.starbucks.co.kr/whats_new/campaign_list.do" target="_blank" rel="noopener noreferrer" class="btn btn--spring" style="width: 100%;">
               <span aria-hidden="true">자세히 보기</span>
-              <span class="blind">스프링 시즌 블렌드 자세히 보기</span>
+              <span class="blind">스프링 시즌 블렌드 자세히 보기, 새 탭에서 열림</span>
             </a>
           </div>
         </div>
@@ -944,21 +951,21 @@
       <div class="first_reserve_inner">
         <div class="first_reserve_copy">
           <div class="first_reserve_title">
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/260224_pc_reserve_title.png" alt="COSTA RICA TICA LINDA">
+            <img src="./images/reserve/260224_pc_reserve_title.png" alt="COSTA RICA TICA LINDA">
           </div>
           <div class="first_reserve_detail-btn_wrap">
             <div class="first_reserve_detail-btn">
-              <a href="https://www.starbucks.co.kr/store/store_reserve.do" class="btn btn--gold">
+              <a href="https://www.starbucks.co.kr/store/store_reserve.do" target="_blank" rel="noopener noreferrer" class="btn btn--gold">
                 <span aria-hidden="true">자세히 보기</span>
-                <span class="blind">리저브 원두와 매장 정보 자세히 보기</span>
+                <span class="blind">리저브 원두와 매장 정보 자세히 보기, 새 탭에서 열림</span>
               </a>
             </div>
           </div>
         </div>
       <div class="first_reserve_visual back-to-position">
           <picture>
-            <!-- <source media="(min-width: 951px) and (max-width: 1279px)" srcset="https://image.istarbucks.co.kr/upload/common/img/main/2026/260224_mo_reserve.png"> -->
-            <img src="https://image.istarbucks.co.kr/upload/common/img/main/2026/260224_pc_reserve_coffee.png" class="reserve_visual-pc" alt="COSTA RICA 커피 이미지">
+            <!-- <source media="(min-width: 951px) and (max-width: 1279px)" srcset="./images/reserve/260224_mo_reserve.png"> -->
+            <img src="./images/reserve/260224_pc_reserve_coffee.png" class="reserve_visual-pc" alt="COSTA RICA 커피 이미지">
           </picture>
       </div> 
       </div>
@@ -977,9 +984,9 @@
         </div>
         <div class="fav_main_img"></div>
         <div class="fav_btn back-to-position">
-          <a href="https://www.starbucks.co.kr/menu/drink_list.do" class="btn btn--white">
+          <a href="https://www.starbucks.co.kr/menu/drink_list.do" target="_blank" rel="noopener noreferrer" class="btn btn--white">
             <span aria-hidden="true">자세히 보기</span>
-            <span class="blind">스타벅스 메뉴 자세히 보기</span>
+            <span class="blind">스타벅스 메뉴 자세히 보기, 새 탭에서 열림</span>
           </a>
         </div>
       </div>
@@ -990,16 +997,16 @@
       <h2 class="blind" id="reserve-magazine-title">리저브 매거진</h2>
       <div class="reserve_inner">
         <div class="reserve_title">
-          <img src="./images/reserve_magazine_text.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요.">
+          <img src="./images/reserve/reserve_magazine_text.png" alt="리저브 매거진에서 일상 속 특별함을 만나보세요.">
         </div>
         <div class="reserve_visual back-to-position delay-1">
-          <img src="./images/reserve_magazine_visual.png" alt="Reserve magazine">
+          <img src="./images/reserve/reserve_magazine_visual.png" alt="Reserve magazine">
         </div>
         <div class="reserve_btn_wrap">
           <div class="reserve_detail-btn">
-            <a href="https://www.starbucks.co.kr/store/store_reserve.do" class="btn btn--black">
+            <a href="https://www.starbucks.co.kr/store/store_reserve.do" target="_blank" rel="noopener noreferrer" class="btn btn--black">
               <span aria-hidden="true">자세히 보기</span>
-              <span class="blind">리저브 매거진과 리저브 매장 자세히 보기</span>
+              <span class="blind">리저브 매거진과 리저브 매장 자세히 보기, 새 탭에서 열림</span>
             </a>
           </div>
         </div>
@@ -1023,7 +1030,7 @@
           함께해서 더 따뜻할수 있는 지역사회 소통 공간 커뮤니티 매장
         </div>
         <div class="store_btn back-to-position delay-3 to-left">
-          <a href="https://www.starbucks.co.kr/store/store_map.do" class="btn btn--black">매장 찾기</a>
+          <a href="https://www.starbucks.co.kr/store/store_map.do" target="_blank" rel="noopener noreferrer" class="btn btn--black" aria-label="매장 찾기, 새 탭에서 열림">매장 찾기</a>
         </div>
       </div>
     </section>
@@ -1073,88 +1080,97 @@
       <div class="footer-desktop">
         <div class="footer-desktop__inner">
           <div class="footer-desktop__top">
-            <nav class="footer-desktop__menu" aria-label="스타벅스 데스크탑 푸터 메뉴">
+            <div class="footer-desktop__menu">
               <section class="footer-desktop__menu-group" aria-labelledby="footer-company-title">
                 <h2 class="footer-desktop__menu-title" id="footer-company-title">Company</h2>
                 <ul class="footer-desktop__menu-list" aria-labelledby="footer-company-title">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">한눈에 보기</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">스타벅스 사명</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">스타벅스 소개</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">컴플라이언스</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">국내 뉴스룸</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">세계의 스타벅스</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">글로벌 뉴스룸</a></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">한눈에 보기</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">스타벅스 사명</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">스타벅스 소개</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">컴플라이언스</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">국내 뉴스룸</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">세계의 스타벅스</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">글로벌 뉴스룸</span></li>
                 </ul>
               </section>
               <section class="footer-desktop__menu-group" aria-labelledby="footer-corporate-sales-title">
                 <h2 class="footer-desktop__menu-title" id="footer-corporate-sales-title">Corporate Sales</h2>
                 <ul class="footer-desktop__menu-list" aria-labelledby="footer-corporate-sales-title">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 및 기업 구매 안내</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">단체 주문 배달 안내</a></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">단체 및 기업 구매 안내</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">단체 주문 배달 안내</span></li>
                 </ul>
               </section>
               <section class="footer-desktop__menu-group" aria-labelledby="footer-partnership-title">
                 <h2 class="footer-desktop__menu-title" id="footer-partnership-title">Partnership</h2>
                 <ul class="footer-desktop__menu-list" aria-labelledby="footer-partnership-title">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">신규 입점 제의</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">협력 고객사 등록신청</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">중개업체 확인</a></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">신규 입점 제의</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">협력 고객사 등록신청</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">중개업체 확인</span></li>
                 </ul>
               </section>
               <section class="footer-desktop__menu-group" aria-labelledby="footer-community-title">
                 <h2 class="footer-desktop__menu-title" id="footer-community-title">Online Community</h2>
                 <ul class="footer-desktop__menu-list" aria-labelledby="footer-community-title">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">페이스북</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">트위터</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">유튜브</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">인스타그램</a></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">페이스북</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">트위터</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">유튜브</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">인스타그램</span></li>
                 </ul>
               </section>
               <section class="footer-desktop__menu-group" aria-labelledby="footer-recruit-title">
                 <h2 class="footer-desktop__menu-title" id="footer-recruit-title">Recruit</h2>
                 <ul class="footer-desktop__menu-list" aria-labelledby="footer-recruit-title">
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 소개</a></li>
-                  <li class="footer-desktop__menu-item"><a href="javascript:void(0)" class="footer-desktop__menu-link">채용 지원하기</a></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">채용 소개</span></li>
+                  <li class="footer-desktop__menu-item"><span class="footer-desktop__menu-link" data-link-status="planned" aria-disabled="true">채용 지원하기</span></li>
                 </ul>
               </section>
-            </nav>
+            </div>
           </div>
           <div class="footer-desktop__awards" aria-label="스타벅스 수상 내역">
             <ul>
-              <li><img src="./images/footer_award_image_01.jpg" alt="2020 여성가족부장관상"></li>
-              <li><img src="./images/footer_award_image_02.jpg" alt="2020 행정안전부장관 표창"></li>
-              <li><img src="./images/footer_award_image_03.jpg" alt="2020 농림축산식품부 장관상"></li>
-              <li><img src="./images/footer_award_image_04.jpg" alt="2020 대한민국 중소중견기업혁신대상"></li>
-              <li><img src="./images/footer_award_image_05.jpg" alt="2020 대한민국 일자리 유공 표창"></li>
-              <li><img src="./images/footer_award_image_06.jpg" alt="2020 사랑나눔 사회공헌대상"></li>
-              <li><img src="./images/footer_award_image_07.jpg" alt="CCM 인증획득"></li>
+              <li><img src="./images/footer/footer_award_image_01.jpg" alt="2020 여성가족부장관상"></li>
+              <li><img src="./images/footer/footer_award_image_02.jpg" alt="2020 행정안전부장관 표창"></li>
+              <li><img src="./images/footer/footer_award_image_03.jpg" alt="2020 농림축산식품부 장관상"></li>
+              <li><img src="./images/footer/footer_award_image_04.jpg" alt="2020 대한민국 중소중견기업혁신대상"></li>
+              <li><img src="./images/footer/footer_award_image_05.jpg" alt="2020 대한민국 일자리 유공 표창"></li>
+              <li><img src="./images/footer/footer_award_image_06.jpg" alt="2020 사랑나눔 사회공헌대상"></li>
+              <li><img src="./images/footer/footer_award_image_07.jpg" alt="CCM 인증획득"></li>
             </ul>
           </div>
           <div class="footer-desktop__bottom">
-            <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 링크">
-              <a href="javascript:void(0)">개인정보처리방침</a>
-              <a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a>
-              <a href="javascript:void(0)">홈페이지 이용약관</a>
-              <a href="javascript:void(0)">위치정보 이용약관</a>
-              <a href="javascript:void(0)">스타벅스 카드 이용약관</a>
-              <a href="javascript:void(0)">신세계 유니버스 클럽 이용약관</a>
-              <a href="javascript:void(0)">비회원 이용약관</a>
-              <a href="javascript:void(0)">My DT Pass 서비스 이용약관</a>
-              <a href="javascript:void(0)">윤리경영 핫라인</a>
+            <div class="footer-desktop__policy" aria-label="스타벅스 주요 정책 항목">
+              <span data-link-status="planned" aria-disabled="true">개인정보처리방침</span>
+              <span data-link-status="planned" aria-disabled="true">영상정보처리기기 운영관리 방침</span>
+              <span data-link-status="planned" aria-disabled="true">홈페이지 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">위치정보 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">스타벅스 카드 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">신세계 유니버스 클럽 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">비회원 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">My DT Pass 서비스 이용약관</span>
+              <span data-link-status="planned" aria-disabled="true">윤리경영 핫라인</span>
             </div>
-            <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 바로가기">
-              <a href="javascript:void(0)">찾아오시는 길</a>
-              <a href="javascript:void(0)">신규입점제의</a>
-              <a href="javascript:void(0)">사이트 맵</a>
+            <div class="footer-desktop__buttons" aria-label="스타벅스 푸터 예정 항목">
+              <span data-link-status="planned" aria-disabled="true">찾아오시는 길</span>
+              <span data-link-status="planned" aria-disabled="true">신규입점제의</span>
+              <span data-link-status="planned" aria-disabled="true">사이트 맵</span>
             </div>
-            <div class="footer-desktop__info" aria-label="스타벅스 사업자 정보">
-              <p>사업자등록번호 : 201-81-21515</p>
-              <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-              <p>TEL : 1522-3232</p>
-              <p>개인정보 책임자 : 이찬우</p>
+            <div class="footer-desktop__info" aria-label="포트폴리오 연락처">
+              <p>Email : bangsiri@example.com</p>
+            </div>
+            <div class="footer-social" aria-label="소셜 채널">
+              <span class="footer-social__item" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                </svg>
+              </span>
+              <span class="footer-social__item" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+              </span>
             </div>
             <p class="footer-desktop__copyright">
-              &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+              &copy; <span class="this-year"></span> 방Siri All Right Reserved.
             </p>
           </div>
         </div>
@@ -1166,53 +1182,62 @@
           <section class="mobile-flow-footer__section mobile-flow-footer__section--service" aria-labelledby="mobile-footer-service-title">
             <h2 class="mobile-flow-footer__title" id="mobile-footer-service-title">스타벅스를 이용해보세요</h2>
             <ul class="mobile-flow-footer__list" aria-labelledby="mobile-footer-service-title">
-              <li class="mobile-flow-footer__item"><a href="https://www.starbucks.co.kr/store/store_map.do" class="mobile-flow-footer__link">매장 찾기</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사이렌 오더</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">딜리버스</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">e-Gift Card</a></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">매장 찾기</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">사이렌 오더</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">딜리버스</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">e-Gift Card</span></li>
             </ul>
           </section>
           <section class="mobile-flow-footer__section mobile-flow-footer__section--menu" aria-labelledby="mobile-footer-menu-title">
             <h2 class="mobile-flow-footer__title" id="mobile-footer-menu-title">메뉴와 커피를 더 알고 싶다면</h2>
             <ul class="mobile-flow-footer__list" aria-labelledby="mobile-footer-menu-title">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">음료</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">푸드</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">상품</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">커피 이야기</a></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">음료</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">푸드</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">상품</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">커피 이야기</span></li>
             </ul>
           </section>
           <section class="mobile-flow-footer__section mobile-flow-footer__section--brand" aria-labelledby="mobile-footer-brand-title">
             <h2 class="mobile-flow-footer__title" id="mobile-footer-brand-title">스타벅스가 궁금하다면</h2>
             <ul class="mobile-flow-footer__list" aria-labelledby="mobile-footer-brand-title">
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 소개</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">국내 뉴스룸</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">사회공헌</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">채용 소개</a></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">스타벅스 소개</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">국내 뉴스룸</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">사회공헌</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">채용 소개</span></li>
             </ul>
           </section>
           <section class="mobile-flow-footer__section mobile-flow-footer__section--support" aria-labelledby="mobile-footer-support-title">
             <h2 class="mobile-flow-footer__title" id="mobile-footer-support-title">더 필요한 안내</h2>
             <ul class="mobile-flow-footer__list" aria-labelledby="mobile-footer-support-title">
-              <li class="mobile-flow-footer__item"><a href="https://www.starbucks.co.kr/whats_new/notice_list.do" class="mobile-flow-footer__link">공지사항</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">고객의 소리</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">자주 하는 질문</a></li>
-              <li class="mobile-flow-footer__item"><a href="javascript:void(0)" class="mobile-flow-footer__link">매장 이용 안내</a></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">공지사항</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">고객의 소리</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">자주 하는 질문</span></li>
+              <li class="mobile-flow-footer__item"><span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">매장 이용 안내</span></li>
             </ul>
           </section>
-          <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 링크">
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">개인정보처리방침</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">홈페이지 이용약관</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">위치정보 이용약관</a>
-            <a href="javascript:void(0)" class="mobile-flow-footer__link">스타벅스 카드 이용약관</a>
+          <div class="mobile-flow-footer__policy" aria-label="스타벅스 모바일 주요 정책 항목">
+            <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">개인정보처리방침</span>
+            <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">홈페이지 이용약관</span>
+            <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">위치정보 이용약관</span>
+            <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">스타벅스 카드 이용약관</span>
           </div>
-          <div class="mobile-flow-footer__info" aria-label="스타벅스 사업자 정보">
-            <p>사업자등록번호 : 201-81-21515</p>
-            <p>주식회사 에스씨케이컴퍼니 대표이사 : 손정현</p>
-            <p>TEL : 1522-3232</p>
-            <p>개인정보 책임자 : 이찬우</p>
+          <div class="mobile-flow-footer__info" aria-label="포트폴리오 연락처">
+            <p>Email : bangsiri@example.com</p>
+          </div>
+          <div class="footer-social" aria-label="소셜 채널">
+            <span class="footer-social__item" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </span>
+            <span class="footer-social__item" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </span>
           </div>
           <p class="mobile-flow-footer__copyright">
-            &copy; <span class="this-year"></span> Starbucks Coffee Company. All Rights Reserved.
+            &copy; <span class="this-year"></span> 방Siri All Right Reserved.
           </p>
         </div>
       </div>
@@ -1222,3 +1247,4 @@
 
 </body>
 </html>
+

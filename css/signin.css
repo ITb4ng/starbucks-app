@@ -5,7 +5,7 @@
 #signin {
     margin-top: 120px;
     padding: 100px 0 150px; 
-    background-image: url("https://www.starbucks.co.kr/common/img/util/mem/login_bg.jpg");
+    background-image: url("../images/common/login_bg.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -72,7 +72,7 @@
     border: 0;
     border-radius: 4px;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1;
     background: #006633;
@@ -96,12 +96,25 @@
     line-height: 1.4;
     color: #006633;
 }
+
+.signin__card form .form__message {
+    min-height: 20px;
+    margin-top: 0;
+    color: #5f6e68;
+    font-size: 13px;
+}
+
+.signin__card form .form__message:empty {
+    display: none;
+}
+
 .signin__card .siginin__card__utils {
     display: flex;
     border-top: 1px solid #ddd;
 }
 
-.signin__card .siginin__card__utils a {
+.signin__card .siginin__card__utils a,
+.signin__card .siginin__card__utils [data-link-status="planned"] {
     color: #666;
     flex-grow: 1;
     flex-basis: 0;
@@ -110,12 +123,17 @@
     font-size: 14px;
     border-right: 1px solid #ddd;
 }
-.signin__card .siginin__card__utils a:last-child {
+.signin__card .siginin__card__utils a:last-child,
+.signin__card .siginin__card__utils [data-link-status="planned"]:last-child {
     border-right: 0;
 }
 
 .signin__card .siginin__card__utils a:hover {
     text-decoration: underline;
+}
+
+.signin__card .siginin__card__utils [data-link-status="planned"] {
+    opacity: .68;
 }
 
 @media screen and (max-width:950px){
@@ -159,7 +177,8 @@
         font-size: 13px;
         line-height: 1.5;
     }
-    .signin__card .siginin__card__utils a {
+    .signin__card .siginin__card__utils a,
+    .signin__card .siginin__card__utils [data-link-status="planned"] {
         padding: 16px 10px;
         font-size: 13px;
     }
@@ -204,18 +223,22 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0;
     }
-    .signin__card .siginin__card__utils a {
+    .signin__card .siginin__card__utils a,
+    .signin__card .siginin__card__utils [data-link-status="planned"] {
         padding: 14px 10px;
         border-bottom: 1px solid #ddd;
         border-right: 0;
     }
-    .signin__card .siginin__card__utils a:first-child {
+    .signin__card .siginin__card__utils a:first-child,
+    .signin__card .siginin__card__utils [data-link-status="planned"]:first-child {
         grid-column: 1 / -1;
     }
-    .signin__card .siginin__card__utils a:last-child {
+    .signin__card .siginin__card__utils a:last-child,
+    .signin__card .siginin__card__utils [data-link-status="planned"]:last-child {
         border-bottom: 0;
     }
-    .signin__card .siginin__card__utils a:nth-child(2) {
+    .signin__card .siginin__card__utils a:nth-child(2),
+    .signin__card .siginin__card__utils [data-link-status="planned"]:nth-child(2) {
         border-right: 1px solid #ddd;
     }
 }  

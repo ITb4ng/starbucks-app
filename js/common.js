@@ -14,6 +14,7 @@ const headerOverlayEl = headerEl ? headerEl.querySelector('.header-overlay') : n
 const headerMenuButtons = headerEl ? Array.from(headerEl.querySelectorAll('.main-menu .item > .item__name')) : [];
 const headerMenuItems = headerEl ? Array.from(headerEl.querySelectorAll('.main-menu > .item')) : [];
 const headerSkipMenuLinks = document.querySelectorAll('[data-skip-menu]');
+const demoFormEls = Array.from(document.querySelectorAll('form[data-demo-form]'));
 const mobileSearchMediaQuery = window.matchMedia('(max-width: 959px)');
 const tabletMediaQuery = window.matchMedia('(max-width: 959px)');
 const rootEl = document.documentElement;
@@ -558,6 +559,19 @@ if (headerEl && headerToggleEl && headerNavEl && headerOverlayEl) {
     syncHeaderNavViewportHeight();
     resetHeaderMenuState();
 }
+
+demoFormEls.forEach(function (formEl) {
+    formEl.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const messageTargetId = formEl.dataset.demoMessageTarget;
+        const messageTargetEl = messageTargetId ? document.getElementById(messageTargetId) : null;
+
+        if (messageTargetEl) {
+            messageTargetEl.textContent = '포트폴리오 데모 페이지라 실제 제출은 진행되지 않습니다.';
+        }
+    });
+});
 
 const thisYearEls = document.querySelectorAll('.this-year');
 if (thisYearEls.length) {

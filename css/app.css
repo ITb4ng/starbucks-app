@@ -250,7 +250,8 @@
     gap: 8px;
   }
 
-  header .sub-menu ul.menu li a {
+  header .sub-menu ul.menu li a,
+  header .sub-menu ul.menu li [data-link-status="planned"] {
     padding: 10px 10px;
     font-size: 12px;
     white-space: nowrap;
@@ -471,6 +472,18 @@
   .mobile-flow-footer {
     display: block;
   }
+
+  .mobile-flow-footer__inner,
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer__info,
+  .mobile-flow-footer__copyright {
+    text-align: left;
+  }
+
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer .footer-social {
+    justify-content: flex-start;
+  }
 }
 
 @media screen and (min-width: 541px) and (max-width: 959px) {
@@ -485,6 +498,17 @@
   .mobile-flow-footer__info,
   .mobile-flow-footer__copyright {
     grid-column: 1 / -1;
+  }
+
+  .mobile-flow-footer__policy,
+  .mobile-flow-footer__info,
+  .mobile-flow-footer__copyright {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .mobile-flow-footer .footer-social {
+    justify-content: flex-start;
   }
 }
 
@@ -558,7 +582,7 @@
         rgba(246, 245, 240, 0.14) 34%,
         rgba(246, 245, 240, 0) 46%
       ),
-      url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_bg_mo_260407.jpg");
+      url("../images/hero/2026_spring2_top_bg_mo_260407.jpg");
     background-position: center top, center top;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
@@ -1040,7 +1064,8 @@
     display: none;
   }
 
-  header .sub-menu ul.menu li a {
+  header .sub-menu ul.menu li a,
+  header .sub-menu ul.menu li [data-link-status="planned"] {
     padding: 14px 0;
     font-size: 14px;
   }
@@ -1206,7 +1231,8 @@
     line-height: 1.5;
   }
 
-  header .main-menu .item .item__contents .contents__menu > ul > li ul li a {
+  header .main-menu .item .item__contents .contents__menu > ul > li ul li a,
+  header .main-menu .item .item__contents .contents__menu > ul > li ul li [data-link-status="planned"] {
     display: inline-block;
     color: inherit;
     font-size: inherit;
@@ -1722,6 +1748,16 @@
     background-color: rgba(255, 255, 255, 0.08);
   }
 
+  .mobile-flow__action[data-link-status="planned"],
+  .mobile-flow__promo-card[data-link-status="planned"],
+  .mobile-flow__subaction[data-link-status="planned"],
+  .mobile-flow__more[data-link-status="planned"],
+  .mobile-flow__notice-link[data-link-status="planned"],
+  .mobile-flow__item[data-link-status="planned"] {
+    opacity: .7;
+    cursor: default;
+  }
+
   .mobile-flow__subactions {
     display: flex;
     align-items: center;
@@ -1760,6 +1796,21 @@
     line-height: 1;
   }
 
+  .mobile-flow__more[data-planned-label]::after {
+    content: attr(data-planned-label);
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    padding: 2px 6px;
+    border: 1px solid rgba(0, 98, 65, 0.18);
+    border-radius: 999px;
+    background-color: rgba(0, 98, 65, 0.08);
+    color: #006241;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
   .mobile-flow__promo-list {
     display: grid;
     gap: 8px;
@@ -1767,6 +1818,7 @@
   }
 
   .mobile-flow__promo-card {
+    position: relative;
     display: grid;
     grid-template-columns: 78px minmax(0, 1fr);
     align-items: center;
@@ -1776,6 +1828,13 @@
     border-radius: 18px;
     background-color: rgba(255, 255, 255, 0.92);
     color: #1e3932;
+  }
+
+  .mobile-flow__promo-card[data-planned-label]::after {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 0;
   }
 
   .mobile-flow__promo-thumb {
@@ -2100,7 +2159,8 @@
     font-size: 11.5px;
   }
 
-  header .sub-menu ul.menu li a {
+  header .sub-menu ul.menu li a,
+  header .sub-menu ul.menu li [data-link-status="planned"] {
     padding: 12px 0;
     font-size: 13px;
   }

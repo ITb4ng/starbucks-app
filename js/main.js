@@ -488,74 +488,11 @@ function syncPromotionState(isHidden) {
     }
 }
 
-function syncPromotionState(isHidden) {
-    if (!promotionEl || !promotionToggleEl) {
-        return;
-    }
-
-    isPromotionHidden = isHidden;
-    promotionEl.classList.toggle('hide', isPromotionHidden);
-    promotionEl.setAttribute('aria-hidden', String(isPromotionHidden));
-    promotionEl.inert = isPromotionHidden;
-    promotionToggleEl.setAttribute('aria-expanded', String(!isPromotionHidden));
-    promotionToggleEl.setAttribute('aria-label', isPromotionHidden ? '프로모션 펼치기' : '프로모션 접기');
-
-    if (noticeEl) {
-        noticeEl.classList.toggle('menuing', !isPromotionHidden);
-    }
-
-    if (isPromotionHidden && promotionEl.contains(document.activeElement)) {
-        focusElement(promotionToggleEl);
-    }
-}
-
-function syncPromotionState(isHidden) {
-    if (!promotionEl || !promotionToggleEl) {
-        return;
-    }
-
-    isPromotionHidden = isHidden;
-    promotionEl.classList.toggle('hide', isPromotionHidden);
-    promotionEl.setAttribute('aria-hidden', String(isPromotionHidden));
-    promotionEl.inert = isPromotionHidden;
-    promotionToggleEl.setAttribute('aria-expanded', String(!isPromotionHidden));
-    promotionToggleEl.setAttribute('aria-label', isPromotionHidden ? '프로모션 펼치기' : '프로모션 접기');
-
-    if (noticeEl) {
-        noticeEl.classList.toggle('menuing', !isPromotionHidden);
-    }
-
-    if (isPromotionHidden && promotionEl.contains(document.activeElement)) {
-        focusElement(promotionToggleEl);
-    }
-}
-
-function syncPromotionStateAccessible(isHidden) {
-    if (!promotionEl || !promotionToggleEl) {
-        return;
-    }
-
-    isPromotionHidden = isHidden;
-    promotionEl.classList.toggle('hide', isPromotionHidden);
-    promotionEl.setAttribute('aria-hidden', String(isPromotionHidden));
-    promotionEl.inert = isPromotionHidden;
-    promotionToggleEl.setAttribute('aria-expanded', String(!isPromotionHidden));
-    promotionToggleEl.setAttribute('aria-label', isPromotionHidden ? '프로모션 펼치기' : '프로모션 접기');
-
-    if (noticeEl) {
-        noticeEl.classList.toggle('menuing', !isPromotionHidden);
-    }
-
-    if (isPromotionHidden && promotionEl.contains(document.activeElement)) {
-        focusElement(promotionToggleEl);
-    }
-}
-
 if (promotionEl && promotionToggleEl) {
-    syncPromotionStateAccessible(isPromotionHidden);
+    syncPromotionState(isPromotionHidden);
 
     promotionToggleEl.addEventListener('click', function () {
-        syncPromotionStateAccessible(!isPromotionHidden);
+        syncPromotionState(!isPromotionHidden);
     });
 }
 

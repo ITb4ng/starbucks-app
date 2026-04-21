@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-  <meta name="description" content="스타벅스 코리아 로그인 페이지">
-  <title>Starbucks Korea | 로그인</title>
+  <meta name="description" content="스타벅스 코리아 회원가입 데모 페이지">
+  <title>Starbucks Korea | 회원가입</title>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Starbucks">
   <meta property="og:title" content="Starbucks Coffee Korea">
-  <meta property="og:description" content="Starbucks Korea 로그인 페이지">
+  <meta property="og:description" content="Starbucks Korea 회원가입 데모 페이지">
   <meta property="og:image" content="../images/common/starbucks_seo.jpg">
   <meta property="og:url" content="https://starbucks.co.kr">
 
@@ -60,7 +60,7 @@
               <span class="material-icons header-quick-link__icon" aria-hidden="true">local_cafe</span>
               <span class="header-quick-link__text">메뉴</span>
             </a>
-            <a href="./" class="header-quick-link" aria-current="page">
+            <a href="./" class="header-quick-link">
               <span class="material-icons header-quick-link__icon" aria-hidden="true">person</span>
               <span class="header-quick-link__text">로그인</span>
             </a>
@@ -68,7 +68,7 @@
 
           <div class="sub-menu">
             <ul class="menu" aria-label="유틸리티 링크">
-              <li><a href="./" aria-current="page">Sign In</a></li>
+              <li><a href="./">Sign In</a></li>
               <li><span data-link-status="planned" aria-disabled="true">My Starbucks</span></li>
               <li><span data-link-status="planned" aria-disabled="true">Customer Service &amp; ideas</span></li>
               <li><span data-link-status="planned" aria-disabled="true">Find a Store</span></li>
@@ -280,32 +280,38 @@
   </header>
 
   <main id="main-content">
-    <section id="signin" aria-labelledby="signin-title">
-      <h2 id="signin-title">로그인</h2>
+    <section id="signin" class="join" aria-labelledby="join-title">
+      <h2 id="join-title">회원가입</h2>
       <div class="signin__card">
-        <div class="signin__card__title" id="signin-card-title">
-          <span>welcome!</span>
-          스타벅스 코리아에 오신 것을 환영합니다.
+        <div class="signin__card__title" id="join-card-title">
+          <span>create account</span>
+          포트폴리오 데모용 회원가입 화면입니다.
         </div>
 
-        <form data-demo-form data-demo-message-target="signin-demo-message" aria-labelledby="signin-card-title" aria-describedby="signin-notice signin-demo-message">
-          <label for="signin-id" class="blind">아이디</label>
-          <input id="signin-id" name="signin-id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required autocomplete="username">
+        <form data-demo-form data-demo-message-target="join-demo-message" aria-labelledby="join-card-title" aria-describedby="join-notice join-demo-message">
+          <label for="join-name" class="blind">이름</label>
+          <input id="join-name" name="join-name" type="text" maxlength="20" placeholder="이름을 입력해 주세요." required autocomplete="name">
 
-          <label for="signin-password" class="blind">비밀번호</label>
-          <input id="signin-password" name="signin-password" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required autocomplete="current-password">
+          <label for="join-email" class="blind">이메일</label>
+          <input id="join-email" name="join-email" type="email" maxlength="50" placeholder="이메일을 입력해 주세요." required autocomplete="email">
 
-          <button type="submit" class="form__login">로그인</button>
+          <label for="join-id" class="blind">아이디</label>
+          <input id="join-id" name="join-id" type="text" maxlength="20" placeholder="아이디를 입력해 주세요." required autocomplete="username">
 
-          <p id="signin-notice">
-            * 본 로그인 화면은 공식 서비스의 로그인 기능이 아닌, UI/UX를 재해석한 퍼블리싱 포트폴리오입니다. <br>
-            * 실제 로그인은 진행되지 않으며, 실제 서비스와 유사하게 재해석한 데모 사이트임을 참고해 주세요.
+          <label for="join-password" class="blind">비밀번호</label>
+          <input id="join-password" name="join-password" type="password" maxlength="20" placeholder="비밀번호를 입력해 주세요." required autocomplete="new-password">
+
+          <button type="submit" class="form__login">가입하기</button>
+
+          <p id="join-notice">
+            * 이 화면은 포트폴리오 제출용 정적 데모 페이지입니다. <br>
+            * 입력 정보는 저장되지 않으며, 실제 회원가입 기능은 제공하지 않습니다.
           </p>
-          <p id="signin-demo-message" class="form__message" aria-live="polite"></p>
+          <p id="join-demo-message" class="form__message" aria-live="polite"></p>
         </form>
 
         <div class="siginin__card__utils">
-          <a href="./join.html">회원가입</a>
+          <a href="./">로그인으로 돌아가기</a>
           <span data-link-status="planned" aria-disabled="true">아이디 찾기</span>
           <span data-link-status="planned" aria-disabled="true">비밀번호 찾기</span>
         </div>
