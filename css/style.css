@@ -319,7 +319,8 @@ header .main-menu .item .item__contents .contents__menu > ul {
 header .main-menu .item .item__contents .contents__menu > ul > li {
   width: 220px;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li a {
+header .main-menu .item .item__contents .contents__menu > ul > li a,
+header .main-menu .item .item__contents .contents__menu > ul > li [data-link-status="planned"] {
   font-size: 12px;
 }
 header .main-menu .item .item__contents .contents__menu > ul > li h2 {
@@ -327,7 +328,8 @@ header .main-menu .item .item__contents .contents__menu > ul > li h2 {
   font-size: 14px;
   color: #fff;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a {
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > a,
+header .main-menu .item .item__contents .contents__menu > ul > li > h2 > [data-link-status="planned"] {
   display: inline-block;
   color: inherit;
 }
@@ -341,14 +343,14 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   padding: 5px 0;
   font-size: 12px;
   color: #999;
-  cursor: pointer;
   line-height: 1.4;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li a {
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a,
+header .main-menu .item .item__contents .contents__menu > ul > li ul li [data-link-status="planned"] {
   display: inline-block;
   color: inherit;
 }
-header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+header .main-menu .item .item__contents .contents__menu > ul > li ul li a:hover {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -1546,7 +1548,8 @@ body.order-choice-open {
   gap: 12px 18px;
 }
 
-.footer-desktop__awards a {
+.footer-desktop__awards a,
+.footer-desktop__awards span {
   display: block;
 }
 

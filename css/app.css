@@ -1206,7 +1206,8 @@
     line-height: 1.5;
   }
 
-  header .main-menu .item .item__contents .contents__menu > ul > li ul li a {
+  header .main-menu .item .item__contents .contents__menu > ul > li ul li a,
+  header .main-menu .item .item__contents .contents__menu > ul > li ul li [data-link-status="planned"] {
     display: inline-block;
     color: inherit;
     font-size: inherit;
