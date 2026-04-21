@@ -393,7 +393,7 @@ aside .badges img {
     margin: 0 auto;
     padding: 0;
     display: block;
-    background-image: url("https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_top_bg_260407.jpg");
+    background-image: url("../images/hero/2026_spring2_top_bg_260407.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -731,7 +731,7 @@ body.order-choice-open {
 
 .notice .notice-line .inner__left .speaker {
   color: #fff;
-  background: url('../images/notice-line_speker.png') center center no-repeat;
+  background: url('../images/common/notice-line_speker.png') center center no-repeat;
   background-size: 33px 25px;
   height: 33px;
   width: 65px;
@@ -890,7 +890,7 @@ body.order-choice-open {
 }
 .notice .promotion .swiper-pagination .swiper-pagination-bullet {
   background-color: transparent;
-  background-image: url("../images/promotion_slide_pager.png");
+  background-image: url("../images/promotion/promotion_slide_pager.png");
   width: 13px;
   height: 12px;
   margin-right: 6px;
@@ -900,7 +900,7 @@ body.order-choice-open {
   margin-right: 0;
 }
 .notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
-  background-image: url("../images/promotion_slide_pager_on.png");
+  background-image: url("../images/promotion/promotion_slide_pager_on.png");
 }
 .notice .promotion .swiper-prev,
 .notice .promotion .swiper-next {
@@ -1065,7 +1065,7 @@ body.order-choice-open {
 
 /* 메인 원두 리워드  섹션  */
 #main-bean-wrap {
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring1_ph1_promotion_bg_260220.jpg');    
+  background-image: url('../images/promotion/2026_spring1_ph1_promotion_bg_260220.jpg');    
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1202,7 +1202,7 @@ body.order-choice-open {
 /* favorite Section */
 #fav_wrap {
   position: relative;
-  background: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_bg_260407.jpg') center center fixed no-repeat transparent;
+  background: url('../images/promotion/2026_spring2_pick_bg_260407.jpg') center center fixed no-repeat transparent;
   background-size: auto 87%;
   background-position: bottom;
   height: 800px;
@@ -1215,7 +1215,7 @@ body.order-choice-open {
 }
 .fav_txt_img {
   top: 172px;
-  background: url('../images/fav_prod_txt01.png') no-repeat;
+  background: url('../images/promotion/fav_prod_txt01.png') no-repeat;
   width: 258px;
   height: 204px;
   overflow: hidden;
@@ -1225,7 +1225,7 @@ body.order-choice-open {
   left: 200px;
 }
 .fav_txt_img2 {
-  background: url('../images/fav_prod_txt02.png') no-repeat;
+  background: url('../images/promotion/fav_prod_txt02.png') no-repeat;
   top: 417px;
   background-size: contain;
   width: 362px;
@@ -1246,7 +1246,7 @@ body.order-choice-open {
   right: -163px;
   width: 912px;
   height: 575px;
-  background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2026/2026_spring2_pick_img_260407.png');
+  background-image: url('../images/promotion/2026_spring2_pick_img_260407.png');
 }
 .fav_btn {
   position: absolute;
@@ -1265,7 +1265,7 @@ body.order-choice-open {
 /* RESERVE Section */
 
 #reserve_magazine_wrap {
-  background: url('../images/reserve_magazine_bg.png') no-repeat 50% 100%;
+  background: url('../images/reserve/reserve_magazine_bg.png') no-repeat 50% 100%;
   position: relative;
   height: 400px;
   background-size: auto 353px;
@@ -1328,7 +1328,7 @@ body.order-choice-open {
 
 /* STORE Section */
 #storewrap {
-  background: url('../images/store_bg.jpg');
+  background: url('../images/store/store_bg.jpg');
   background-size: 100% auto;
   height: 400px;
   position: relative;
@@ -1343,7 +1343,7 @@ body.order-choice-open {
   left: 50%;
 }
 .store_inner .store_img01 {
-  background: url('../images/store_image_01.png'); /* 작은 원 */
+  background: url('../images/store/store_image_01.png'); /* 작은 원 */
   height: 228px;
   left: 390px;
   position: absolute;
@@ -1353,7 +1353,7 @@ body.order-choice-open {
   background-size: contain;
 }
 .store_inner .store_img02 {
-  background: url('../images/store_image_02.png'); /* 큰 원 */
+  background: url('../images/store/store_image_02.png'); /* 큰 원 */
   height: 312px;
   left: 160px;
   position: absolute;
@@ -1363,7 +1363,7 @@ body.order-choice-open {
   background-size: contain;
 }
 .store_inner .store_img03 {
-  background: url('../images/store_image_03.png');
+  background: url('../images/store/store_image_03.png');
   height: 142px;
   left: 520px;
   position: absolute;
@@ -1372,7 +1372,7 @@ body.order-choice-open {
   z-index: 4;
 }
 .store_inner .store_img04 {
-  background: url('../images/store_image_04.png');
+  background: url('../images/store/store_image_04.png');
   height: 102px;
   position: absolute;
   right: 30px;
@@ -1381,7 +1381,7 @@ body.order-choice-open {
   z-index: 4;
 }
 .store_inner .store_txt01 {
-  background: url('../images/store_text_01.png');
+  background: url('../images/store/store_text_01.png');
   height: 54px;
   position: absolute;
   right: 162px;
@@ -1392,7 +1392,7 @@ body.order-choice-open {
   z-index: 4;
 }
 .store_inner .store_txt02 {
-  background: url('../images/store_text_02.png');
+  background: url('../images/store/store_text_02.png');
   height: 92px;
   position: absolute;
   right: 168px;
