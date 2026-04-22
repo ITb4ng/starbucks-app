@@ -26,6 +26,7 @@
 ## 배포 및 미리보기
 
 - Production (main): https://itb4ng-siri.netlify.app
+- Legacy (master) : https://starbucks2025.vercel.app
 - Release: [v0.2.1](https://github.com/ITb4ng/starbucks-app/releases/tag/v0.2.1)
 - 주요 화면: 메인 페이지, 로그인 페이지, 모바일 전용 흐름, 프로모션/리워드/스토어 섹션
 - 공유 미리보기: Open Graph, Twitter Card, iOS/Safari 아이콘 메타를 현재 배포 주소 기준으로 정리
