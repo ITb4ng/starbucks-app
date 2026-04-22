@@ -85,7 +85,8 @@
 }
 
 .signin__card form .form__login:focus-visible,
-.signin__card .siginin__card__utils a:focus-visible {
+.signin__card .siginin__card__utils a:focus-visible,
+.signin__card .siginin__card__utils button:focus-visible {
     outline: 2px solid #006633;
     outline-offset: 2px;
 }
@@ -114,21 +115,28 @@
 }
 
 .signin__card .siginin__card__utils a,
+.signin__card .siginin__card__utils button,
 .signin__card .siginin__card__utils [data-link-status="planned"] {
+    appearance: none;
+    border: 0;
+    border-right: 1px solid #ddd;
+    background: transparent;
     color: #666;
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
     padding: 20px;
+    font: inherit;
     font-size: 14px;
-    border-right: 1px solid #ddd;
 }
 .signin__card .siginin__card__utils a:last-child,
+.signin__card .siginin__card__utils button:last-child,
 .signin__card .siginin__card__utils [data-link-status="planned"]:last-child {
     border-right: 0;
 }
 
-.signin__card .siginin__card__utils a:hover {
+.signin__card .siginin__card__utils a:hover,
+.signin__card .siginin__card__utils button:hover {
     text-decoration: underline;
 }
 
@@ -178,6 +186,7 @@
         line-height: 1.5;
     }
     .signin__card .siginin__card__utils a,
+    .signin__card .siginin__card__utils button,
     .signin__card .siginin__card__utils [data-link-status="planned"] {
         padding: 16px 10px;
         font-size: 13px;
@@ -224,20 +233,24 @@
         gap: 0;
     }
     .signin__card .siginin__card__utils a,
+    .signin__card .siginin__card__utils button,
     .signin__card .siginin__card__utils [data-link-status="planned"] {
         padding: 14px 10px;
         border-bottom: 1px solid #ddd;
         border-right: 0;
     }
     .signin__card .siginin__card__utils a:first-child,
+    .signin__card .siginin__card__utils button:first-child,
     .signin__card .siginin__card__utils [data-link-status="planned"]:first-child {
         grid-column: 1 / -1;
     }
     .signin__card .siginin__card__utils a:last-child,
+    .signin__card .siginin__card__utils button:last-child,
     .signin__card .siginin__card__utils [data-link-status="planned"]:last-child {
         border-bottom: 0;
     }
     .signin__card .siginin__card__utils a:nth-child(2),
+    .signin__card .siginin__card__utils button:nth-child(2),
     .signin__card .siginin__card__utils [data-link-status="planned"]:nth-child(2) {
         border-right: 1px solid #ddd;
     }

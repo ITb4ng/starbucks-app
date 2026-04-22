@@ -5,28 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="description" content="스타벅스 공홈을 참고해 재해석한 개인 웹 포트폴리오 프로젝트">
   <title>Starbucks Korea</title>
   <script>
     try {
       if (sessionStorage.getItem('starbucksPortfolioSplashSeen') === 'true') {
         document.documentElement.classList.add('splash-seen');
       }
-    } catch (error) {}
-  </script>
-  <noscript>
-    <style>
-      .portfolio-splash {
-        display: none;
-      }
-    </style>
-  </noscript>
+    } catch (error) {
+      console.warn('splash sessionStorage 접근 실패:', error);
+      document.documentElement.classList.add('splash-seen');
+    }
+</script>
+<noscript>
+  <style>
+    .portfolio-splash {
+      display: none;
+    }
+  </style>
+</noscript>
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Starbucks" />
   <meta property="og:title" content="Starbucks Coffee Korea" />
-  <meta property="og:description" content="Starbucks" />
-  <meta property="og:image" content="./images/common/starbucks_seo.jpg" />
-  <meta property="og:url" content="https://starbucks.co.kr" />
+  <meta property="og:description" content="스타벅스 공홈을 참고해 재해석한 개인 웹 포트폴리오 프로젝트" />
+  <meta property="og:url" content="https://resplendent-wisp-92cba.netlify.app/" />
+  <meta property="og:image" content="https://resplendent-wisp-92cba.netlify.app/images/common/starbucks_og.png" />
+  <meta property="og:image:secure_url" content="https://resplendent-wisp-92cba.netlify.app/images/common/starbucks_og.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Starbucks portfolio preview" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Starbucks Coffee Korea" />
+  <meta name="twitter:description" content="스타벅스 공홈을 참고해 재해석한 개인 웹 포트폴리오 프로젝트" />
+  <meta name="twitter:image" content="https://resplendent-wisp-92cba.netlify.app/images/common/starbucks_og.png" />
 
   <!---- CDN  ----->
 
@@ -34,7 +47,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   
   <!--root 상대경로 파비콘 지정-->
-  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon"> 
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" href="./favicon.png" type="image/png" sizes="500x500">
+  <link rel="apple-touch-icon" href="./images/common/apple-touch-icon.png" sizes="180x180">
+  <meta name="apple-mobile-web-app-title" content="Starbucks Korea">
+  <meta name="theme-color" content="#006241">
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
@@ -99,6 +116,7 @@
 
 </head>
 <body>
+  <!-- 인트로 스플래시 전환 -->
   <div class="portfolio-splash" id="portfolio-splash" data-splash>
     <div class="portfolio-splash__inner" aria-labelledby="portfolio-splash-title" aria-describedby="portfolio-splash-desc">
       <p class="portfolio-splash__eyebrow">Portfolio UI/UX Study</p>
@@ -120,7 +138,7 @@
       </div>
     </div>
   </div>
-
+  <!-- 스킵링크 -->
   <nav class="skip-links" aria-label="바로가기">
     <a href="./signup/" class="skip-link">로그인 바로가기</a>
     <a href="#main-menu-first-item" class="skip-link" data-skip-menu>메뉴 바로가기</a>
@@ -579,7 +597,7 @@
 
         <div class="btn_slogan" data-hero-fade data-fade-desktop-order="9">
           <a
-            href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296"
+            href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3365&menu_cd="
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--spring"
@@ -609,7 +627,7 @@
               앱에서 주문하기
             </button>
             <a
-              href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296"
+              href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3365&menu_cd="
               target="_blank"
               rel="noopener noreferrer"
               class="hero-link"
@@ -885,7 +903,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./images/promotion/6U1ecL_20260410163726645.jpg" alt="Spring 2번째 프로모션" />
-              <a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3296" target="_blank" rel="noopener noreferrer" class="btn btn--promotion">
+              <a href="https://www.starbucks.co.kr/whats_new/campaign_view.do?pro_seq=3365&menu_cd=" target="_blank" rel="noopener noreferrer" class="btn btn--promotion">
                 <span aria-hidden="true">자세히 보기</span>
                 <span class="blind">시즌 프로모션 자세히 보기, 새 탭에서 열림</span>
               </a>
@@ -935,7 +953,7 @@
               </p>
             </div>
             <div class="btn-signin_group">
-              <a href="./signup/" class="btn-signin_join">회원가입</a>
+              <button type="button" class="btn-signin_join" data-coming-soon-alert>회원가입</button>
               <a href="./signup/" class="btn-signin_login">로그인</a>
             </div>
           </div>
@@ -1088,7 +1106,7 @@
         <h2 id="order_choice_title">스타벅스 앱으로 이동할까요?</h2>
         <p id="order_choice_desc">
           스타벅스 앱이 설치되어 있지 않거나 최신 버전이 아니면 이용이 제한될 수 있습니다.
-  웹에서 계속 주문하려면 아래 버튼을 눌러주세요.
+          웹에서 계속 주문하려면 아래 버튼을 눌러주세요.
         </p>
         <div class="order-choice__actions">
           <a
@@ -1192,19 +1210,19 @@
               <span data-link-status="planned" aria-disabled="true">사이트 맵</span>
             </div>
             <div class="footer-desktop__info" aria-label="포트폴리오 연락처">
-              <p>Email : bangsiri@example.com</p>
+              <p>Email : qkdtjdghks1@naver.com</p>
             </div>
             <div class="footer-social" aria-label="소셜 채널">
-              <span class="footer-social__item" aria-label="GitHub">
+              <a class="footer-social__item" href="https://github.com/itb4ng" target="_blank" rel="noopener noreferrer" aria-label="개발자 GitHub 새 탭으로 이동">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
                 </svg>
-              </span>
-              <span class="footer-social__item" aria-label="Instagram">
+              </a>
+              <a class="footer-social__item" href="https://www.instagram.com/b4ngs__hwa2" target="_blank" rel="noopener noreferrer" aria-label="개발자 Instagram 사 새 탭으로 이동">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
-              </span>
+              </a>
             </div>
             <p class="footer-desktop__copyright">
               &copy; <span class="this-year"></span> 방Siri All Right Reserved.
@@ -1259,19 +1277,19 @@
             <span class="mobile-flow-footer__link" data-link-status="planned" aria-disabled="true">스타벅스 카드 이용약관</span>
           </div>
           <div class="mobile-flow-footer__info" aria-label="포트폴리오 연락처">
-            <p>Email : bangsiri@example.com</p>
+            <p>Email : qkdtjdghks1@naver.com</p>
           </div>
           <div class="footer-social" aria-label="소셜 채널">
-            <span class="footer-social__item" aria-label="GitHub">
+            <a class="footer-social__item" href="https://github.com/itb4ng" target="_blank" rel="noopener noreferrer" aria-label="개발자 GitHub 새 탭으로 이동">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.09.68-.22.68-.49v-1.73c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.34 9.34 0 0 1 12 6.97c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.79c0 .27.18.58.69.48A10.05 10.05 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
               </svg>
-            </span>
-            <span class="footer-social__item" aria-label="Instagram">
+            </a>
+            <a class="footer-social__item" href="https://www.instagram.com/b4ngs__hwa2" target="_blank" rel="noopener noreferrer" aria-label="개발자 Instagram 새 탭으로 이동">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5A3.5 3.5 0 1 1 12 15.5a3.5 3.5 0 0 1 0-7zm0 2A1.5 1.5 0 1 0 12 13.5a1.5 1.5 0 0 0 0-3zm4.25-3.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
               </svg>
-            </span>
+            </a>
           </div>
           <p class="mobile-flow-footer__copyright">
             &copy; <span class="this-year"></span> 방Siri All Right Reserved.
