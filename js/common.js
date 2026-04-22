@@ -15,6 +15,7 @@ const headerMenuButtons = headerEl ? Array.from(headerEl.querySelectorAll('.main
 const headerMenuItems = headerEl ? Array.from(headerEl.querySelectorAll('.main-menu > .item')) : [];
 const headerSkipMenuLinks = document.querySelectorAll('[data-skip-menu]');
 const demoFormEls = Array.from(document.querySelectorAll('form[data-demo-form]'));
+const comingSoonAlertEls = Array.from(document.querySelectorAll('[data-coming-soon-alert]'));
 const mobileSearchMediaQuery = window.matchMedia('(max-width: 959px)');
 const tabletMediaQuery = window.matchMedia('(max-width: 959px)');
 const rootEl = document.documentElement;
@@ -229,6 +230,23 @@ function toggleHeaderMenuItem(buttonEl) {
     }
 
     openHeaderMenuItem(buttonEl);
+}
+
+function closePinnedHeaderMenuOnPointerEnter(buttonEl) {
+    if (!buttonEl || tabletMediaQuery.matches) {
+        return;
+    }
+
+    const itemEl = getHeaderMenuItem(buttonEl);
+    const hasPinnedMenu = headerMenuItems.some(function (otherItemEl) {
+        return otherItemEl.classList.contains('is-open');
+    });
+
+    if (!hasPinnedMenu || (itemEl && itemEl.classList.contains('is-open'))) {
+        return;
+    }
+
+    closeAllHeaderMenuItems();
 }
 
 function resetHeaderMenuState() {
@@ -496,8 +514,19 @@ if (headerEl && headerToggleEl && headerNavEl && headerOverlayEl) {
             handleHeaderMenuButtonKeydown(event, buttonEl, index);
         });
 
-        buttonEl.addEventListener('click', function () {
+        buttonEl.addEventListener('pointerenter', function () {
+            closePinnedHeaderMenuOnPointerEnter(buttonEl);
+        });
+
+        buttonEl.addEventListener('click', function (event) {
             resetSearchFocusState();
+
+            if (!tabletMediaQuery.matches && event.detail > 0) {
+                closeAllHeaderMenuItems();
+                buttonEl.blur();
+                return;
+            }
+
             toggleHeaderMenuItem(buttonEl);
         });
     });
@@ -509,7 +538,15 @@ if (headerEl && headerToggleEl && headerNavEl && headerOverlayEl) {
             return;
         }
 
+        itemEl.addEventListener('mouseenter', function () {
+            closePinnedHeaderMenuOnPointerEnter(buttonEl);
+        });
+
         itemEl.addEventListener('focusout', function (event) {
+            if (tabletMediaQuery.matches && headerEl && headerEl.classList.contains('is-nav-open')) {
+                return;
+            }
+
             const nextFocusedEl = event.relatedTarget;
 
             if (nextFocusedEl && itemEl.contains(nextFocusedEl)) {
@@ -570,6 +607,12 @@ demoFormEls.forEach(function (formEl) {
         if (messageTargetEl) {
             messageTargetEl.textContent = '포트폴리오 데모 페이지라 실제 제출은 진행되지 않습니다.';
         }
+    });
+});
+
+comingSoonAlertEls.forEach(function (buttonEl) {
+    buttonEl.addEventListener('click', function () {
+        window.alert('준비중입니다.');
     });
 });
 
